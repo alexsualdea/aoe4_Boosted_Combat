@@ -1,0 +1,162 @@
+<instance version="4" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1853756747" List.ParentItemID="1853756747">
+			<bool name="browsable_in_editor" value="True" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="1338650760" List.ParentItemID="1338650760">
+			<state_tree_node name="death_action_tree" value="building_death_actions\landmarks\landmarks_age1\sul_qutub_minar" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="119825962" List.ParentItemID="119825962">
+			<list name="race_type_list" overrideParent="True">
+				<instance_reference name="race_type" value="racebps\sultanate" List.ItemID="410091389" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-514641933" List.ParentItemID="-514641933">
+			<float name="decorator_height" value="10" overrideParent="True" />
+			<file name="icon_name" value="races\sultanate\buildings\building_landmark_age1_qutub_minar" overrideParent="True" />
+			<locstring name="screen_name" value="11148463" overrideParent="True" />
+			<locstring name="extra_text" value="11185320" overrideParent="True" />
+			<instance_reference name="district_info" value="" overrideParent="True" />
+			<template_reference name="help_text_formatter" value="ui_text_formatter" overrideParent="True">
+				<list name="formatter_arguments" overrideParent="True">
+					<int name="int_value" value="15" overrideParent="True" List.ItemID="-1741958839" />
+				</list>
+				<locstring name="formatter" value="11232064" overrideParent="True" />
+			</template_reference>
+			<string name="telemetry_name" value="Tower of Victory" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\requirement_ext" List.ItemID="-1410531980" List.ParentItemID="-1410531980">
+			<list name="requirement_table" overrideParent="True">
+				<template_reference name="required" value="requirements\required_not" List.ItemID="-478920019">
+					<enum name="reason" value="usage" />
+					<locstring name="ui_name" value="11142977" />
+					<list name="requirement_table">
+						<template_reference name="required" value="requirements\required_any_in_list" List.ItemID="-1376422184">
+							<enum name="reason" value="usage" />
+							<locstring name="ui_name" value="0" />
+							<list name="requirements">
+								<template_reference name="requirement" value="requirements\required_structure" List.ItemID="-1685534866">
+									<enum name="reason" value="usage" />
+									<locstring name="ui_name" value="0" />
+									<instance_reference name="structure_name" value="ebps\races\sultanate\buildings\building_landmark_age1_qutub_minar_sul\building_landmark_age1_qutub_minar_control_sul" />
+									<int name="required_structure_count" value="1" />
+									<bool name="check_team" value="False" />
+									<bool name="require_construction_complete" value="False" />
+									<group name="include_pbg_parenting">
+										<bool name="include_child_pbgs" value="False" />
+										<bool name="include_parent_pbgs" value="False" />
+									</group>
+								</template_reference>
+								<template_reference name="requirement" value="requirements\required_structure" List.ItemID="-1978734649">
+									<enum name="reason" value="usage" />
+									<locstring name="ui_name" value="0" />
+									<instance_reference name="structure_name" value="ebps\races\sultanate\buildings\building_landmark_age1_quwwat_ul_islam_sul\building_landmark_age1_quwwat_ul_islam_control_sul" />
+									<int name="required_structure_count" value="1" />
+									<bool name="check_team" value="False" />
+									<bool name="require_construction_complete" value="False" />
+									<group name="include_pbg_parenting">
+										<bool name="include_child_pbgs" value="False" />
+										<bool name="include_parent_pbgs" value="False" />
+									</group>
+								</template_reference>
+							</list>
+						</template_reference>
+					</list>
+				</template_reference>
+				<template_reference name="required" value="requirements\required_player_upgrade" List.ItemID="-478499272">
+					<enum name="reason" value="usage_and_display" />
+					<locstring name="ui_name" value="0" />
+					<bool name="is_present" value="False" />
+					<int name="max_completed" value="100" />
+					<int name="min_completed" value="1" />
+					<instance_reference name="upgrade_name" value="upgrade\dev\ages\feudal_age" />
+					<bool name="include_queued" value="False" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="False" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+					<bool name="include_completed" value="True" />
+				</template_reference>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\action_apply_ext" List.ItemID="400135735" List.ParentItemID="400135735">
+			<list name="action_state_trees" overrideParent="True">
+				<group name="container" List.ItemID="1530704757">
+					<string name="state_tree" value="building_action_apply\buildings\landmark_age_1_action_apply" />
+				</group>
+				<group name="container" List.ItemID="1554281026">
+					<string name="state_tree" value="influence_invalid_sul" overrideParent="True" />
+				</group>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\construction_ext" List.ItemID="-1019930499" List.ParentItemID="-1019930499">
+			<group name="on_construction_complete_state_tree_refs">
+				<string name="while_construction_complete_entity_state_tree_ref" value="tower_of_victory_construction_complete_sul" overrideParent="True" />
+			</group>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\statemodel_ext" List.ItemID="340824163" List.ParentItemID="340824163">
+			<instance_reference name="schema" value="statemodel_schema\buildings\civilizations\sultanate\wonder_age1_sul" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\audio_ext" List.ItemID="2076616617" List.ParentItemID="2076616617">
+			<string name="single_select_event" value="sfx_ui_landmark_building_selection_play" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\building_presentation_ext" List.ItemID="1440054338" List.ParentItemID="1440054338">
+			<file name="construction_stamp" value="art\stamps\scaffolding\sultanate\sul_qutub_minar" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\tier_ext" overrideParent="True" List.ItemID="1841348160" List.ListAction="Append">
+			<list name="tier_group_list" overrideParent="True">
+				<list name="tier_group" List.ItemID="2120858345">
+					<group name="tier" List.ItemID="776488653">
+						<list name="tier_requirements">
+						</list>
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\sultanate\buildings\landmark_qutub_minar_sul\landmark_qutub_minar_control_sul" overrideParent="True" />
+						<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+							<state_tree_node name="ActionTree_OpeningBranch" value="" />
+							<bool name="start_suspended" value="False" />
+						</template_reference>
+						<instance_reference name="statetree_tier_requirements_pbg" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="" />
+						<string name="tier_attachment_action" value="" />
+						<template_reference name="blueprint_conversion_parameters" value="blueprint_conversion_parameters">
+							<bool name="reissue_commands" value="False" />
+							<bool name="continue_state_trees" value="False" />
+							<bool name="remove_from_pending_deaths" value="False" />
+						</template_reference>
+						<string name="inventory_category_to_refresh_on_tier_up" value="" />
+					</group>
+				</list>
+				<list name="tier_group" overrideParent="True" List.ItemID="-1776480371">
+					<group name="tier" List.ItemID="-1901995898">
+						<list name="tier_requirements">
+						</list>
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\sultanate\outskirts\wonders\won_qminar" overrideParent="True" />
+						<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+							<state_tree_node name="ActionTree_OpeningBranch" value="" />
+							<bool name="start_suspended" value="False" />
+						</template_reference>
+						<instance_reference name="statetree_tier_requirements_pbg" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="" />
+						<string name="tier_attachment_action" value="" />
+						<template_reference name="blueprint_conversion_parameters" value="blueprint_conversion_parameters">
+							<bool name="reissue_commands" value="False" />
+							<bool name="continue_state_trees" value="False" />
+							<bool name="remove_from_pending_deaths" value="False" />
+						</template_reference>
+						<string name="inventory_category_to_refresh_on_tier_up" value="" />
+					</group>
+				</list>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\district_generator_ext" List.ItemID="-1293086513" List.ListAction="Append">
+			<float name="range_metres" value="4" overrideParent="True" />
+			<bool name="is_root_generator" value="True" overrideParent="True" />
+			<int name="generator_value" value="0" />
+			<bool name="disable_generation_on_spawn" value="False" />
+			<int name="district_palette_id" value="1" overrideParent="True" />
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="135886" />
+	<instance_reference name="parent_pbg" value="ebps\races\core\buildings\building_wonder_age1" />
+</instance>

@@ -1,0 +1,210 @@
+<instance version="4" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\requirement_ext" List.ItemID="665441583" List.ParentItemID="665441583">
+			<list name="requirement_table" overrideParent="True">
+				<template_reference name="required" value="requirements\required_not" List.ItemID="-1971218439">
+					<enum name="reason" value="usage" />
+					<locstring name="ui_name" value="11142977" />
+					<list name="requirement_table">
+						<template_reference name="required" value="requirements\required_any_in_list" List.ItemID="1997723356">
+							<enum name="reason" value="usage" />
+							<locstring name="ui_name" value="0" />
+							<list name="requirements">
+								<template_reference name="requirement" value="requirements\required_structure" List.ItemID="1531719368">
+									<enum name="reason" value="usage" />
+									<locstring name="ui_name" value="0" />
+									<instance_reference name="structure_name" value="ebps\races\mongol\buildings\building_wonder_age3_khanbaliq_mon" />
+									<int name="required_structure_count" value="1" />
+									<bool name="check_team" value="False" />
+									<bool name="require_construction_complete" value="False" />
+									<group name="include_pbg_parenting">
+										<bool name="include_child_pbgs" value="False" />
+										<bool name="include_parent_pbgs" value="False" />
+									</group>
+								</template_reference>
+								<template_reference name="requirement" value="requirements\required_structure" List.ItemID="1623977024">
+									<enum name="reason" value="usage" />
+									<locstring name="ui_name" value="0" />
+									<instance_reference name="structure_name" value="ebps\races\mongol\buildings\building_wonder_age3_stupa_mon" />
+									<int name="required_structure_count" value="1" />
+									<bool name="check_team" value="False" />
+									<bool name="require_construction_complete" value="False" />
+									<group name="include_pbg_parenting">
+										<bool name="include_child_pbgs" value="False" />
+										<bool name="include_parent_pbgs" value="False" />
+									</group>
+								</template_reference>
+							</list>
+						</template_reference>
+					</list>
+				</template_reference>
+				<template_reference name="required" value="requirements\required_player_upgrade" List.ItemID="-1049927196">
+					<enum name="reason" value="usage_and_display" />
+					<locstring name="ui_name" value="0" />
+					<bool name="is_present" value="False" />
+					<int name="max_completed" value="100" />
+					<int name="min_completed" value="1" />
+					<instance_reference name="upgrade_name" value="upgrade\dev\ages\imperial_age" overrideParent="True" />
+					<bool name="include_queued" value="False" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="False" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+					<bool name="include_completed" value="True" />
+				</template_reference>
+				<template_reference name="required" value="requirements\required_player_upgrade" List.ItemID="1555179784">
+					<enum name="reason" value="usage_and_display" />
+					<locstring name="ui_name" value="0" />
+					<bool name="is_present" value="True" />
+					<int name="max_completed" value="100" />
+					<int name="min_completed" value="1" />
+					<instance_reference name="upgrade_name" value="upgrade\dev\ages\castle_age" />
+					<bool name="include_queued" value="False" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="False" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+					<bool name="include_completed" value="True" />
+				</template_reference>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\health_ext" comment="TEMP: This is for the Villager UI - can remove after relic slice! (Never originally had this ext)" List.ItemID="77336098" List.ParentItemID="77336098">
+			<state_tree_node name="death_action_tree" value="building_death_actions\landmarks\landmarks_age3\mongol_stupa" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="901697529" List.ParentItemID="901697529">
+			<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\mongol\buildings\building_wonder_mongol" overrideParent="True" />
+			<bool name="browsable_in_editor" value="True" overrideParent="True" />
+			<enum name="subclass_type" value="MongolBuilding" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="555024994" List.ParentItemID="555024994">
+			<list name="unit_type_list" overrideParent="True">
+				<enum name="unit_type" value="building" List.ItemID="397630171" />
+				<enum name="unit_type" value="wonder" List.ItemID="2146071183" />
+				<enum name="unit_type" value="wonder_castle_age" List.ItemID="109757035" />
+				<enum name="unit_type" value="siegeable" List.ItemID="-75794201" />
+				<enum name="unit_type" value="stupa" List.ItemID="-1735725556" />
+				<enum name="unit_type" value="packable_building" List.ItemID="1318659801" />
+				<enum name="unit_type" value="select_special_building" List.ItemID="1572351072" />
+				<enum name="unit_type" value="landmark" List.ItemID="1502309886" />
+				<enum name="unit_type" value="age3_landmark2" List.ItemID="-2126569851" />
+				<enum name="unit_type" value="ovoo" List.ItemID="2102070941" />
+				<enum name="unit_type" value="audio_production_landmark" List.ItemID="-719870588" />
+			</list>
+			<list name="race_type_list" overrideParent="True">
+				<instance_reference name="race_type" value="racebps\mongol" List.ItemID="716036592" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="646243642" List.ParentItemID="646243642">
+			<float name="decorator_height" value="10" overrideParent="True" />
+			<locstring name="help_text" value="0" overrideParent="True" />
+			<file name="icon_name" value="races\mongols\buildings\building_wonder_age4_stupa" overrideParent="True" />
+			<locstring name="screen_name" value="11147010" overrideParent="True" />
+			<float name="minimap_icon_scale" value="0.3" overrideParent="True" />
+			<locstring name="extra_text" value="11195007" overrideParent="True" />
+			<list name="ui_extra_infos" overrideParent="True">
+				<template_reference name="ui_extra_info" value="info\ui_extra_info" List.ItemID="2019021755">
+					<file name="icon" value="influence_buff" />
+					<locstring name="description" value="11198256" />
+					<template_reference name="description_formatter" value="">
+					</template_reference>
+				</template_reference>
+			</list>
+			<template_reference name="help_text_formatter" value="ui_text_formatter" comment="Remember to update the sbps help text for the packed/cart version." overrideParent="True">
+				<list name="formatter_arguments" overrideParent="True">
+					<int name="int_value" value="240" List.ItemID="1625427189" />
+				</list>
+				<locstring name="formatter" value="11205466" overrideParent="True" />
+			</template_reference>
+			<string name="telemetry_name" value="The White Stupa" overrideParent="True" />
+			<string name="selection_group" value="ovoo" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\site_ext" List.ItemID="-1963866549" List.ParentItemID="-1963866549">
+			<bool name="snap_to_construction_grid" value="True" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\construction_ext" List.ItemID="1828097256" List.ParentItemID="1828097256">
+			<state_tree_node name="can_be_cancelled_state_tree_conditions" value="entity_construction_queries_mon\Can_Cancel_Construction" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\ability_ext" List.ItemID="669128015" List.ParentItemID="669128015">
+			<list name="abilities" overrideParent="True">
+				<instance_reference name="ability" value="abilities\toggle_abilities\mongol\cancel_unpacking_building_mon" List.ItemID="-2114470896" />
+				<instance_reference name="ability" value="abilities\toggle_abilities\mongol\dummy_unpacking_building_mon" List.ItemID="-857763992" />
+				<instance_reference name="ability" value="abilities\always_on_abilities\mongol\white_stupa_stone_generation_mon" List.ItemID="-745577603" />
+				<instance_reference name="ability" value="abilities\toggle_abilities\mongol\pack_building_mon" overrideParent="True" List.ItemID="1959512762" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\statemodel_ext" comment="Make sure the building and moving building are referencing the same schema, if they are using different schemas unpacking will break." List.ItemID="-1077208244" List.ParentItemID="-1077208244">
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\action_tree_ext" List.ItemID="-621948538" List.ParentItemID="-621948538">
+			<state_tree_node name="fallback_default_move_command_conditions" value="entity_construction_queries_mon\Can_Queue_Move_Commands" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\upgrade_ext" List.ItemID="-1352379827" List.ParentItemID="-1352379827">
+			<list name="standard_upgrades" overrideParent="True">
+				<instance_reference name="upgrade" value="upgrade\races\mongol\research\unique\upgrade_khan_signal_arrow_mon" List.ItemID="-1366590418" />
+				<instance_reference name="upgrade" value="upgrade\races\mongol\research\unique\upgrade_raid_bounty_mon" List.ItemID="55242854" />
+				<instance_reference name="upgrade" value="upgrade\races\mongol\research\unique\upgrade_raid_stone_bounty_mon" List.ItemID="1176237618" />
+				<instance_reference name="upgrade" value="upgrade\races\mongol\research\unique\upgrade_weapon_fire_damage_mon" List.ItemID="416734255" />
+				<instance_reference name="upgrade" value="upgrade\races\mongol\research\unit\upgrade_unit_town_center_faster_packing_1_mon" List.ItemID="117076607" />
+				<instance_reference name="upgrade" value="upgrade\races\mongol\research\unique\upgrade_khan_signal_arrow_improved_mon" List.ItemID="-813025537" />
+				<instance_reference name="upgrade" value="upgrade\races\mongol\research\unique\upgrade_raid_bounty_improved_mon" List.ItemID="1235499192" />
+				<instance_reference name="upgrade" value="upgrade\races\mongol\research\unique\upgrade_raid_stone_bounty_improved_mon" List.ItemID="810548941" />
+				<instance_reference name="upgrade" value="upgrade\races\mongol\research\unique\upgrade_weapon_fire_damage_improved_mon" List.ItemID="-2079844179" />
+				<instance_reference name="upgrade" value="upgrade\races\common\research\economy\upgrade_tech_university_architecture_4" List.ItemID="590205615" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\tier_ext" List.ItemID="-2081174727" List.ListAction="Append">
+			<list name="tier_group_list" overrideParent="True">
+				<list name="tier_group" List.ItemID="-1871777239">
+					<group name="tier" List.ItemID="772800568">
+						<list name="tier_requirements">
+						</list>
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\mongol\buildings\wonder_age3_stupa_control_mon\wonder_age3_stupa_control_mon" overrideParent="True" />
+						<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+							<state_tree_node name="ActionTree_OpeningBranch" value="" />
+							<bool name="start_suspended" value="False" />
+						</template_reference>
+						<instance_reference name="statetree_tier_requirements_pbg" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="" />
+						<string name="tier_attachment_action" value="" />
+						<template_reference name="blueprint_conversion_parameters" value="blueprint_conversion_parameters">
+							<bool name="reissue_commands" value="False" />
+							<bool name="continue_state_trees" value="False" />
+							<bool name="remove_from_pending_deaths" value="False" />
+						</template_reference>
+						<string name="inventory_category_to_refresh_on_tier_up" value="" />
+					</group>
+				</list>
+				<list name="tier_group" overrideParent="True" List.ItemID="39395617">
+					<group name="tier" List.ItemID="30318293">
+						<list name="tier_requirements">
+						</list>
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\mongol\outskirts\wonders\won_stupa" overrideParent="True" />
+						<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+							<state_tree_node name="ActionTree_OpeningBranch" value="" />
+							<bool name="start_suspended" value="False" />
+						</template_reference>
+						<instance_reference name="statetree_tier_requirements_pbg" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="" />
+						<string name="tier_attachment_action" value="" />
+						<template_reference name="blueprint_conversion_parameters" value="blueprint_conversion_parameters">
+							<bool name="reissue_commands" value="False" />
+							<bool name="continue_state_trees" value="False" />
+							<bool name="remove_from_pending_deaths" value="False" />
+						</template_reference>
+						<string name="inventory_category_to_refresh_on_tier_up" value="" />
+					</group>
+				</list>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\district_generator_ext" List.ItemID="-1109700667" List.ListAction="Append">
+			<float name="range_metres" value="8" />
+			<int name="generator_value" value="0" overrideParent="True" />
+			<bool name="disable_generation_on_spawn" value="False" />
+			<bool name="is_root_generator" value="True" overrideParent="True" />
+			<int name="district_palette_id" value="1" overrideParent="True" />
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="136389" />
+	<instance_reference name="parent_pbg" value="ebps\races\core\buildings\building_wonder_age3" />
+</instance>

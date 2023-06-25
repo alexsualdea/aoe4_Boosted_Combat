@@ -1,0 +1,231 @@
+<instance version="4" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1853756747" List.ParentItemID="1853756747">
+			<bool name="browsable_in_editor" value="True" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="1338650760" List.ParentItemID="1338650760">
+			<state_tree_node name="death_action_tree" value="building_death_actions\landmarks\landmarks_age1\rus_golden_gate_vladimir" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="119825962" List.ParentItemID="119825962">
+			<list name="unit_type_list" overrideParent="True">
+				<enum name="unit_type" value="building" List.ItemID="1804466973" />
+				<enum name="unit_type" value="wonder" List.ItemID="-112956757" />
+				<enum name="unit_type" value="wonder_dark_age" List.ItemID="-1090479488" />
+				<enum name="unit_type" value="siegeable" List.ItemID="1819226599" />
+				<enum name="unit_type" value="select_special_building" List.ItemID="1632029440" />
+				<enum name="unit_type" value="landmark" List.ItemID="322031965" />
+				<enum name="unit_type" value="age1_landmark1" List.ItemID="1764884963" />
+				<enum name="unit_type" value="audio_production_landmark" List.ItemID="-1214831827" />
+			</list>
+			<list name="race_type_list" overrideParent="True">
+				<instance_reference name="race_type" value="racebps\rus" List.ItemID="1968952570" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-514641933" List.ParentItemID="-514641933">
+			<float name="decorator_height" value="11" overrideParent="True" />
+			<file name="icon_name" value="races\rus\buildings\building_landmark_age1_golden_gate_vladimir" overrideParent="True" />
+			<locstring name="screen_name" value="11145284" overrideParent="True" />
+			<float name="minimap_icon_scale" value="0.3" overrideParent="True" />
+			<locstring name="extra_text" value="11191387" overrideParent="True" />
+			<group name="ui_codex_info">
+				<bool name="exclusive" value="True" overrideParent="True" />
+			</group>
+			<template_reference name="help_text_formatter" value="ui_text_formatter" overrideParent="True">
+				<list name="formatter_arguments" overrideParent="True">
+					<int name="int_value" value="30" overrideParent="True" List.ItemID="666795249" />
+				</list>
+				<locstring name="formatter" value="11204227" overrideParent="True" />
+			</template_reference>
+			<string name="telemetry_name" value="The Golden Gate" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\requirement_ext" List.ItemID="-1410531980" List.ParentItemID="-1410531980">
+			<list name="requirement_table" overrideParent="True">
+				<template_reference name="required" value="requirements\required_not" List.ItemID="-467915840">
+					<enum name="reason" value="usage" />
+					<locstring name="ui_name" value="11142977" />
+					<list name="requirement_table">
+						<template_reference name="required" value="requirements\required_any_in_list" List.ItemID="1967083377">
+							<enum name="reason" value="usage" />
+							<locstring name="ui_name" value="0" />
+							<list name="requirements">
+								<template_reference name="requirement" value="requirements\required_structure" List.ItemID="1438585597">
+									<enum name="reason" value="usage" />
+									<locstring name="ui_name" value="0" />
+									<instance_reference name="structure_name" value="ebps\races\rus\buildings\building_landmark_age1_golden_gate_vladimir_rus\building_landmark_age1_golden_gate_vladimir_control_rus" />
+									<int name="required_structure_count" value="1" />
+									<bool name="check_team" value="False" />
+									<bool name="require_construction_complete" value="False" />
+									<group name="include_pbg_parenting">
+										<bool name="include_child_pbgs" value="False" />
+										<bool name="include_parent_pbgs" value="False" />
+									</group>
+								</template_reference>
+								<template_reference name="requirement" value="requirements\required_structure" List.ItemID="1184238695">
+									<enum name="reason" value="usage" />
+									<locstring name="ui_name" value="0" />
+									<instance_reference name="structure_name" value="ebps\races\rus\buildings\building_landmark_age1_novgorod_kremlin_rus\building_landmark_age1_novgorod_kremlin_control_rus" />
+									<int name="required_structure_count" value="1" />
+									<bool name="check_team" value="False" />
+									<bool name="require_construction_complete" value="False" />
+									<group name="include_pbg_parenting">
+										<bool name="include_child_pbgs" value="False" />
+										<bool name="include_parent_pbgs" value="False" />
+									</group>
+								</template_reference>
+							</list>
+						</template_reference>
+					</list>
+				</template_reference>
+				<template_reference name="required" value="requirements\required_player_upgrade" List.ItemID="1483451635">
+					<enum name="reason" value="usage_and_display" />
+					<locstring name="ui_name" value="0" />
+					<bool name="is_present" value="False" />
+					<int name="max_completed" value="100" />
+					<int name="min_completed" value="1" />
+					<instance_reference name="upgrade_name" value="upgrade\dev\ages\feudal_age" />
+					<bool name="include_queued" value="False" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="False" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+					<bool name="include_completed" value="True" />
+				</template_reference>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\action_apply_ext" List.ItemID="400135735" List.ParentItemID="400135735">
+			<list name="action_state_trees" overrideParent="True">
+				<group name="container" List.ItemID="830252757">
+					<string name="state_tree" value="building_action_apply\buildings\landmark_age_1_action_apply" />
+				</group>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\interactive_object_ext" List.ItemID="-68660537" List.ParentItemID="-68660537">
+			<list name="type_list" overrideParent="True">
+				<group name="type" List.ItemID="984759771">
+					<enum name="interaction_type" value="repair" />
+					<int name="prefer_number" value="-1" />
+					<int name="max_number" value="-1" />
+					<enum name="interaction_target_type" value="entity" />
+					<template_reference name="node_list_option" value="options\none">
+					</template_reference>
+					<bool name="block_pathing_when_interacted" value="False" />
+				</group>
+				<group name="type" List.ItemID="-198084837">
+					<enum name="interaction_type" value="repair" />
+					<int name="prefer_number" value="-1" />
+					<int name="max_number" value="-1" />
+					<enum name="interaction_target_type" value="entity" />
+					<template_reference name="node_list_option" value="options\none">
+					</template_reference>
+					<bool name="block_pathing_when_interacted" value="False" />
+				</group>
+				<group name="type" List.ItemID="1135855566">
+					<enum name="interaction_type" value="construct" />
+					<int name="prefer_number" value="-1" />
+					<int name="max_number" value="-1" />
+					<enum name="interaction_target_type" value="entity" />
+					<template_reference name="node_list_option" value="options\none">
+					</template_reference>
+					<bool name="block_pathing_when_interacted" value="False" />
+				</group>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\site_ext" List.ItemID="-1469122038" List.ParentItemID="-1469122038">
+			<bool name="snap_to_construction_grid" value="True" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\construction_ext" List.ItemID="-1019930499" List.ParentItemID="-1019930499">
+			<group name="on_construction_complete_state_tree_refs">
+				<string name="on_construction_complete_entity_state_tree_ref" value="golden_gate_trade_rate_bonus" overrideParent="True" />
+			</group>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\ability_ext" List.ItemID="203393663" List.ParentItemID="203393663">
+			<list name="abilities" overrideParent="True">
+				<instance_reference name="ability" value="abilities\timed_abilities\rus\buy_food" overrideParent="True" List.ItemID="838379518" />
+				<instance_reference name="ability" value="abilities\timed_abilities\rus\buy_stone" overrideParent="True" List.ItemID="-1217615695" />
+				<instance_reference name="ability" value="abilities\timed_abilities\rus\buy_wood" overrideParent="True" List.ItemID="413977132" />
+				<instance_reference name="ability" value="abilities\timed_abilities\rus\sell_food" overrideParent="True" List.ItemID="1930446978" />
+				<instance_reference name="ability" value="abilities\timed_abilities\rus\sell_stone" overrideParent="True" List.ItemID="130772468" />
+				<instance_reference name="ability" value="abilities\timed_abilities\rus\sell_wood" overrideParent="True" List.ItemID="-1660759998" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\statemodel_ext" List.ItemID="340824163" List.ParentItemID="340824163">
+			<instance_reference name="schema" value="statemodel_schema\buildings\civilizations\rus\landmark_golden_gate_rus" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\building_presentation_ext" List.ItemID="1440054338" List.ParentItemID="1440054338">
+			<file name="construction_stamp" value="art\stamps\scaffolding\rus\rus_golden_gate_vladimir" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\tier_ext" overrideParent="True" List.ItemID="1351663620" List.ListAction="Append">
+			<list name="tier_group_list" overrideParent="True">
+				<list name="tier_group" List.ItemID="-1405136640">
+					<group name="tier" List.ItemID="-421840356">
+						<list name="tier_requirements">
+						</list>
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\rus\buildings\landmark_golden_gate_of_vladimir_rus" overrideParent="True" />
+						<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+							<state_tree_node name="ActionTree_OpeningBranch" value="" />
+							<bool name="start_suspended" value="False" />
+						</template_reference>
+						<instance_reference name="statetree_tier_requirements_pbg" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="" />
+						<string name="tier_attachment_action" value="" />
+						<template_reference name="blueprint_conversion_parameters" value="blueprint_conversion_parameters">
+							<bool name="reissue_commands" value="False" />
+							<bool name="continue_state_trees" value="False" />
+							<bool name="remove_from_pending_deaths" value="False" />
+						</template_reference>
+						<string name="inventory_category_to_refresh_on_tier_up" value="" />
+					</group>
+				</list>
+				<list name="tier_group" overrideParent="True" List.ItemID="1618302059">
+					<group name="tier" List.ItemID="1203583881">
+						<list name="tier_requirements">
+						</list>
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\rus\outskirts\wonders\won_gvladimir" overrideParent="True" />
+						<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+							<state_tree_node name="ActionTree_OpeningBranch" value="" />
+							<bool name="start_suspended" value="False" />
+						</template_reference>
+						<instance_reference name="statetree_tier_requirements_pbg" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="" />
+						<string name="tier_attachment_action" value="" />
+						<template_reference name="blueprint_conversion_parameters" value="blueprint_conversion_parameters">
+							<bool name="reissue_commands" value="False" />
+							<bool name="continue_state_trees" value="False" />
+							<bool name="remove_from_pending_deaths" value="False" />
+						</template_reference>
+						<string name="inventory_category_to_refresh_on_tier_up" value="" />
+					</group>
+				</list>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\spawner_ext" List.ItemID="1797524106" List.ListAction="Append">
+			<bool name="must_be_in_supply" value="False" />
+			<float name="reinforce_radius" value="0" />
+			<list name="spawn_items">
+			</list>
+			<list name="bonus_xp_from_hold_list">
+			</list>
+			<list name="reinforce_requirements">
+			</list>
+			<bool name="spawn_to_hold_try_first" value="False" />
+			<list name="queue_requirements">
+			</list>
+			<bool name="can_rally" value="False" overrideParent="True" />
+			<template_reference name="animated_spawn_option" value="options\none">
+			</template_reference>
+			<int name="max_queue_size_override" value="-1" />
+			<string name="queue_requirements_openingbranch" value="" />
+			<string name="reinforce_requirements_openingbranch" value="" />
+			<state_tree_node name="production_item_completed_openingbranch" value="" />
+			<bool name="enforce_minimum_clearance_at_spawn_positions" value="True" />
+			<bool name="enforce_minimum_clearance_if_entities_blocking" value="True" />
+			<float name="enforce_minimum_clearance_at_spawn_positions_search_range" value="30" />
+			<instance_reference name="rally_pass_type" value="pass_types\vehicle" overrideParent="True" />
+			<bool name="reset_production_progress_at_current_pop_cap" value="True" />
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="133425" />
+	<instance_reference name="parent_pbg" value="ebps\races\core\buildings\building_wonder_age1" />
+</instance>

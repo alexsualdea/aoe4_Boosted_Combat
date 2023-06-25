@@ -1,0 +1,28 @@
+<DataWarehouse>
+	<!--Boosted Combat/-->
+	<DataObject Name="Boosted Combat" Type="Mod" Id="15591054188498303611" Version="1">
+		<DataProperty Name="m_description" Type="Object">
+			<DataValue Name="util::ReflectLocString">13688250082918037198</DataValue>
+			<!--Boosted Combat/util::ReflectLocString/-->
+			<DataObject Name="" Type="util::ReflectLocString" Id="13688250082918037198" OwnerId="15591054188498303611">
+				<DataProperty Name="m_modPart2" Type="UInt32" Value="546287270"/>
+				<DataProperty Name="m_modPart3" Type="UInt32" Value="2732924509"/>
+				<DataProperty Name="m_modPart0" Type="UInt32" Value="2203595316"/>
+				<DataProperty Name="m_modPart1" Type="UInt32" Value="1075758194"/>
+				<DataProperty Name="m_locStringKey" Type="Int32" Value="2"/>
+			</DataObject>
+		</DataProperty>
+		<DataProperty Name="m_name" Type="Object">
+			<DataValue Name="util::ReflectLocString">1655187718337194726</DataValue>
+			<!--Boosted Combat/util::ReflectLocString/-->
+			<DataObject Name="" Type="util::ReflectLocString" Id="1655187718337194726" OwnerId="15591054188498303611">
+				<DataProperty Name="m_modPart2" Type="UInt32" Value="546287270"/>
+				<DataProperty Name="m_modPart3" Type="UInt32" Value="2732924509"/>
+				<DataProperty Name="m_modPart0" Type="UInt32" Value="2203595316"/>
+				<DataProperty Name="m_modPart1" Type="UInt32" Value="1075758194"/>
+				<DataProperty Name="m_locStringKey" Type="Int32" Value="1"/>
+			</DataObject>
+		</DataProperty>
+	</DataObject>
+</DataWarehouse>
+

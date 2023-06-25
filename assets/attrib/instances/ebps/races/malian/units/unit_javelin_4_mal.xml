@@ -1,0 +1,112 @@
+<instance version="4" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1585358807" List.ParentItemID="1585358807">
+			<float name="entity_scale" value="75" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-1968249569" List.ParentItemID="-1968249569">
+			<float name="death_seconds" value="19" overrideParent="True" />
+			<float name="hitpoints" value="95" overrideParent="True" />
+			<enum_table name="armor_scaler_by_damage_type">
+				<float name="Ranged" value="5" overrideParent="True" />
+			</enum_table>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="-785960889" List.ParentItemID="-785960889">
+			<instance_reference name="hit_material" value="hit_material\armour" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="-1735857511" List.ParentItemID="-1735857511">
+			<list name="race_type_list" overrideParent="True">
+				<instance_reference name="race_type" value="racebps\malian" List.ItemID="-975153837" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\combat_ext" List.ItemID="-690770711" List.ParentItemID="-690770711">
+			<list name="hardpoints">
+				<group name="hardpoint" List.ItemID="69747504" List.ParentItemID="69747504">
+					<list name="weapon_table" overrideParent="True">
+						<group name="weapon" List.ItemID="-777139035">
+							<group name="heading">
+								<float name="x" value="0" />
+								<float name="y" value="0" />
+								<float name="z" value="0" />
+							</group>
+							<float name="length" value="0" />
+							<group name="origin">
+								<float name="x" value="0" />
+								<float name="y" value="1.7" />
+								<float name="z" value="0" />
+							</group>
+							<enum name="type" value="default" />
+							<template_reference name="weapon_entity_attachment" value="">
+							</template_reference>
+							<template_reference name="non_entity_weapon_wrapper" value="non_entity_weapon_wrapper">
+								<instance_reference name="non_entity_weapon_wrapper_pbg" value="weapon\races\common\ranged\weapon_javelin_4" overrideParent="True" />
+								<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\core\weapons\wpn_range_javelin_4" overrideParent="True" />
+								<string name="marker_name_parent" value="MetaRig_RArmPalmSocket" />
+							</template_reference>
+						</group>
+						<group name="weapon" List.ItemID="1074106617">
+							<group name="heading">
+								<float name="x" value="0" />
+								<float name="y" value="0" />
+								<float name="z" value="1" />
+							</group>
+							<float name="length" value="0" />
+							<group name="origin">
+								<float name="x" value="0" />
+								<float name="y" value="1.7" />
+								<float name="z" value="0" />
+							</group>
+							<enum name="type" value="default" />
+							<template_reference name="weapon_entity_attachment" value="">
+							</template_reference>
+							<template_reference name="non_entity_weapon_wrapper" value="non_entity_weapon_wrapper">
+								<instance_reference name="non_entity_weapon_wrapper_pbg" value="weapon\races\common\ranged\weapon_torch" />
+								<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\core\weapons\wpn_siege_torch" />
+								<string name="marker_name_parent" value="MetaRig_RArmPalmSocket" />
+							</template_reference>
+						</group>
+					</list>
+				</group>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\moving_ext" List.ItemID="1921186394" List.ParentItemID="1921186394">
+			<enum_table name="speed_scaling_table">
+				<float name="default_speed" value="5" overrideParent="True" />
+			</enum_table>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="-1794037369" List.ParentItemID="-1794037369">
+			<string name="speaker_code" value="javelinthrower" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\tier_ext" List.ItemID="126082233" List.ParentItemID="126082233">
+			<list name="tier_group_list" overrideParent="True">
+				<list name="tier_group" overrideParent="True" List.ItemID="1277809557">
+					<group name="tier" List.ItemID="-1862483434">
+						<list name="tier_requirements" overrideParent="True">
+						</list>
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\malian\units\tier4_javelin_mal" overrideParent="True" />
+						<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+							<state_tree_node name="ActionTree_OpeningBranch" value="tier_unit_exposure_dca" overrideParent="True" />
+							<bool name="start_suspended" value="False" />
+						</template_reference>
+						<instance_reference name="statetree_tier_requirements_pbg" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="" />
+						<string name="tier_attachment_action" value="" />
+						<template_reference name="blueprint_conversion_parameters" value="blueprint_conversion_parameters">
+							<bool name="reissue_commands" value="False" />
+							<bool name="continue_state_trees" value="True" />
+							<bool name="remove_from_pending_deaths" value="False" />
+						</template_reference>
+						<string name="inventory_category_to_refresh_on_tier_up" value="" />
+					</group>
+				</list>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\stealth_ext" List.ItemID="-918900918" List.ListAction="Append">
+			<float name="revealed_time" value="8" />
+			<float name="reveal_radius" value="8" />
+			<bool name="revealed_by_unit" value="True" />
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="2062102" />
+	<instance_reference name="parent_pbg" value="ebps\races\core\units\unit_javelin_4" />
+</instance>

@@ -1,0 +1,263 @@
+<instance version="4" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="347108419" List.ParentItemID="347108419">
+			<file name="alternate_sua" value="" overrideParent="True" />
+			<bool name="browsable_in_editor" value="True" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\site_ext" List.ItemID="964116860" List.ParentItemID="964116860">
+			<bool name="snap_to_construction_grid" value="True" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="519261965" List.ParentItemID="519261965">
+			<list name="unit_type_list" overrideParent="True">
+				<enum name="unit_type" value="building" List.ItemID="60294807" />
+				<enum name="unit_type" value="hq" List.ItemID="-369000319" />
+				<enum name="unit_type" value="town_center" List.ItemID="-374441392" />
+				<enum name="unit_type" value="resource_drop_off" List.ItemID="-652244511" />
+				<enum name="unit_type" value="siegeable" List.ItemID="-1658339533" />
+				<enum name="unit_type" value="emits_herding_interest" List.ItemID="78214244" />
+				<enum name="unit_type" value="town_bell_target" List.ItemID="1688411887" />
+				<enum name="unit_type" value="production_building" List.ItemID="1397208263" />
+				<enum name="unit_type" value="defensive_structure" List.ItemID="4211131" />
+				<enum name="unit_type" value="town_center_non_capital" List.ItemID="897246491" />
+				<enum name="unit_type" value="has_default_building_weapons" List.ItemID="-531689885" />
+			</list>
+			<list name="race_type_list" overrideParent="True">
+				<instance_reference name="race_type" value="racebps\english" List.ItemID="183939397" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\ability_ext" List.ItemID="565171784" List.ParentItemID="565171784">
+			<list name="abilities" overrideParent="True">
+				<instance_reference name="ability" value="abilities\timed_abilities\civ_core\core_building_scuttle" List.ItemID="1166722110" />
+				<instance_reference name="ability" value="abilities\modal_abilities\core\age_up_feudal" List.ItemID="-1390900812" />
+				<instance_reference name="ability" value="abilities\modal_abilities\core\age_up_castle" List.ItemID="1113573201" />
+				<instance_reference name="ability" value="abilities\modal_abilities\core\age_up_imperial" List.ItemID="-166287069" />
+				<instance_reference name="ability" value="abilities\modal_abilities\core\town_bell\hold_return_to_work" List.ItemID="764293717" />
+				<instance_reference name="ability" value="abilities\modal_abilities\core\town_bell\global_return_to_work" overrideParent="True" List.ItemID="-49953543" />
+				<instance_reference name="ability" value="abilities\always_on_abilities\english\tower_outpost_alert_aura_eng" List.ItemID="251317216" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-272167440" List.ParentItemID="-272167440">
+			<locstring name="help_text" value="11177882" overrideParent="True" />
+			<bool name="use_construction_range_on_selection" comment="Network of Castles bonus is the reason for this selection range difference" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\action_apply_ext" List.ItemID="1529303587" List.ParentItemID="1529303587">
+			<list name="action_state_trees">
+				<group name="container" List.ItemID="1248741447" List.ParentItemID="1248741447">
+					<string name="state_tree" value="building_action_apply\buildings\town_center_action_apply" overrideParent="True" />
+				</group>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\spawner_ext" List.ItemID="-1875812947" List.ParentItemID="-1875812947">
+			<list name="spawn_items">
+				<group name="spawn_item" List.ItemID="-389734842" List.ParentItemID="-389734842">
+					<instance_reference name="squad" value="sbps\races\english\unit_villager_1_eng" overrideParent="True" />
+				</group>
+				<group name="spawn_item" List.ItemID="-430274810" List.ParentItemID="-430274810">
+					<instance_reference name="squad" value="sbps\races\english\unit_scout_1_eng" overrideParent="True" />
+				</group>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\upgrade_ext" List.ItemID="-2049432204" List.ParentItemID="-2049432204">
+			<list name="standard_upgrades" overrideParent="True">
+				<instance_reference name="upgrade" value="upgrade\races\common\research\upgrade_villager_health" overrideParent="True" List.ItemID="-1434615103" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\requirement_ext" List.ItemID="-151977967" List.ParentItemID="-151977967">
+			<list name="requirement_table" overrideParent="True">
+				<template_reference name="required" value="requirements\required_player_upgrade" List.ItemID="-1639255196">
+					<enum name="reason" value="usage" overrideParent="True" />
+					<locstring name="ui_name" value="0" />
+					<bool name="is_present" value="True" />
+					<int name="max_completed" value="100" />
+					<int name="min_completed" value="1" />
+					<instance_reference name="upgrade_name" value="upgrade\dev\ages\feudal_age" overrideParent="True" />
+					<bool name="include_queued" value="False" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="False" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+					<bool name="include_completed" value="True" />
+				</template_reference>
+				<template_reference name="required" value="requirements\required_statemodelfloat" List.ItemID="508508118">
+					<locstring name="ui_name" value="0" />
+					<enum name="reason" value="usage_and_display" overrideParent="True" />
+					<enum name="key" value="has_capital" overrideParent="True" />
+					<enum name="data_source_type" value="player_datasource" overrideParent="True" />
+					<float name="default_value" value="0" />
+					<float name="compare_to_value" value="1" overrideParent="True" />
+					<enum name="comparison" value="equal_to" />
+					<float name="ui_max_value" value="0" />
+					<float name="ui_min_value" value="0" />
+				</template_reference>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\statemodel_ext" List.ItemID="-1383350114" List.ParentItemID="-1383350114">
+			<instance_reference name="schema" value="statemodel_schema\buildings\civilizations\english\town_center_eng" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\combat_ext" List.ItemID="-211859969" List.ParentItemID="-211859969">
+			<template_reference name="kill_action_tree" value="state_tree_reference_info" comment="Check these weird values that inherit oddly">
+				<state_tree_node name="ActionTree_OpeningBranch" value="" overrideParent="True" />
+				<bool name="start_suspended" value="False" overrideParent="True" />
+			</template_reference>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\tier_ext" List.ItemID="-1829461480" List.ListAction="Append">
+			<list name="tier_group_list">
+				<list name="tier_group" List.ItemID="-880946645">
+					<group name="tier" List.ItemID="21223115">
+						<list name="tier_requirements">
+						</list>
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\english\buildings\town_center_eng\tier1_town_center_control_eng" />
+						<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+							<state_tree_node name="ActionTree_OpeningBranch" value="" />
+							<bool name="start_suspended" value="False" />
+						</template_reference>
+						<instance_reference name="statetree_tier_requirements_pbg" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="" />
+						<string name="tier_attachment_action" value="" />
+						<template_reference name="blueprint_conversion_parameters" value="blueprint_conversion_parameters">
+							<bool name="reissue_commands" value="False" />
+							<bool name="continue_state_trees" value="False" />
+							<bool name="remove_from_pending_deaths" value="False" />
+						</template_reference>
+						<string name="inventory_category_to_refresh_on_tier_up" value="" />
+					</group>
+					<group name="tier" List.ItemID="698997539">
+						<list name="tier_requirements">
+						</list>
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\english\buildings\town_center_eng\tier2_town_center_control_eng" />
+						<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+							<state_tree_node name="ActionTree_OpeningBranch" value="" />
+							<bool name="start_suspended" value="False" />
+						</template_reference>
+						<instance_reference name="statetree_tier_requirements_pbg" value="upgrade\dev\ages\feudal_age" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="" />
+						<string name="tier_attachment_action" value="act_set_current_age_feudal" overrideParent="True" />
+						<template_reference name="blueprint_conversion_parameters" value="blueprint_conversion_parameters">
+							<bool name="reissue_commands" value="False" />
+							<bool name="continue_state_trees" value="False" />
+							<bool name="remove_from_pending_deaths" value="False" />
+						</template_reference>
+						<string name="inventory_category_to_refresh_on_tier_up" value="" />
+					</group>
+					<group name="tier" List.ItemID="-213146635">
+						<list name="tier_requirements">
+						</list>
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\english\buildings\town_center_eng\tier3_town_center_control_eng" />
+						<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+							<state_tree_node name="ActionTree_OpeningBranch" value="" />
+							<bool name="start_suspended" value="False" />
+						</template_reference>
+						<instance_reference name="statetree_tier_requirements_pbg" value="upgrade\dev\ages\castle_age" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="" />
+						<string name="tier_attachment_action" value="act_set_current_age_castle" overrideParent="True" />
+						<template_reference name="blueprint_conversion_parameters" value="blueprint_conversion_parameters">
+							<bool name="reissue_commands" value="False" />
+							<bool name="continue_state_trees" value="False" />
+							<bool name="remove_from_pending_deaths" value="False" />
+						</template_reference>
+						<string name="inventory_category_to_refresh_on_tier_up" value="" />
+					</group>
+					<group name="tier" List.ItemID="-1340358897">
+						<list name="tier_requirements">
+						</list>
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\english\buildings\town_center_eng\tier4_town_center_control_eng" />
+						<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+							<state_tree_node name="ActionTree_OpeningBranch" value="" />
+							<bool name="start_suspended" value="False" />
+						</template_reference>
+						<instance_reference name="statetree_tier_requirements_pbg" value="upgrade\dev\ages\imperial_age" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="" />
+						<string name="tier_attachment_action" value="act_set_current_age_imperial" overrideParent="True" />
+						<template_reference name="blueprint_conversion_parameters" value="blueprint_conversion_parameters">
+							<bool name="reissue_commands" value="False" />
+							<bool name="continue_state_trees" value="False" />
+							<bool name="remove_from_pending_deaths" value="False" />
+						</template_reference>
+						<string name="inventory_category_to_refresh_on_tier_up" value="" />
+					</group>
+				</list>
+				<list name="tier_group" List.ItemID="1123914200">
+					<group name="tier" List.ItemID="-475168896">
+						<list name="tier_requirements">
+						</list>
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\english\outskirts\general\towncenter_01" comment="Outskirts go here. Removed until a fix for selection is in. To add back, copy and paste the following into this field:&#xD;&#xA;&#xD;&#xA;&lt;instance_reference name=&quot;attachments&quot; value=&quot;attachments\attachment_lists\civilizations\english\outskirts\general\towncenter_01&quot; /&gt;" overrideParent="True" />
+						<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+							<state_tree_node name="ActionTree_OpeningBranch" value="" />
+							<bool name="start_suspended" value="False" />
+						</template_reference>
+						<instance_reference name="statetree_tier_requirements_pbg" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="" />
+						<string name="tier_attachment_action" value="" />
+						<template_reference name="blueprint_conversion_parameters" value="blueprint_conversion_parameters">
+							<bool name="reissue_commands" value="False" />
+							<bool name="continue_state_trees" value="False" />
+							<bool name="remove_from_pending_deaths" value="False" />
+						</template_reference>
+						<string name="inventory_category_to_refresh_on_tier_up" value="" />
+					</group>
+					<group name="tier" List.ItemID="-1278428531">
+						<list name="tier_requirements">
+							<template_reference name="requirement" value="requirements\required_player_upgrade" List.ItemID="303597671">
+								<enum name="reason" value="usage" />
+								<locstring name="ui_name" value="0" />
+								<bool name="is_present" value="True" />
+								<int name="max_completed" value="100" />
+								<int name="min_completed" value="1" />
+								<instance_reference name="upgrade_name" value="upgrade\dev\ages\castle_age" />
+								<bool name="include_queued" value="False" />
+								<group name="include_pbg_parenting">
+									<bool name="include_child_pbgs" value="False" />
+									<bool name="include_parent_pbgs" value="False" />
+								</group>
+								<bool name="include_completed" value="True" />
+							</template_reference>
+						</list>
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\english\outskirts\general\towncenter_03" comment="Outskirts go here. Removed until a fix for selection is in. To add back, copy and paste the following into this field:&#xD;&#xA;&#xD;&#xA;&lt;instance_reference name=&quot;attachments&quot; value=&quot;attachments\attachment_lists\civilizations\english\outskirts\general\towncenter_03&quot; /&gt;" overrideParent="True" />
+						<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+							<state_tree_node name="ActionTree_OpeningBranch" value="" />
+							<bool name="start_suspended" value="False" />
+						</template_reference>
+						<instance_reference name="statetree_tier_requirements_pbg" value="upgrade\dev\ages\castle_age" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="" />
+						<string name="tier_attachment_action" value="" />
+						<template_reference name="blueprint_conversion_parameters" value="blueprint_conversion_parameters">
+							<bool name="reissue_commands" value="False" />
+							<bool name="continue_state_trees" value="False" />
+							<bool name="remove_from_pending_deaths" value="False" />
+						</template_reference>
+						<string name="inventory_category_to_refresh_on_tier_up" value="" />
+					</group>
+				</list>
+				<list name="tier_group" List.ItemID="78278168">
+					<group name="tier" List.ItemID="-2125005759">
+						<list name="tier_requirements">
+						</list>
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\common\buildings\building_town_center_bell_arch" />
+						<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+							<state_tree_node name="ActionTree_OpeningBranch" value="" />
+							<bool name="start_suspended" value="False" />
+						</template_reference>
+						<instance_reference name="statetree_tier_requirements_pbg" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="" />
+						<string name="tier_attachment_action" value="" />
+						<template_reference name="blueprint_conversion_parameters" value="blueprint_conversion_parameters">
+							<bool name="reissue_commands" value="False" />
+							<bool name="continue_state_trees" value="False" />
+							<bool name="remove_from_pending_deaths" value="False" />
+						</template_reference>
+						<string name="inventory_category_to_refresh_on_tier_up" value="" />
+					</group>
+				</list>
+			</list>
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="188762" />
+	<instance_reference name="parent_pbg" value="ebps\races\core\buildings\building_town_center" />
+</instance>

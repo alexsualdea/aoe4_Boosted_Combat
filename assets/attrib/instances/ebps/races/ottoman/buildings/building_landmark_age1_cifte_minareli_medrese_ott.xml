@@ -1,0 +1,196 @@
+<instance version="4" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1853756747" List.ParentItemID="1853756747">
+			<bool name="browsable_in_editor" value="True" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="119825962" List.ParentItemID="119825962">
+			<list name="unit_type_list" overrideParent="True">
+				<enum name="unit_type" value="building" List.ItemID="847519380" />
+				<enum name="unit_type" value="wonder" List.ItemID="-582065659" />
+				<enum name="unit_type" value="wonder_dark_age" List.ItemID="-181808673" />
+				<enum name="unit_type" value="siegeable" List.ItemID="-2044085441" />
+				<enum name="unit_type" value="select_special_building" List.ItemID="-641639240" />
+				<enum name="unit_type" value="landmark" List.ItemID="926726954" />
+				<enum name="unit_type" value="age1_landmark2" overrideParent="True" List.ItemID="210806830" />
+				<enum name="unit_type" value="resource_drop_off" List.ItemID="-1748340619" />
+				<enum name="unit_type" value="audio_production_landmark" List.ItemID="-1904763377" />
+			</list>
+			<list name="race_type_list" overrideParent="True">
+				<instance_reference name="race_type" value="racebps\ottoman" overrideParent="True" List.ItemID="920003705" />
+			</list>
+			<list name="unit_type_list_selection_keybind_only" overrideParent="True">
+				<enum name="unit_type" value="economy_building" List.ItemID="1683985803" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-514641933" List.ParentItemID="-514641933">
+			<float name="decorator_height" value="10" overrideParent="True" />
+			<file name="icon_name" value="races\ottoman\buildings\building_landmark_age1_cifte_minareli_medrese_ott" overrideParent="True" />
+			<locstring name="screen_name" value="11207679" overrideParent="True" />
+			<locstring name="extra_text" value="11217990" overrideParent="True" />
+			<template_reference name="help_text_formatter" value="ui_text_formatter" overrideParent="True">
+				<list name="formatter_arguments" overrideParent="True">
+					<int name="int_value" value="4" overrideParent="True" List.ItemID="1350005853" />
+					<int name="int_value" value="50" overrideParent="True" List.ItemID="-500650545" />
+					<int name="int_value" value="120" overrideParent="True" List.ItemID="-1842869030" />
+				</list>
+				<locstring name="formatter" value="11217425" overrideParent="True" />
+			</template_reference>
+			<string name="telemetry_name" value="Cifte Minareli Medrese" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\requirement_ext" List.ItemID="-1410531980" List.ParentItemID="-1410531980">
+			<list name="requirement_table" overrideParent="True">
+				<template_reference name="required" value="requirements\required_not" List.ItemID="-1951519633">
+					<enum name="reason" value="usage" />
+					<locstring name="ui_name" value="0" />
+					<list name="requirement_table">
+						<template_reference name="required" value="requirements\required_any_in_list" List.ItemID="14468141">
+							<enum name="reason" value="usage" />
+							<locstring name="ui_name" value="0" />
+							<list name="requirements">
+								<template_reference name="requirement" value="requirements\required_structure" List.ItemID="1935370744">
+									<enum name="reason" value="usage" />
+									<locstring name="ui_name" value="0" />
+									<instance_reference name="structure_name" value="ebps\races\ottoman\buildings\building_landmark_age1_cifte_minareli_medrese_ott" overrideParent="True" />
+									<int name="required_structure_count" value="1" />
+									<bool name="check_team" value="False" />
+									<bool name="require_construction_complete" value="False" />
+									<group name="include_pbg_parenting">
+										<bool name="include_child_pbgs" value="False" />
+										<bool name="include_parent_pbgs" value="False" />
+									</group>
+								</template_reference>
+								<template_reference name="requirement" value="requirements\required_structure" List.ItemID="-1198827990">
+									<enum name="reason" value="usage" />
+									<locstring name="ui_name" value="0" />
+									<instance_reference name="structure_name" value="ebps\races\ottoman\buildings\building_landmark_age1_han_caravanserai_ott" overrideParent="True" />
+									<int name="required_structure_count" value="1" />
+									<bool name="check_team" value="False" />
+									<bool name="require_construction_complete" value="False" />
+									<group name="include_pbg_parenting">
+										<bool name="include_child_pbgs" value="False" />
+										<bool name="include_parent_pbgs" value="False" />
+									</group>
+								</template_reference>
+							</list>
+						</template_reference>
+					</list>
+				</template_reference>
+				<template_reference name="required" value="requirements\required_player_upgrade" List.ItemID="199043587">
+					<enum name="reason" value="usage_and_display" />
+					<locstring name="ui_name" value="0" />
+					<bool name="is_present" value="False" />
+					<int name="max_completed" value="100" />
+					<int name="min_completed" value="1" />
+					<instance_reference name="upgrade_name" value="upgrade\dev\ages\feudal_age" />
+					<bool name="include_queued" value="False" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="False" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+					<bool name="include_completed" value="True" />
+				</template_reference>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\construction_ext" List.ItemID="-1019930499" List.ParentItemID="-1019930499">
+			<group name="on_construction_complete_state_tree_refs">
+				<string name="on_construction_complete_entity_state_tree_ref" value="imperial_council_ott\construction_complete" overrideParent="True" />
+			</group>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\ability_ext" List.ItemID="203393663" List.ParentItemID="203393663">
+			<list name="abilities" overrideParent="True">
+				<instance_reference name="ability" value="abilities\always_on_abilities\ottoman\cifte_minareli_berry_spawn_ott" List.ItemID="-1369556044" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\statemodel_ext" List.ItemID="340824163" List.ParentItemID="340824163">
+			<instance_reference name="schema" value="statemodel_schema\buildings\civilizations\ottoman\landmark_cifte_minareli_ott" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\upgrade_ext" overrideParent="True" List.ItemID="-255210680" List.ParentItemID="-255210680">
+			<bool name="must_be_in_supply" value="False" />
+			<float name="number_of_standard_slots" value="-1" />
+			<list name="standard_upgrades">
+				<instance_reference name="upgrade" value="upgrade\races\common\research\economy\upgrade_econ_resource_food_harvest_rate_2" List.ItemID="-1514948237" />
+				<instance_reference name="upgrade" value="upgrade\races\common\research\economy\upgrade_econ_resource_food_harvest_rate_3" List.ItemID="-311865952" />
+				<instance_reference name="upgrade" value="upgrade\races\common\research\economy\upgrade_econ_resource_food_harvest_rate_4" List.ItemID="-1585988784" />
+				<instance_reference name="upgrade" value="upgrade\races\common\research\upgrade_scout_forester" List.ItemID="40094189" />
+				<instance_reference name="upgrade" value="upgrade\races\common\research\unit\upgrade_unit_town_center_wheelbarrow_1" List.ItemID="-11239840" />
+				<instance_reference name="upgrade" value="upgrade\races\common\research\economy\upgrade_econ_villager_hunting_gear_1" List.ItemID="1079327667" />
+			</list>
+			<int name="max_queue_size_override" value="-1" />
+			<state_tree_node name="production_item_completed_openingbranch" value="" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\building_presentation_ext" List.ItemID="1440054338" List.ParentItemID="1440054338">
+			<file name="construction_stamp" value="art\stamps\scaffolding\ottoman\ott_const_land_b_01" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\tier_ext" overrideParent="True" List.ItemID="351825404" List.ListAction="Append">
+			<list name="tier_group_list" overrideParent="True">
+				<list name="tier_group" List.ItemID="-189952542">
+					<group name="tier" List.ItemID="-669436293">
+						<list name="tier_requirements">
+						</list>
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\ottoman\buildings\ott_landmark_b_01" overrideParent="True" />
+						<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+							<state_tree_node name="ActionTree_OpeningBranch" value="" />
+							<bool name="start_suspended" value="False" />
+						</template_reference>
+						<instance_reference name="statetree_tier_requirements_pbg" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="" />
+						<string name="tier_attachment_action" value="" />
+						<template_reference name="blueprint_conversion_parameters" value="blueprint_conversion_parameters">
+							<bool name="reissue_commands" value="False" />
+							<bool name="continue_state_trees" value="False" />
+							<bool name="remove_from_pending_deaths" value="False" />
+						</template_reference>
+						<string name="inventory_category_to_refresh_on_tier_up" value="" />
+					</group>
+				</list>
+				<list name="tier_group" overrideParent="True" List.ItemID="-85374070">
+					<group name="tier" List.ItemID="1819760836">
+						<list name="tier_requirements">
+						</list>
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\ottoman\outskirts\landmarks\ott_lan_b_01" overrideParent="True" />
+						<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+							<state_tree_node name="ActionTree_OpeningBranch" value="" />
+							<bool name="start_suspended" value="False" />
+						</template_reference>
+						<instance_reference name="statetree_tier_requirements_pbg" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="" />
+						<string name="tier_attachment_action" value="" />
+						<template_reference name="blueprint_conversion_parameters" value="blueprint_conversion_parameters">
+							<bool name="reissue_commands" value="False" />
+							<bool name="continue_state_trees" value="False" />
+							<bool name="remove_from_pending_deaths" value="False" />
+						</template_reference>
+						<string name="inventory_category_to_refresh_on_tier_up" value="" />
+					</group>
+				</list>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\resource_drop_off_ext" List.ItemID="109751243" List.ListAction="Append">
+			<enum_table name="accepted_resources">
+				<bool name="action" value="False" />
+				<bool name="command" value="False" />
+				<bool name="popcap" value="False" />
+				<bool name="food" value="True" overrideParent="True" />
+				<bool name="wood" value="False" />
+				<bool name="stone" value="False" />
+				<bool name="gold" value="False" />
+				<bool name="militia_hre" value="False" />
+			</enum_table>
+			<enum_table name="drop_off_time_seconds">
+				<float name="action" value="1" />
+				<float name="command" value="1" />
+				<float name="popcap" value="1" />
+				<float name="food" value="0" overrideParent="True" />
+				<float name="wood" value="1" />
+				<float name="stone" value="1" />
+				<float name="gold" value="1" />
+				<float name="militia_hre" value="1" />
+			</enum_table>
+			<bool name="allow_any_resource_after_construct" value="True" />
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="2055468" />
+	<instance_reference name="parent_pbg" value="ebps\races\core\buildings\building_wonder_age1" />
+</instance>

@@ -1,0 +1,466 @@
+<instance version="4" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1853756747" List.ParentItemID="1853756747">
+			<bool name="browsable_in_editor" value="True" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="1338650760" List.ParentItemID="1338650760">
+			<bool name="can_repair" value="True" overrideParent="True" />
+			<state_tree_node name="death_action_tree" value="building_death_actions\landmarks\landmarks_age1\fre_casernes_centrales" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="119825962" List.ParentItemID="119825962">
+			<list name="unit_type_list" overrideParent="True">
+				<enum name="unit_type" value="building" List.ItemID="1764754728" />
+				<enum name="unit_type" value="wonder" List.ItemID="-942421478" />
+				<enum name="unit_type" value="wonder_dark_age" List.ItemID="1555622567" />
+				<enum name="unit_type" value="siegeable" List.ItemID="-676682426" />
+				<enum name="unit_type" value="select_special_building" List.ItemID="456224289" />
+				<enum name="unit_type" value="landmark" List.ItemID="-643328051" />
+				<enum name="unit_type" value="age1_landmark1" List.ItemID="1342329048" />
+				<enum name="unit_type" value="military_only_production" overrideParent="True" List.ItemID="36822198" />
+				<enum name="unit_type" value="stable" List.ItemID="1622020699" />
+				<enum name="unit_type" value="audio_production_landmark" List.ItemID="1152504525" />
+			</list>
+			<list name="race_type_list" overrideParent="True">
+				<instance_reference name="race_type" value="racebps\french" List.ItemID="-959504038" />
+			</list>
+			<list name="unit_type_list_selection_keybind_only" overrideParent="True">
+				<enum name="unit_type" value="military_production_building" List.ItemID="-764310326" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-514641933" List.ParentItemID="-514641933">
+			<float name="decorator_height" value="9" overrideParent="True" />
+			<locstring name="help_text" value="0" overrideParent="True" />
+			<file name="icon_name" value="races\french\buildings\building-_landmark_age1_casernes_centrales" overrideParent="True" />
+			<locstring name="screen_name" value="11145222" overrideParent="True" />
+			<locstring name="extra_text" value="11202513" overrideParent="True" />
+			<instance_reference name="district_info" value="ui_district_info\french\dib_fre_cavalry_specializations" overrideParent="True" />
+			<group name="ui_codex_info">
+				<bool name="exclusive" value="True" overrideParent="True" />
+			</group>
+			<list name="ui_extra_infos" overrideParent="True">
+				<template_reference name="ui_extra_info" value="info\ui_extra_info" List.ItemID="1400533088">
+					<file name="icon" value="influence_decorator" overrideParent="True" />
+					<locstring name="description" value="0" overrideParent="True" />
+					<template_reference name="description_formatter" value="ui_text_formatter" overrideParent="True">
+						<list name="formatter_arguments" overrideParent="True">
+							<int name="int_value" value="20" overrideParent="True" List.ItemID="1913326246" />
+						</list>
+						<locstring name="formatter" value="11227030" overrideParent="True" />
+					</template_reference>
+				</template_reference>
+			</list>
+			<template_reference name="help_text_formatter" value="ui_text_formatter" overrideParent="True">
+				<list name="formatter_arguments" overrideParent="True">
+					<int name="int_value" value="20" overrideParent="True" List.ItemID="1432651186" />
+				</list>
+				<locstring name="formatter" value="11215384" overrideParent="True" />
+			</template_reference>
+			<string name="telemetry_name" value="School of Cavalry" overrideParent="True" />
+			<string name="selection_group" value="stables" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\requirement_ext" List.ItemID="-1410531980" List.ParentItemID="-1410531980">
+			<list name="requirement_table" overrideParent="True">
+				<template_reference name="required" value="requirements\required_not" List.ItemID="-991336065">
+					<enum name="reason" value="usage" />
+					<locstring name="ui_name" value="11142977" />
+					<list name="requirement_table">
+						<template_reference name="required" value="requirements\required_any_in_list" List.ItemID="2099529246">
+							<enum name="reason" value="usage" />
+							<locstring name="ui_name" value="0" />
+							<list name="requirements">
+								<template_reference name="requirement" value="requirements\required_structure" List.ItemID="-807214672">
+									<enum name="reason" value="usage" />
+									<locstring name="ui_name" value="0" />
+									<instance_reference name="structure_name" value="ebps\races\french\buildings\building_landmark_age1_chamber_of_commerce_fre\building_landmark_age1_chamber_of_commerce_fre" overrideParent="True" />
+									<int name="required_structure_count" value="1" />
+									<bool name="check_team" value="False" />
+									<bool name="require_construction_complete" value="False" />
+									<group name="include_pbg_parenting">
+										<bool name="include_child_pbgs" value="False" />
+										<bool name="include_parent_pbgs" value="False" />
+									</group>
+								</template_reference>
+								<template_reference name="requirement" value="requirements\required_structure" List.ItemID="-1527960151">
+									<enum name="reason" value="usage" />
+									<locstring name="ui_name" value="0" />
+									<instance_reference name="structure_name" value="ebps\races\french\buildings\building_landmark_age1_casernes_centrales_fre\building_landmark_age1_casernes_centrales_fre" />
+									<int name="required_structure_count" value="1" />
+									<bool name="check_team" value="False" />
+									<bool name="require_construction_complete" value="False" />
+									<group name="include_pbg_parenting">
+										<bool name="include_child_pbgs" value="False" />
+										<bool name="include_parent_pbgs" value="False" />
+									</group>
+								</template_reference>
+							</list>
+						</template_reference>
+					</list>
+				</template_reference>
+				<template_reference name="required" value="requirements\required_player_upgrade" List.ItemID="1880411789">
+					<enum name="reason" value="usage_and_display" />
+					<locstring name="ui_name" value="0" />
+					<bool name="is_present" value="False" />
+					<int name="max_completed" value="100" />
+					<int name="min_completed" value="1" />
+					<instance_reference name="upgrade_name" value="upgrade\dev\ages\feudal_age" />
+					<bool name="include_queued" value="False" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="False" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+					<bool name="include_completed" value="True" />
+				</template_reference>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\action_apply_ext" List.ItemID="400135735" List.ParentItemID="400135735">
+			<list name="deferred_action_state_trees" overrideParent="True">
+				<group name="container" List.ItemID="1440623733">
+					<string name="state_tree" value="school_of_cavalry_construction_complete_fre" overrideParent="True" />
+				</group>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\site_ext" List.ItemID="-1469122038" List.ParentItemID="-1469122038">
+			<bool name="snap_to_construction_grid" value="True" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\construction_ext" List.ItemID="-1019930499" List.ParentItemID="-1019930499">
+			<group name="on_construction_complete_state_tree_refs">
+				<string name="while_construction_complete_entity_state_tree_ref" value="school_of_cavalry_construction_complete_fre" overrideParent="True" />
+			</group>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\upgrade_ext" List.ItemID="-255210680" List.ParentItemID="-255210680">
+			<list name="standard_upgrades" overrideParent="True">
+				<instance_reference name="upgrade" value="upgrade\races\common\units\upgrade_unit_horseman_3" List.ItemID="-22601844" />
+				<instance_reference name="upgrade" value="upgrade\races\common\units\upgrade_unit_horseman_4" List.ItemID="357300431" />
+				<instance_reference name="upgrade" value="upgrade\races\french\units\upgrade_unit_knight_3_fre" overrideParent="True" List.ItemID="-172619007" />
+				<instance_reference name="upgrade" value="upgrade\races\french\units\upgrade_unit_knight_4_fre" overrideParent="True" List.ItemID="-852860151" />
+				<instance_reference name="upgrade" value="upgrade\races\french\research\upgrade_cavalry_cantled_saddle_fre" List.ItemID="-1848357141" />
+				<instance_reference name="upgrade" value="upgrade\races\french\research\upgrade_cavalry_chivalry_fre" List.ItemID="-909551241" />
+				<instance_reference name="upgrade" value="upgrade\races\common\research\upgrade_scout_los_increase" List.ItemID="-1649548248" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\building_presentation_ext" List.ItemID="1440054338" List.ParentItemID="1440054338">
+			<file name="construction_stamp" value="art\stamps\scaffolding\french\fre_casernes_centrales" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\tier_ext" overrideParent="True" List.ItemID="1815235991" List.ListAction="Append">
+			<list name="tier_group_list" overrideParent="True">
+				<list name="tier_group" List.ItemID="2005319718">
+					<group name="tier" List.ItemID="1158158098">
+						<list name="tier_requirements">
+						</list>
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\french\buildings\landmark_casernes_centrales_fre\landmark_casernes_centrales_fre" overrideParent="True" />
+						<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+							<state_tree_node name="ActionTree_OpeningBranch" value="" />
+							<bool name="start_suspended" value="False" />
+						</template_reference>
+						<instance_reference name="statetree_tier_requirements_pbg" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="" />
+						<string name="tier_attachment_action" value="" />
+						<template_reference name="blueprint_conversion_parameters" value="blueprint_conversion_parameters">
+							<bool name="reissue_commands" value="False" />
+							<bool name="continue_state_trees" value="False" />
+							<bool name="remove_from_pending_deaths" value="False" />
+						</template_reference>
+						<string name="inventory_category_to_refresh_on_tier_up" value="" />
+					</group>
+				</list>
+				<list name="tier_group" overrideParent="True" List.ItemID="2132660292">
+					<group name="tier" List.ItemID="-467411059">
+						<list name="tier_requirements">
+						</list>
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\french\outskirts\wonders\won_ccentrale" overrideParent="True" />
+						<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+							<state_tree_node name="ActionTree_OpeningBranch" value="" />
+							<bool name="start_suspended" value="False" />
+						</template_reference>
+						<instance_reference name="statetree_tier_requirements_pbg" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="" />
+						<string name="tier_attachment_action" value="" />
+						<template_reference name="blueprint_conversion_parameters" value="blueprint_conversion_parameters">
+							<bool name="reissue_commands" value="False" />
+							<bool name="continue_state_trees" value="False" />
+							<bool name="remove_from_pending_deaths" value="False" />
+						</template_reference>
+						<string name="inventory_category_to_refresh_on_tier_up" value="" />
+					</group>
+				</list>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\spawner_ext" overrideParent="True" List.ItemID="-607350221" List.ListAction="Append">
+			<bool name="must_be_in_supply" value="False" />
+			<float name="reinforce_radius" value="0" />
+			<list name="spawn_items" overrideParent="True">
+				<group name="spawn_item" comment="hussar - feudal age" List.ItemID="1380448312">
+					<instance_reference name="entity" value="" />
+					<instance_reference name="squad" value="sbps\races\french\unit_horseman_2_fre" overrideParent="True" />
+					<bool name="spawn_at_map_entry_point" value="False" />
+					<group name="ui_position">
+						<int name="ui_position_row" value="1" />
+						<int name="ui_position_column" value="1" />
+					</group>
+					<instance_reference name="ui_menu" value="" />
+					<int name="number_to_spawn" value="1" />
+					<enum_table name="item_cost_adjustment">
+						<float name="action" value="0" />
+						<float name="command" value="0" overrideParent="True" />
+						<float name="popcap" value="0" />
+						<float name="food" value="0" overrideParent="True" />
+						<float name="wood" value="0" overrideParent="True" />
+						<float name="stone" value="0" />
+						<float name="gold" value="0" />
+						<float name="militia_hre" value="0" />
+					</enum_table>
+					<locstring name="ui_screen_name" value="0" />
+					<locstring name="ui_help_text" value="0" />
+					<bool name="can_be_cancelled" value="True" />
+					<int name="number_to_queue_up_to_when_modified" value="5" />
+					<list name="additional_squads">
+					</list>
+					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_stable\produce_horseman" overrideParent="True" />
+				</group>
+				<group name="spawn_item" comment="hussar - castle age" List.ItemID="257774129">
+					<instance_reference name="entity" value="" />
+					<instance_reference name="squad" value="sbps\races\french\unit_horseman_3_fre" overrideParent="True" />
+					<bool name="spawn_at_map_entry_point" value="False" />
+					<group name="ui_position">
+						<int name="ui_position_row" value="1" />
+						<int name="ui_position_column" value="1" />
+					</group>
+					<instance_reference name="ui_menu" value="" />
+					<int name="number_to_spawn" value="1" />
+					<enum_table name="item_cost_adjustment">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" />
+						<float name="food" value="0" overrideParent="True" />
+						<float name="wood" value="0" overrideParent="True" />
+						<float name="stone" value="0" />
+						<float name="gold" value="0" />
+						<float name="militia_hre" value="0" />
+					</enum_table>
+					<locstring name="ui_screen_name" value="0" />
+					<locstring name="ui_help_text" value="0" />
+					<bool name="can_be_cancelled" value="True" />
+					<int name="number_to_queue_up_to_when_modified" value="5" />
+					<list name="additional_squads">
+					</list>
+					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_stable\produce_horseman" overrideParent="True" />
+				</group>
+				<group name="spawn_item" comment="hussar - imperial age" List.ItemID="-2020269111">
+					<instance_reference name="entity" value="" />
+					<instance_reference name="squad" value="sbps\races\french\unit_horseman_4_fre" overrideParent="True" />
+					<bool name="spawn_at_map_entry_point" value="False" />
+					<group name="ui_position">
+						<int name="ui_position_row" value="1" />
+						<int name="ui_position_column" value="1" />
+					</group>
+					<instance_reference name="ui_menu" value="" />
+					<int name="number_to_spawn" value="1" />
+					<enum_table name="item_cost_adjustment">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" />
+						<float name="food" value="0" overrideParent="True" />
+						<float name="wood" value="0" overrideParent="True" />
+						<float name="stone" value="0" />
+						<float name="gold" value="0" />
+						<float name="militia_hre" value="0" />
+					</enum_table>
+					<locstring name="ui_screen_name" value="0" />
+					<locstring name="ui_help_text" value="0" />
+					<bool name="can_be_cancelled" value="True" />
+					<int name="number_to_queue_up_to_when_modified" value="5" />
+					<list name="additional_squads">
+					</list>
+					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_stable\produce_horseman" overrideParent="True" />
+				</group>
+				<group name="spawn_item" comment="lancer - feudal age" List.ItemID="-732221649">
+					<instance_reference name="entity" value="" />
+					<instance_reference name="squad" value="sbps\races\french\unit_knight_2_fre" overrideParent="True" />
+					<bool name="spawn_at_map_entry_point" value="False" />
+					<group name="ui_position">
+						<int name="ui_position_row" value="1" overrideParent="True" />
+						<int name="ui_position_column" value="2" />
+					</group>
+					<instance_reference name="ui_menu" value="" />
+					<int name="number_to_spawn" value="1" />
+					<enum_table name="item_cost_adjustment">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" />
+						<float name="food" value="0" overrideParent="True" />
+						<float name="wood" value="0" overrideParent="True" />
+						<float name="stone" value="0" />
+						<float name="gold" value="0" overrideParent="True" />
+						<float name="militia_hre" value="0" />
+					</enum_table>
+					<locstring name="ui_screen_name" value="0" />
+					<locstring name="ui_help_text" value="0" />
+					<bool name="can_be_cancelled" value="True" />
+					<int name="number_to_queue_up_to_when_modified" value="5" />
+					<list name="additional_squads">
+					</list>
+					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_stable\produce_knight" overrideParent="True" />
+				</group>
+				<group name="spawn_item" comment="lancer - castle age" List.ItemID="-1050416071">
+					<instance_reference name="entity" value="" />
+					<instance_reference name="squad" value="sbps\races\french\unit_knight_3_fre" overrideParent="True" />
+					<bool name="spawn_at_map_entry_point" value="False" />
+					<group name="ui_position">
+						<int name="ui_position_row" value="1" overrideParent="True" />
+						<int name="ui_position_column" value="2" />
+					</group>
+					<instance_reference name="ui_menu" value="" />
+					<int name="number_to_spawn" value="1" />
+					<enum_table name="item_cost_adjustment">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" />
+						<float name="food" value="0" overrideParent="True" />
+						<float name="wood" value="0" overrideParent="True" />
+						<float name="stone" value="0" />
+						<float name="gold" value="0" overrideParent="True" />
+						<float name="militia_hre" value="0" />
+					</enum_table>
+					<locstring name="ui_screen_name" value="0" />
+					<locstring name="ui_help_text" value="0" />
+					<bool name="can_be_cancelled" value="True" />
+					<int name="number_to_queue_up_to_when_modified" value="5" />
+					<list name="additional_squads">
+					</list>
+					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_stable\produce_knight" overrideParent="True" />
+				</group>
+				<group name="spawn_item" comment="lancer - imperial age" List.ItemID="-991712857">
+					<instance_reference name="entity" value="" />
+					<instance_reference name="squad" value="sbps\races\french\unit_knight_4_fre" overrideParent="True" />
+					<bool name="spawn_at_map_entry_point" value="False" />
+					<group name="ui_position">
+						<int name="ui_position_row" value="1" overrideParent="True" />
+						<int name="ui_position_column" value="2" />
+					</group>
+					<instance_reference name="ui_menu" value="" />
+					<int name="number_to_spawn" value="1" />
+					<enum_table name="item_cost_adjustment">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" />
+						<float name="food" value="0" overrideParent="True" />
+						<float name="wood" value="0" overrideParent="True" />
+						<float name="stone" value="0" />
+						<float name="gold" value="0" overrideParent="True" />
+						<float name="militia_hre" value="0" overrideParent="True" />
+					</enum_table>
+					<locstring name="ui_screen_name" value="0" />
+					<locstring name="ui_help_text" value="0" />
+					<bool name="can_be_cancelled" value="True" />
+					<int name="number_to_queue_up_to_when_modified" value="5" />
+					<list name="additional_squads">
+					</list>
+					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_stable\produce_knight" overrideParent="True" />
+				</group>
+				<group name="spawn_item" comment="Scout" overrideParent="True" List.ItemID="-2101002655">
+					<group name="ui_position">
+						<int name="ui_position_row" value="1" />
+						<int name="ui_position_column" value="3" />
+					</group>
+					<instance_reference name="entity" value="" overrideParent="True" />
+					<instance_reference name="squad" value="sbps\races\french\unit_scout_1_fre" overrideParent="True" />
+					<bool name="spawn_at_map_entry_point" value="False" />
+					<instance_reference name="ui_menu" value="" />
+					<int name="number_to_spawn" value="1" />
+					<locstring name="ui_screen_name" value="0" />
+					<locstring name="ui_help_text" value="0" />
+					<enum_table name="item_cost_adjustment">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" />
+						<float name="food" value="0" />
+						<float name="wood" value="0" />
+						<float name="stone" value="0" />
+						<float name="gold" value="0" />
+						<float name="militia_hre" value="0" />
+					</enum_table>
+					<bool name="can_be_cancelled" value="True" />
+					<int name="number_to_queue_up_to_when_modified" value="5" />
+					<list name="additional_squads">
+					</list>
+					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_stable\produce_scout" overrideParent="True" />
+				</group>
+			</list>
+			<list name="bonus_xp_from_hold_list">
+			</list>
+			<list name="reinforce_requirements">
+			</list>
+			<bool name="spawn_to_hold_try_first" value="False" />
+			<list name="queue_requirements">
+			</list>
+			<bool name="can_rally" value="True" />
+			<template_reference name="animated_spawn_option" value="options\none">
+			</template_reference>
+			<int name="max_queue_size_override" value="-1" />
+			<string name="queue_requirements_openingbranch" value="" />
+			<string name="reinforce_requirements_openingbranch" value="" />
+			<state_tree_node name="production_item_completed_openingbranch" value="building_production_item_completed\Master\building_production_item_complete\building_production_item_complete_cavalry" overrideParent="True" />
+			<bool name="enforce_minimum_clearance_at_spawn_positions" value="True" overrideParent="True" />
+			<bool name="enforce_minimum_clearance_if_entities_blocking" value="True" />
+			<float name="enforce_minimum_clearance_at_spawn_positions_search_range" value="30" />
+			<instance_reference name="rally_pass_type" value="pass_types\infantry" overrideParent="True" />
+			<bool name="reset_production_progress_at_current_pop_cap" value="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\district_bonuses_ext" List.ItemID="-1544716933" List.ListAction="Append">
+			<bool name="update_on_upgrade_changed" value="False" />
+			<bool name="update_on_construction_complete" value="True" />
+			<list name="district_bonuses" overrideParent="True">
+				<template_reference name="district_bonus" value="district_bonus" comment="Keep Production/Research bonus" List.ItemID="2029035292">
+					<template_reference name="requirement" value="options\ebpextensions\districtbonusesext\requirements\district_bonus_entity_requirement">
+						<list name="dynamic_requirements" overrideParent="True">
+						</list>
+						<list name="satisfying_entity_groups" overrideParent="True">
+							<group name="satisfying_entity_group" List.ItemID="-1081764614">
+								<list name="satisfying_entities" overrideParent="True">
+									<instance_reference name="entity" value="ebps\races\french\buildings\building_defense_keep_fre\building_defense_keep_fre" overrideParent="True" List.ItemID="1986166100" />
+									<instance_reference name="entity" value="ebps\races\french\buildings\building_landmark_age2_la_chateau_rouge_fre\building_landmark_age2_la_chateau_rouge_fre" List.ItemID="-1927014753" />
+									<instance_reference name="entity" value="ebps\races\french\buildings\building_landmark_age3_ecole_de_poudre_a_canon_fre\building_landmark_age3_ecole_de_poudre_a_canon_fre" List.ItemID="-672202921" />
+									<instance_reference name="entity" value="ebps\races\french\buildings\building_landmark_age3_le_grande_university_fre\building_landmark_age3_le_grande_university_fre" overrideParent="True" List.ItemID="-484279088" />
+								</list>
+							</group>
+						</list>
+					</template_reference>
+					<uniqueid name="id" value="1472071" />
+					<template_reference name="action_tree" value="state_tree_reference_info">
+						<state_tree_node name="ActionTree_OpeningBranch" value="influence_unit_cost_fre" overrideParent="True" />
+						<bool name="start_suspended" value="False" />
+					</template_reference>
+				</template_reference>
+				<template_reference name="district_bonus" value="district_bonus" comment="Research Speed increase from Royal Institute" List.ItemID="1735936199">
+					<template_reference name="requirement" value="options\ebpextensions\districtbonusesext\requirements\district_bonus_entity_requirement">
+						<list name="dynamic_requirements">
+						</list>
+						<list name="satisfying_entity_groups" overrideParent="True">
+							<group name="satisfying_entity_group" List.ItemID="-1743451928">
+								<list name="satisfying_entities" overrideParent="True">
+									<instance_reference name="entity" value="ebps\races\french\buildings\building_landmark_age3_le_grande_university_fre\building_landmark_age3_le_grande_university_fre" overrideParent="True" List.ItemID="1066804235" />
+								</list>
+							</group>
+						</list>
+					</template_reference>
+					<uniqueid name="id" value="1472073" />
+					<template_reference name="action_tree" value="state_tree_reference_info">
+						<state_tree_node name="ActionTree_OpeningBranch" value="influence_improved_research_cost_fre\improved_research_cost" overrideParent="True" />
+						<bool name="start_suspended" value="False" />
+					</template_reference>
+				</template_reference>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\district_generator_ext" List.ItemID="145404065" List.ListAction="Append">
+			<float name="range_metres" value="0" overrideParent="True" />
+			<int name="generator_value" value="150" />
+			<bool name="disable_generation_on_spawn" value="False" />
+			<bool name="is_root_generator" value="False" />
+			<int name="district_palette_id" value="0" />
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="132778" />
+	<instance_reference name="parent_pbg" value="ebps\races\core\buildings\building_wonder_age1" />
+</instance>

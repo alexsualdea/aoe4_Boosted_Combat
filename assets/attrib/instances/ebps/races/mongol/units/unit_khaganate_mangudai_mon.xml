@@ -1,0 +1,43 @@
+<instance version="4" description="Mongol castle age horse archer" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1491559579" List.ParentItemID="1491559579">
+			<float name="entity_scale" value="75" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\cost_ext" List.ItemID="1012099503" List.ParentItemID="1012099503">
+			<group name="time_cost">
+				<float name="time_seconds" value="50" overrideParent="True" />
+				<enum_table name="cost">
+					<float name="food" value="0" overrideParent="True" />
+					<float name="gold" value="0" overrideParent="True" />
+				</enum_table>
+			</group>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\tier_ext" overrideParent="True" List.ItemID="181591875" List.ParentItemID="181591875">
+			<list name="tier_group_list">
+				<list name="tier_group" overrideParent="True" List.ItemID="-78734107" List.ParentItemID="-78734107">
+					<group name="tier" List.ItemID="1939517555">
+						<list name="tier_requirements">
+						</list>
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\mongol\units\tier4_cavalry_horsearcher_mon" overrideParent="True" />
+						<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+							<state_tree_node name="ActionTree_OpeningBranch" value="tier_unit_exposure_dca" overrideParent="True" />
+							<bool name="start_suspended" value="False" />
+						</template_reference>
+						<instance_reference name="statetree_tier_requirements_pbg" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="" overrideParent="True" />
+						<string name="tier_attachment_action" value="" />
+						<template_reference name="blueprint_conversion_parameters" value="blueprint_conversion_parameters">
+							<bool name="reissue_commands" value="False" />
+							<bool name="continue_state_trees" value="True" />
+							<bool name="remove_from_pending_deaths" value="False" />
+						</template_reference>
+						<string name="inventory_category_to_refresh_on_tier_up" value="" />
+					</group>
+				</list>
+			</list>
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="2122463" />
+	<instance_reference name="parent_pbg" value="ebps\races\mongol\units\unit_horsearcher_4_mon" />
+</instance>

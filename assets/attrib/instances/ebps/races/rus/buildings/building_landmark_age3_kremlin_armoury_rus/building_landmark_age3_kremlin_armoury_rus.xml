@@ -1,0 +1,183 @@
+<instance version="4" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\requirement_ext" List.ItemID="665441583" List.ParentItemID="665441583">
+			<list name="requirement_table" overrideParent="True">
+				<template_reference name="required" value="requirements\required_not" List.ItemID="630779002">
+					<enum name="reason" value="usage" />
+					<locstring name="ui_name" value="11142977" />
+					<list name="requirement_table">
+						<template_reference name="required" value="requirements\required_any_in_list" List.ItemID="-757680477">
+							<enum name="reason" value="usage" />
+							<locstring name="ui_name" value="0" />
+							<list name="requirements">
+								<template_reference name="requirement" value="requirements\required_structure" List.ItemID="-622432588">
+									<enum name="reason" value="usage" />
+									<locstring name="ui_name" value="0" />
+									<instance_reference name="structure_name" value="ebps\races\rus\buildings\building_landmark_age3_kremlin_armoury_rus\building_landmark_age3_kremlin_armoury_rus" />
+									<int name="required_structure_count" value="1" />
+									<bool name="check_team" value="False" />
+									<bool name="require_construction_complete" value="False" />
+									<group name="include_pbg_parenting">
+										<bool name="include_child_pbgs" value="False" />
+										<bool name="include_parent_pbgs" value="False" />
+									</group>
+								</template_reference>
+								<template_reference name="requirement" value="requirements\required_structure" List.ItemID="783124503">
+									<enum name="reason" value="usage" />
+									<locstring name="ui_name" value="0" />
+									<instance_reference name="structure_name" value="ebps\races\rus\buildings\building_landmark_age3_spassakaya_tower_rus\building_landmark_age3_spassakaya_tower_control_rus" />
+									<int name="required_structure_count" value="1" />
+									<bool name="check_team" value="False" />
+									<bool name="require_construction_complete" value="False" />
+									<group name="include_pbg_parenting">
+										<bool name="include_child_pbgs" value="False" />
+										<bool name="include_parent_pbgs" value="False" />
+									</group>
+								</template_reference>
+							</list>
+						</template_reference>
+					</list>
+				</template_reference>
+				<template_reference name="required" value="requirements\required_player_upgrade" List.ItemID="-355192409">
+					<enum name="reason" value="usage_and_display" />
+					<locstring name="ui_name" value="0" />
+					<bool name="is_present" value="False" />
+					<int name="max_completed" value="100" />
+					<int name="min_completed" value="1" />
+					<instance_reference name="upgrade_name" value="upgrade\dev\ages\imperial_age" />
+					<bool name="include_queued" value="False" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="False" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+					<bool name="include_completed" value="True" />
+				</template_reference>
+				<template_reference name="required" value="requirements\required_player_upgrade" List.ItemID="2081834893">
+					<enum name="reason" value="usage_and_display" />
+					<locstring name="ui_name" value="0" />
+					<bool name="is_present" value="True" />
+					<int name="max_completed" value="100" />
+					<int name="min_completed" value="1" />
+					<instance_reference name="upgrade_name" value="upgrade\dev\ages\castle_age" />
+					<bool name="include_queued" value="False" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="False" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+					<bool name="include_completed" value="True" />
+				</template_reference>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="77336098" List.ParentItemID="77336098">
+			<state_tree_node name="death_action_tree" value="building_death_actions\landmarks\landmarks_age3\rus_kremlin_armoury" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="901697529" List.ParentItemID="901697529">
+			<bool name="browsable_in_editor" value="True" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="555024994" List.ParentItemID="555024994">
+			<list name="unit_type_list" overrideParent="True">
+				<enum name="unit_type" value="building" List.ItemID="1892022960" />
+				<enum name="unit_type" value="wonder" List.ItemID="-1482651575" />
+				<enum name="unit_type" value="wonder_castle_age" List.ItemID="-1346637590" />
+				<enum name="unit_type" value="siegeable" List.ItemID="-373307429" />
+				<enum name="unit_type" value="select_special_building" List.ItemID="-1747554938" />
+				<enum name="unit_type" value="landmark" List.ItemID="-59617686" />
+				<enum name="unit_type" value="age3_landmark1" List.ItemID="-249324904" />
+				<enum name="unit_type" value="kremlin_armory_rus" List.ItemID="414235148" />
+				<enum name="unit_type" value="audio_production_landmark" List.ItemID="-369505253" />
+			</list>
+			<list name="race_type_list" overrideParent="True">
+				<instance_reference name="race_type" value="racebps\rus" List.ItemID="-1706642522" />
+			</list>
+			<list name="unit_type_list_selection_keybind_only" overrideParent="True">
+				<enum name="unit_type" value="research_building" List.ItemID="1938278965" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="646243642" List.ParentItemID="646243642">
+			<float name="decorator_height" value="10" overrideParent="True" />
+			<file name="icon_name" value="races\rus\buildings\building_landmark_age3_kremlin_armory" overrideParent="True" />
+			<locstring name="screen_name" value="11146036" overrideParent="True" />
+			<float name="minimap_icon_scale" value="0.3" overrideParent="True" />
+			<locstring name="extra_text" value="11185325" overrideParent="True" />
+			<bool name="use_construction_range_on_selection" value="True" overrideParent="True" />
+			<template_reference name="help_text_formatter" value="ui_text_formatter" overrideParent="True">
+				<list name="formatter_arguments" overrideParent="True">
+					<int name="int_value" value="20" overrideParent="True" List.ItemID="1333578957" />
+				</list>
+				<locstring name="formatter" value="11215220" overrideParent="True" />
+			</template_reference>
+			<string name="telemetry_name" value="High Armory" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\site_ext" List.ItemID="-1963866549" List.ParentItemID="-1963866549">
+			<bool name="snap_to_construction_grid" value="True" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\construction_ext" List.ItemID="1828097256" List.ParentItemID="1828097256">
+			<instance_reference name="ui_range" value="ui_reticule\default_range" overrideParent="True" />
+			<float name="ui_range_radius" value="30" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\ability_ext" List.ItemID="669128015" List.ParentItemID="669128015">
+			<list name="abilities" overrideParent="True">
+				<instance_reference name="ability" value="abilities\always_on_abilities\rus\high_armory_production_aura_rus" List.ItemID="362104089" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\upgrade_ext" List.ItemID="-1352379827" List.ParentItemID="-1352379827">
+			<list name="standard_upgrades" overrideParent="True">
+				<instance_reference name="upgrade" value="upgrade\races\rus\research\upgrade_siege_crew_training_rus" List.ItemID="1424931053" />
+				<instance_reference name="upgrade" value="upgrade\races\rus\research\upgrade_siege_fined_tuned_guns_rus" List.ItemID="1497753228" />
+				<instance_reference name="upgrade" value="upgrade\races\rus\research\upgrade_siege_improvements_rus" List.ItemID="207748257" />
+				<instance_reference name="upgrade" value="upgrade\races\rus\research\upgrade_springald_range_rus" List.ItemID="-1431740822" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\building_presentation_ext" List.ItemID="-823671089" List.ParentItemID="-823671089">
+			<file name="construction_stamp" value="art\stamps\scaffolding\rus\rus_kremlin_armoury" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\tier_ext" overrideParent="True" List.ItemID="-1457289428" List.ListAction="Append">
+			<list name="tier_group_list" overrideParent="True">
+				<list name="tier_group" List.ItemID="-571477377">
+					<group name="tier" List.ItemID="2116526705">
+						<list name="tier_requirements">
+						</list>
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\rus\buildings\landmark_kremlin_armory_rus\landmark_kremlin_armory_rus" overrideParent="True" />
+						<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+							<state_tree_node name="ActionTree_OpeningBranch" value="" />
+							<bool name="start_suspended" value="False" />
+						</template_reference>
+						<instance_reference name="statetree_tier_requirements_pbg" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="" />
+						<string name="tier_attachment_action" value="" />
+						<template_reference name="blueprint_conversion_parameters" value="blueprint_conversion_parameters">
+							<bool name="reissue_commands" value="False" />
+							<bool name="continue_state_trees" value="False" />
+							<bool name="remove_from_pending_deaths" value="False" />
+						</template_reference>
+						<string name="inventory_category_to_refresh_on_tier_up" value="" />
+					</group>
+				</list>
+				<list name="tier_group" overrideParent="True" List.ItemID="1467877734">
+					<group name="tier" List.ItemID="-1817752364">
+						<list name="tier_requirements">
+						</list>
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\rus\outskirts\wonders\won_karmoury" overrideParent="True" />
+						<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+							<state_tree_node name="ActionTree_OpeningBranch" value="" />
+							<bool name="start_suspended" value="False" />
+						</template_reference>
+						<instance_reference name="statetree_tier_requirements_pbg" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="" />
+						<string name="tier_attachment_action" value="" />
+						<template_reference name="blueprint_conversion_parameters" value="blueprint_conversion_parameters">
+							<bool name="reissue_commands" value="False" />
+							<bool name="continue_state_trees" value="False" />
+							<bool name="remove_from_pending_deaths" value="False" />
+						</template_reference>
+						<string name="inventory_category_to_refresh_on_tier_up" value="" />
+					</group>
+				</list>
+			</list>
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="133433" />
+	<instance_reference name="parent_pbg" value="ebps\races\core\buildings\building_wonder_age3" />
+</instance>

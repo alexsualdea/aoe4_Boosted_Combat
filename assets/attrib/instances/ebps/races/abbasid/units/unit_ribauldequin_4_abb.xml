@@ -1,0 +1,58 @@
+<instance version="4" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-164298849" List.ParentItemID="-164298849">
+			<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\abbasid\units\unit_ribauldequin_4_abb" overrideParent="True" />
+			<float name="entity_scale" value="75" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\cost_ext" List.ItemID="-1807025588" List.ParentItemID="-1807025588">
+			<group name="time_cost">
+				<enum_table name="cost">
+					<float name="wood" value="400" overrideParent="True" />
+				</enum_table>
+			</group>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-686898218" List.ParentItemID="-686898218">
+			<float name="hitpoints" value="480" overrideParent="True" />
+			<enum_table name="armor_scaler_by_damage_type">
+				<float name="Melee" value="0" overrideParent="True" />
+				<float name="Fire" value="10" overrideParent="True" />
+			</enum_table>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="223061918" List.ParentItemID="223061918">
+			<list name="race_type_list" overrideParent="True">
+				<instance_reference name="race_type" value="racebps\abbasid" List.ItemID="1599962902" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\combat_ext" List.ItemID="-1258960924" List.ParentItemID="-1258960924">
+			<list name="hardpoints">
+				<group name="hardpoint" List.ItemID="-1376879454" List.ParentItemID="-1376879454">
+					<list name="weapon_table">
+						<group name="weapon" List.ItemID="-542612263" List.ParentItemID="-542612263">
+							<template_reference name="weapon_entity_attachment" value="" overrideParent="True">
+							</template_reference>
+							<template_reference name="non_entity_weapon_wrapper" value="non_entity_weapon_wrapper" overrideParent="True">
+								<instance_reference name="non_entity_weapon_wrapper_pbg" value="weapon\races\common\ranged\weapon_ribauldequin_4" overrideParent="True" />
+								<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\core\weapons\wpn_siege_ribauldequin_4" overrideParent="True" />
+								<string name="marker_name_parent" value="" overrideParent="True" />
+							</template_reference>
+						</group>
+					</list>
+				</group>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\tier_ext" List.ItemID="-1320778029" List.ParentItemID="-1320778029">
+			<list name="tier_group_list">
+				<list name="tier_group" List.ItemID="1304605813" List.ParentItemID="1304605813">
+					<group name="tier" List.ItemID="1317888113" List.ParentItemID="1317888113">
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\abbasid\units\tier4_ribauldequin_abb" overrideParent="True" />
+						<template_reference name="blueprint_conversion_parameters" value="blueprint_conversion_parameters">
+							<bool name="continue_state_trees" value="True" overrideParent="True" />
+						</template_reference>
+					</group>
+				</list>
+			</list>
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="199682" />
+	<instance_reference name="parent_pbg" value="ebps\races\core\units\unit_ribauldequin_4" />
+</instance>

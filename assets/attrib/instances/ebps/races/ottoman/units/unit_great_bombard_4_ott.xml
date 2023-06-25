@@ -1,0 +1,186 @@
+<instance version="4" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-1628535093" List.ParentItemID="-1628535093">
+			<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\ottoman\units\unit_great_bombard_4_ott" overrideParent="True" />
+			<float name="animator_scale" value="122" overrideParent="True" />
+			<bool name="browsable_in_editor" value="True" overrideParent="True" />
+			<float name="entity_scale" value="75" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\ability_ext" List.ItemID="767221886" List.ParentItemID="767221886">
+			<list name="abilities" overrideParent="True">
+				<instance_reference name="ability" value="abilities\always_on_abilities\ottoman\mehter_formation_ott" List.ItemID="-1807405431" />
+				<instance_reference name="ability" value="abilities\modal_abilities\ottoman\siege_unload_all_ott" overrideParent="True" List.ItemID="-106383087" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\action_apply_ext" List.ItemID="-479997117" List.ParentItemID="-479997117">
+			<list name="action_state_trees" overrideParent="True">
+				<group name="container" List.ItemID="1074530233">
+					<string name="state_tree" value="unit_action_apply\units\siege\bombard" />
+				</group>
+				<group name="container" List.ItemID="-271899532">
+					<string name="state_tree" value="disable_hold_ott" overrideParent="True" />
+				</group>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\cost_ext" List.ItemID="-1935475677" List.ParentItemID="-1935475677">
+			<group name="time_cost">
+				<enum_table name="cost">
+					<float name="wood" value="450" overrideParent="True" />
+					<float name="gold" value="900" overrideParent="True" />
+				</enum_table>
+				<float name="time_seconds" value="60" overrideParent="True" />
+			</group>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-1911121372" List.ParentItemID="-1911121372">
+			<float name="hitpoints" value="350" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\population_ext" List.ItemID="949331190" List.ParentItemID="949331190">
+			<float name="personnel_pop" value="4" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="1738424060" List.ParentItemID="1738424060">
+			<list name="unit_type_list">
+				<enum name="unit_type" value="great_bombard" overrideParent="True" List.ItemID="-96717497" List.ParentItemID="-96717497" />
+				<enum name="unit_type" value="transport" List.ItemID="-1739679797" List.ListAction="Append" />
+			</list>
+			<list name="race_type_list" overrideParent="True">
+				<instance_reference name="race_type" value="racebps\ottoman" overrideParent="True" List.ItemID="-1130765235" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="199464879" List.ParentItemID="199464879">
+			<enum name="selection_method" value="mesh" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\combat_ext" List.ItemID="-1400691319" List.ParentItemID="-1400691319">
+			<list name="hardpoints">
+				<group name="hardpoint" List.ItemID="952848739" List.ParentItemID="952848739">
+					<list name="weapon_table">
+						<group name="weapon" List.ItemID="-1837376761" List.ParentItemID="-1837376761">
+							<template_reference name="weapon_entity_attachment" value="" overrideParent="True">
+							</template_reference>
+							<template_reference name="non_entity_weapon_wrapper" value="non_entity_weapon_wrapper" overrideParent="True">
+								<instance_reference name="non_entity_weapon_wrapper_pbg" value="weapon\races\ottoman\ranged\weapon_great_bombard_4_ott" overrideParent="True" />
+								<instance_reference name="animator_attachments" value="" overrideParent="True" />
+								<string name="marker_name_parent" value="" overrideParent="True" />
+							</template_reference>
+						</group>
+					</list>
+				</group>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\moving_ext" List.ItemID="1080504923" List.ParentItemID="1080504923">
+			<bool name="orient_to_terrain" value="True" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\statemodel_ext" List.ItemID="1505647075" List.ParentItemID="1505647075">
+			<instance_reference name="schema" value="statemodel_schema\units\civilizations\ottoman\great_bombard_ott" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\tier_ext" List.ItemID="-2081919558" List.ParentItemID="-2081919558">
+			<list name="tier_group_list" overrideParent="True">
+				<list name="tier_group" overrideParent="True" List.ItemID="571273016">
+					<group name="tier" List.ItemID="1963790068">
+						<list name="tier_requirements" overrideParent="True">
+						</list>
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\ottoman\units\tier4_bombard_ott" overrideParent="True" />
+						<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+							<state_tree_node name="ActionTree_OpeningBranch" value="tier_unit_exposure_dca" overrideParent="True" />
+							<bool name="start_suspended" value="False" />
+						</template_reference>
+						<instance_reference name="statetree_tier_requirements_pbg" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="" />
+						<string name="tier_attachment_action" value="" />
+						<template_reference name="blueprint_conversion_parameters" value="blueprint_conversion_parameters">
+							<bool name="reissue_commands" value="False" />
+							<bool name="continue_state_trees" value="True" />
+							<bool name="remove_from_pending_deaths" value="False" />
+						</template_reference>
+						<string name="inventory_category_to_refresh_on_tier_up" value="" />
+					</group>
+				</list>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\modifier_apply_ext" List.ItemID="1161010909" List.ListAction="Append">
+			<list name="modifiers">
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\hold_ext" List.ItemID="457094682" List.ListAction="Append">
+			<list name="acceptable_types">
+				<enum name="acceptable_type" value="hold_infantry" List.ItemID="1768455490" />
+				<enum name="acceptable_type" value="hold_villager" List.ItemID="-563287026" />
+				<enum name="acceptable_type" value="hold_infantry_ranged" List.ItemID="-941246307" />
+				<enum name="acceptable_type" value="hold_monk" List.ItemID="-229745040" />
+			</list>
+			<bool name="attach_passenger_animator" value="False" />
+			<bool name="can_attack_occupant" value="False" />
+			<bool name="invulnerable_in_hold" value="True" />
+			<bool name="disable_area_effect_on_overflow_slot" value="False" />
+			<bool name="disable_unload" value="False" />
+			<bool name="disallow_load_command" value="False" />
+			<bool name="enable_trigger_abilities_in_hold" value="False" />
+			<bool name="enable_trigger_attack_in_hold" value="False" />
+			<bool name="holds_produced_squads" value="False" />
+			<bool name="keep_abandoned_team_weapon" value="False" />
+			<float name="load_seconds" value="1" />
+			<float name="max_load_seconds" value="5" />
+			<float name="min_hold_seconds" value="1" />
+			<float name="num_slots" value="1" overrideParent="True" />
+			<float name="num_squad_slots" value="1" overrideParent="True" />
+			<float name="percent_unload_on_death" value="1" />
+			<bool name="revert_ownership" value="False" />
+			<bool name="scavenge_enabled" value="False" />
+			<enum_table name="scavenge_resource">
+				<float name="action" value="0" />
+				<float name="command" value="0" />
+				<float name="popcap" value="0" />
+				<float name="food" value="0" />
+				<float name="wood" value="0" />
+				<float name="stone" value="0" />
+				<float name="gold" value="0" />
+				<float name="militia_hre" value="0" />
+			</enum_table>
+			<bool name="shared_with_other_same_type_units" value="False" />
+			<float name="unload_seconds" value="0.5" />
+			<bool name="use_building_target_scan_radius" value="True" />
+			<bool name="use_crouching_posture" value="False" />
+			<list name="on_loading_modifiers">
+			</list>
+			<bool name="despawn_on_load" value="False" />
+			<float name="load_distance" value="2" />
+			<bool name="maintain_selection" value="True" />
+			<template_reference name="on_loaded_hold_action_tree" value="state_tree_reference_info">
+				<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				<bool name="start_suspended" value="False" />
+			</template_reference>
+			<template_reference name="on_loaded_squad_action_tree" value="state_tree_reference_info">
+				<state_tree_node name="ActionTree_OpeningBranch" value="siege_crew_hold_event_ott\siege_crew_hold_bonus" overrideParent="True" />
+				<bool name="start_suspended" value="False" />
+			</template_reference>
+			<template_reference name="on_unloaded_squad_instant_action_tree" value="state_tree_reference_info">
+				<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				<bool name="start_suspended" value="False" />
+			</template_reference>
+			<bool name="convert_garrision_on_owner_change" value="False" />
+			<bool name="move_on_remove_hold" value="False" />
+			<bool name="load_separate_entrances" value="False" />
+			<bool name="can_issue_retreat_to_hold_contents" value="True" />
+			<bool name="ensure_pathability_to_hold_for_unload" value="True" />
+			<float name="unload_path_distance_max" value="0" />
+			<bool name="is_indoors" value="True" />
+			<bool name="right_click_garrison_always_enabled" value="True" />
+			<bool name="exclude_allied_units" value="False" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\interactive_object_ext" List.ItemID="483667305" List.ListAction="Append">
+			<list name="type_list">
+				<group name="type" List.ItemID="1095398246" List.ParentItemID="1095398246">
+					<enum name="interaction_type" value="seek_shelter_destination" />
+					<int name="prefer_number" value="-1" />
+					<int name="max_number" value="-1" />
+					<enum name="interaction_target_type" value="entity" />
+					<template_reference name="node_list_option" value="options\none">
+					</template_reference>
+					<bool name="block_pathing_when_interacted" value="False" />
+				</group>
+			</list>
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="2058831" />
+	<instance_reference name="parent_pbg" value="ebps\races\core\units\unit_bombard_4" />
+</instance>

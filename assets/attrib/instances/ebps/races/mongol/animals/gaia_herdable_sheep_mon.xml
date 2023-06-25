@@ -1,0 +1,31 @@
+<instance version="4" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1558009197" List.ParentItemID="1558009197">
+			<bool name="browsable_in_editor" value="True" overrideParent="True" />
+			<float name="entity_scale" value="75" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\action_apply_ext" List.ItemID="-1385292626" List.ParentItemID="-1385292626">
+			<list name="action_state_trees">
+				<group name="container" List.ItemID="-47318342" List.ParentItemID="-47318342">
+					<string name="state_tree" value="gaia_herdable_sheep_action_apply_mon" overrideParent="True" />
+				</group>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\resource_deposit_ext" List.ItemID="1456212255" List.ParentItemID="1456212255">
+			<int name="num_gatherers_to_assign_by_ai" value="4" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\cost_ext" List.ItemID="1246151298" List.ParentItemID="1246151298">
+			<group name="time_cost">
+				<enum_table name="cost">
+					<float name="wood" value="0" overrideParent="True" />
+				</enum_table>
+				<float name="time_seconds" value="140" overrideParent="True" />
+			</group>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\population_ext" List.ItemID="-1673601377" List.ParentItemID="-1673601377">
+			<float name="vehicle_pop" value="1" overrideParent="True" />
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="168712" />
+	<instance_reference name="parent_pbg" value="ebps\gaia\animals\gaia_herdable_sheep" />
+</instance>

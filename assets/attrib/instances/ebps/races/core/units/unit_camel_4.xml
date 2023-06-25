@@ -1,0 +1,41 @@
+<instance version="4" description="Imperial Age Camel" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="452991839" List.ParentItemID="452991839">
+			<float name="entity_scale" value="75" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-1200885310" List.ParentItemID="-1200885310">
+			<float name="hitpoints" value="150" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\combat_ext" List.ItemID="1316018211" List.ParentItemID="1316018211">
+			<list name="hardpoints">
+				<group name="hardpoint" List.ItemID="-1331747399" List.ParentItemID="-1331747399">
+					<list name="weapon_table">
+						<group name="weapon" List.ItemID="-779992377" List.ParentItemID="-779992377">
+							<template_reference name="weapon_entity_attachment" value="" overrideParent="True">
+							</template_reference>
+							<template_reference name="non_entity_weapon_wrapper" value="non_entity_weapon_wrapper" overrideParent="True">
+								<instance_reference name="non_entity_weapon_wrapper_pbg" value="weapon\races\common\melee\weapon_horseman_4" overrideParent="True" />
+								<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\core\weapons\wpn_melee_horseman_4" overrideParent="True" />
+								<string name="marker_name_parent" value="metarig_rarmpalmsocket" overrideParent="True" />
+							</template_reference>
+						</group>
+						<group name="weapon" List.ItemID="79173311" List.ParentItemID="79173311">
+							<template_reference name="weapon_entity_attachment" value="" overrideParent="True">
+							</template_reference>
+							<template_reference name="non_entity_weapon_wrapper" value="non_entity_weapon_wrapper" overrideParent="True">
+								<instance_reference name="non_entity_weapon_wrapper_pbg" value="weapon\races\common\ranged\weapon_torch" overrideParent="True" />
+								<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\core\weapons\wpn_siege_torch" overrideParent="True" />
+								<string name="marker_name_parent" value="metarig_rarmpalmsocket" overrideParent="True" />
+							</template_reference>
+						</group>
+					</list>
+				</group>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="212194949" List.ParentItemID="212194949">
+			<float name="decorator_height" value="4.5" overrideParent="True" />
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="202621" />
+	<instance_reference name="parent_pbg" value="ebps\races\core\units\unit_camel_3" />
+</instance>

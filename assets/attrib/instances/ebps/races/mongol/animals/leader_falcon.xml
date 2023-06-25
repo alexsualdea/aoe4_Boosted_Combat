@@ -1,0 +1,22 @@
+<instance version="4" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-1272444854" List.ParentItemID="-1272444854">
+			<float name="entity_scale" value="85" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\action_apply_ext" List.ItemID="1391008678" List.ParentItemID="1391008678">
+			<list name="action_state_trees">
+				<group name="container" List.ItemID="-1296320340" List.ParentItemID="-1296320340">
+					<string name="state_tree" value="falcon_leader_action_apply" overrideParent="True" />
+				</group>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\sight_ext" List.ItemID="-644516149" List.ParentItemID="-644516149">
+			<group name="sight_package">
+				<float name="inner_radius" value="120" overrideParent="True" />
+				<float name="outer_radius" value="120" overrideParent="True" />
+			</group>
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="673037" />
+	<instance_reference name="parent_pbg" value="ebps\races\mongol\animals\scout_falcon_mon" />
+</instance>

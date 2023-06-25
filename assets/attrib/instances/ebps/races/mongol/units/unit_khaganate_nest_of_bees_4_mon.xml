@@ -1,0 +1,23 @@
+<instance version="4" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-1564013" List.ParentItemID="-1564013">
+			<float name="entity_scale" value="75" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\cost_ext" List.ItemID="452643752" List.ParentItemID="452643752">
+			<group name="time_cost">
+				<float name="time_seconds" value="50" overrideParent="True" />
+				<enum_table name="cost">
+					<float name="wood" value="0" overrideParent="True" />
+					<float name="gold" value="0" overrideParent="True" />
+				</enum_table>
+			</group>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="1978278333" List.ParentItemID="1978278333">
+			<list name="unit_type_list">
+				<enum name="unit_type" value="khaganate" List.ItemID="-453034998" List.ListAction="Append" />
+			</list>
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="2104787" />
+	<instance_reference name="parent_pbg" value="ebps\races\chinese\units\unit_nest_of_bees_4_chi" />
+</instance>

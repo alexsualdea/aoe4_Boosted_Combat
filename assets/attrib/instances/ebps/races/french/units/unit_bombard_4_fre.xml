@@ -1,0 +1,204 @@
+<instance version="4" description="French Imperial Age Bombard" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-1628535093" List.ParentItemID="-1628535093">
+			<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\french\units\unit_bombard_4_fre" overrideParent="True" />
+			<bool name="browsable_in_editor" value="True" overrideParent="True" />
+			<float name="entity_scale" value="75" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\cost_ext" List.ItemID="-1935475677" List.ParentItemID="-1935475677">
+			<group name="time_cost">
+				<enum_table name="cost">
+					<float name="wood" value="400" overrideParent="True" />
+				</enum_table>
+			</group>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-1911121372" List.ParentItemID="-1911121372">
+			<float name="hitpoints" value="400" overrideParent="True" />
+			<enum_table name="armor_scaler_by_damage_type">
+				<float name="Ranged" value="12" overrideParent="True" />
+			</enum_table>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="1738424060" List.ParentItemID="1738424060">
+			<list name="race_type_list" overrideParent="True">
+				<instance_reference name="race_type" value="racebps\french" List.ItemID="-1083028327" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="199464879" List.ParentItemID="199464879">
+			<bool name="ghost_enable" value="False" overrideParent="True" />
+			<file name="icon_name" value="races\common\units\bombard_4" overrideParent="True" />
+			<enum name="selection_method" value="mesh" overrideParent="True" />
+			<bool name="use_combat_range_on_selection" value="True" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\combat_ext" List.ItemID="-1400691319" List.ParentItemID="-1400691319">
+			<list name="hardpoints">
+				<group name="hardpoint" List.ItemID="952848739" List.ParentItemID="952848739">
+					<list name="weapon_table">
+						<group name="weapon" List.ItemID="-1837376761" List.ParentItemID="-1837376761">
+							<template_reference name="weapon_entity_attachment" value="" overrideParent="True">
+							</template_reference>
+							<template_reference name="non_entity_weapon_wrapper" value="non_entity_weapon_wrapper" overrideParent="True">
+								<instance_reference name="non_entity_weapon_wrapper_pbg" value="weapon\races\common\ranged\weapon_bombard_4" overrideParent="True" />
+								<instance_reference name="animator_attachments" value="" overrideParent="True" />
+								<string name="marker_name_parent" value="" overrideParent="True" />
+							</template_reference>
+						</group>
+					</list>
+				</group>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\animation_action_tree_ext" List.ItemID="-323027596" List.ParentItemID="-323027596">
+			<string name="default_animation" value="setup\idle_teardown" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\tier_ext" List.ItemID="-2081919558" List.ParentItemID="-2081919558">
+			<list name="tier_group_list" overrideParent="True">
+				<list name="tier_group" overrideParent="True" List.ItemID="139065733">
+					<group name="tier" List.ItemID="99800328">
+						<list name="tier_requirements" overrideParent="True">
+						</list>
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\french\units\tier4_bombard_fre" overrideParent="True" />
+						<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+							<state_tree_node name="ActionTree_OpeningBranch" value="tier_unit_exposure_dca" overrideParent="True" />
+							<bool name="start_suspended" value="False" />
+						</template_reference>
+						<instance_reference name="statetree_tier_requirements_pbg" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="" />
+						<string name="tier_attachment_action" value="" />
+						<template_reference name="blueprint_conversion_parameters" value="blueprint_conversion_parameters">
+							<bool name="reissue_commands" value="False" />
+							<bool name="continue_state_trees" value="True" />
+							<bool name="remove_from_pending_deaths" value="False" />
+						</template_reference>
+						<string name="inventory_category_to_refresh_on_tier_up" value="" />
+					</group>
+				</list>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\construction_ext" List.ItemID="1616358868" List.ListAction="Append">
+			<bool name="automatic_fit_on_placement" value="False" />
+			<float name="cancel_refund_percentage" value="100" />
+			<string name="construction_state_name" value="construction_state" />
+			<float name="construction_transition_time" value="0" />
+			<bool name="force_construction" value="False" />
+			<float name="max_engineers" value="0" />
+			<instance_reference name="on_construction_squad" value="sbps\races\french\unit_bombard_4_fre" overrideParent="True" />
+			<float name="orientation" value="0" />
+			<enum name="placement_type" value="tp_structure" />
+			<bool name="prefer_spots_on_side_with_leader" value="False" />
+			<bool name="query_abilities_for_range_ui" value="False" />
+			<bool name="random_rotation" value="False" />
+			<float name="replace_ghost_distance" value="15" />
+			<bool name="self_construct" value="False" />
+			<group name="field_placement_info">
+				<instance_reference name="border_entity" value="" />
+				<instance_reference name="replace_entity" value="" />
+				<int name="replace_count" value="0" />
+				<float name="replace_retry_distance" value="0" />
+			</group>
+			<instance_reference name="placement_valid" value="ui_rectangle\construction_placement_valid" />
+			<instance_reference name="placement_invalid" value="ui_rectangle\construction_placement_invalid" />
+			<instance_reference name="ui_range" value="" />
+			<float name="ui_range_radius" value="0" />
+			<instance_reference name="ui_setfacing" value="" />
+			<bool name="query_weapon_for_range_ui" value="False" />
+			<group name="placement_requirements">
+				<bool name="must_be_in_line_of_sight" value="False" />
+				<bool name="must_not_be_in_walkable_surfaces" value="False" />
+				<bool name="must_be_on_strategic_point" value="False" />
+				<list name="requirements">
+				</list>
+				<float name="spacing_distance" value="0" />
+				<bool name="skip_impass_checks_and_ignore_immovable_entities" value="False" />
+				<string name="state_tree_conditions" value="" />
+				<bool name="must_be_in_explored_area" value="False" />
+				<bool name="must_be_on_movement_node" value="False" />
+				<list name="placement_requirement_options" overrideParent="True">
+					<template_reference name="placement_requirement_option" value="options\placement\requirements\placement_requirement_pass_types_option" List.ItemID="-2126940913">
+						<list name="required_pass_types">
+							<group name="pass_type_data" List.ItemID="-782917019">
+								<instance_reference name="pass_type" value="pass_types\infantry" />
+								<int name="minimum_contiguous_cell_count" value="1" />
+							</group>
+						</list>
+						<list name="forbidden_pass_types">
+							<instance_reference name="pass_type" value="pass_types\water_default" List.ItemID="1615656307" />
+						</list>
+						<bool name="use_simbox_scale_as_footprint" value="False" />
+					</template_reference>
+				</list>
+				<locstring name="ui_usage_txt" value="0" />
+			</group>
+			<bool name="squad_ignore_pathfinding" value="True" />
+			<bool name="can_be_cancelled" value="True" />
+			<template_reference name="construction_health_option" value="options\ebpextensions\constructionext\construction_health_option">
+				<float name="initial_health" value="1" />
+			</template_reference>
+			<float name="min_music_intensity" value="0" />
+			<string name="tooltip_data_template" value="" />
+			<enum name="placement_set_facing_style" value="disabled" />
+			<group name="facing_quadrants">
+				<int name="search_radius_metres" value="0" />
+				<int name="radius_metres" value="0" />
+				<group name="quadrants">
+					<enum name="front" value="None" />
+					<enum name="rear" value="None" />
+					<enum name="left" value="None" />
+					<enum name="right" value="None" />
+				</group>
+			</group>
+			<bool name="facing_surface_normal" value="False" />
+			<group name="fixed_rotation_impass_avoidance">
+				<int name="minimum_search_radius_cells" value="5" />
+				<bool name="use_impass_avoidance" value="False" />
+			</group>
+			<group name="on_construction_complete_state_tree_refs">
+				<string name="on_construction_complete_entity_state_tree_ref" value="" />
+				<string name="on_construction_complete_physical_state_tree_ref" value="" />
+				<string name="on_construction_complete_squad_state_tree_ref" value="" />
+				<string name="on_construction_plan_complete_global_state_tree_ref" value="" />
+				<string name="while_construction_complete_entity_state_tree_ref" value="" />
+				<string name="while_construction_complete_physical_state_tree_ref" value="" />
+			</group>
+			<state_tree_node name="can_be_cancelled_state_tree_conditions" value="" />
+			<bool name="query_movement_node_modifier_for_range_ui" value="True" />
+			<enum name="entity_placement_class" value="" />
+			<bool name="show_ability_range_in_construction_item_preview" value="False" />
+			<bool name="construction_site_erase_inactive" value="False" />
+			<group name="preview_upgrade_effects">
+				<string name="statemachine_key" value="" />
+				<string name="on_key" value="" />
+				<string name="off_key" value="" />
+				<enum name="unit_type" value="" />
+				<instance_reference name="reticule" value="" />
+				<float name="reticule_radius" value="0" />
+				<template_reference name="area_info" value="">
+				</template_reference>
+			</group>
+			<bool name="placement_position_ignores_walkable_surfaces" value="False" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\interactive_object_ext" List.ItemID="-987564597" List.ListAction="Append">
+			<list name="type_list">
+				<group name="type" comment="Repair" List.ItemID="-1387050102">
+					<enum name="interaction_type" value="repair" />
+					<int name="prefer_number" value="-1" />
+					<int name="max_number" value="-1" />
+					<enum name="interaction_target_type" value="entity" />
+					<template_reference name="node_list_option" value="options\none">
+					</template_reference>
+					<bool name="block_pathing_when_interacted" value="False" />
+				</group>
+				<group name="type" comment="Construction" List.ItemID="-417398057">
+					<enum name="interaction_type" value="construct" />
+					<int name="prefer_number" value="-1" />
+					<int name="max_number" value="-1" />
+					<enum name="interaction_target_type" value="entity" />
+					<template_reference name="node_list_option" value="options\none">
+					</template_reference>
+					<bool name="block_pathing_when_interacted" value="False" />
+				</group>
+			</list>
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="132249" />
+	<instance_reference name="parent_pbg" value="ebps\races\core\units\unit_bombard_4" />
+</instance>

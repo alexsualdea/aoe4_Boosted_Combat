@@ -1,0 +1,12 @@
+<instance version="4" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-1564013" List.ParentItemID="-1564013">
+			<float name="entity_scale" value="75" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="1844382716" List.ParentItemID="1844382716">
+			<float name="hitpoints" value="400" overrideParent="True" />
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="206821" />
+	<instance_reference name="parent_pbg" value="ebps\races\chinese\units\unit_nest_of_bees_4_chi" />
+</instance>

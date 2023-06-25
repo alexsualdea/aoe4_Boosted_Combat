@@ -1,0 +1,27 @@
+<instance version="4" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1015139908" List.ParentItemID="1015139908">
+			<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\ottoman\units\unit_siege_tower_3_ott" overrideParent="True" />
+			<bool name="browsable_in_editor" value="True" overrideParent="True" />
+			<float name="entity_scale" value="75" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\ability_ext" List.ItemID="19510722" List.ParentItemID="19510722">
+			<list name="abilities" overrideParent="True">
+				<instance_reference name="ability" value="abilities\always_on_abilities\ottoman\mehter_formation_ott" List.ItemID="-1455222386" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="-1324899961" List.ParentItemID="-1324899961">
+			<list name="race_type_list" overrideParent="True">
+				<instance_reference name="race_type" value="racebps\ottoman" overrideParent="True" List.ItemID="-133188258" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\construction_ext" List.ItemID="1985133745" List.ParentItemID="1985133745">
+			<instance_reference name="on_construction_squad" value="sbps\races\ottoman\unit_siege_tower_3_ott" overrideParent="True" />
+			<group name="on_construction_complete_state_tree_refs">
+				<string name="on_construction_complete_entity_state_tree_ref" value="imperial_council_ott\construction_complete" overrideParent="True" />
+			</group>
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="2034654" />
+	<instance_reference name="parent_pbg" value="ebps\races\core\units_buildable\unit_siege_tower_3" />
+</instance>

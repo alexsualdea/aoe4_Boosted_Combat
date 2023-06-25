@@ -1,0 +1,37 @@
+<instance version="4" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1585358807" List.ParentItemID="1585358807">
+			<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\core\units\unit_javelin_4" overrideParent="True" />
+			<float name="entity_scale" value="75" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-1968249569" List.ParentItemID="-1968249569">
+			<float name="death_seconds" value="19" overrideParent="True" />
+			<float name="hitpoints" value="95" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="-785960889" List.ParentItemID="-785960889">
+			<instance_reference name="hit_material" value="hit_material\armour" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\combat_ext" List.ItemID="-690770711" List.ParentItemID="-690770711">
+			<list name="hardpoints">
+				<group name="hardpoint" List.ItemID="69747504" List.ParentItemID="69747504">
+					<list name="weapon_table">
+						<group name="weapon" List.ItemID="-1871166629" List.ParentItemID="-1871166629">
+							<template_reference name="non_entity_weapon_wrapper" value="non_entity_weapon_wrapper">
+								<instance_reference name="non_entity_weapon_wrapper_pbg" value="weapon\races\common\ranged\weapon_javelin_4" overrideParent="True" />
+								<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\core\weapons\wpn_range_javelin_4" overrideParent="True" />
+							</template_reference>
+						</group>
+						<group name="weapon" List.ItemID="-763346323" List.ParentItemID="-763346323">
+							<template_reference name="non_entity_weapon_wrapper" value="non_entity_weapon_wrapper">
+								<instance_reference name="non_entity_weapon_wrapper_pbg" value="weapon\races\common\melee\weapon_javelin_4_melee" overrideParent="True" />
+								<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\core\weapons\wpn_melee_javelin_2_melee" overrideParent="True" />
+							</template_reference>
+						</group>
+					</list>
+				</group>
+			</list>
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="2062088" />
+	<instance_reference name="parent_pbg" value="ebps\races\core\units\unit_javelin_3" />
+</instance>

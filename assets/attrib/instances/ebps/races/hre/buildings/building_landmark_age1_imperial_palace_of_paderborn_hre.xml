@@ -1,0 +1,261 @@
+<instance version="4" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1853756747" List.ParentItemID="1853756747">
+			<bool name="browsable_in_editor" value="True" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="1338650760" List.ParentItemID="1338650760">
+			<bool name="can_repair" value="True" overrideParent="True" />
+			<state_tree_node name="death_action_tree" value="building_death_actions\landmarks\landmarks_age1\hre_imperial_palace_of_paderborn" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="119825962" List.ParentItemID="119825962">
+			<list name="unit_type_list" overrideParent="True">
+				<enum name="unit_type" value="building" List.ItemID="1349454748" />
+				<enum name="unit_type" value="wonder" List.ItemID="-711702376" />
+				<enum name="unit_type" value="wonder_dark_age" List.ItemID="1134698776" />
+				<enum name="unit_type" value="siegeable" List.ItemID="-1220119539" />
+				<enum name="unit_type" value="select_special_building" List.ItemID="-1937005481" />
+				<enum name="unit_type" value="landmark" List.ItemID="833234797" />
+				<enum name="unit_type" value="age1_landmark1" List.ItemID="2137829210" />
+				<enum name="unit_type" value="military_only_production" List.ItemID="337490219" />
+			</list>
+			<list name="race_type_list" overrideParent="True">
+				<instance_reference name="race_type" value="racebps\hre" List.ItemID="1828307085" />
+			</list>
+			<list name="unit_type_list_selection_keybind_only" overrideParent="True">
+				<enum name="unit_type" value="research_building" overrideParent="True" List.ItemID="94453341" />
+				<enum name="unit_type" value="blacksmith" List.ItemID="-746056753" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-514641933" List.ParentItemID="-514641933">
+			<float name="decorator_height" value="10" overrideParent="True" />
+			<file name="icon_name" value="races\hre\buildings\building_landmark_age1_imperial_palace_of_paderborn" overrideParent="True" />
+			<locstring name="screen_name" value="11149008" overrideParent="True" />
+			<float name="minimap_icon_scale" value="0.3" overrideParent="True" />
+			<locstring name="extra_text" value="11232101" overrideParent="True" />
+			<instance_reference name="district_info" value="" overrideParent="True" />
+			<list name="ui_extra_infos" overrideParent="True">
+				<template_reference name="ui_extra_info" value="info\ui_extra_info" List.ItemID="-1867126545">
+					<file name="icon" value="influence_decorator" overrideParent="True" />
+					<locstring name="description" value="0" overrideParent="True" />
+					<template_reference name="description_formatter" value="ui_text_formatter" overrideParent="True">
+						<list name="formatter_arguments">
+							<int name="int_value" value="200" List.ItemID="1773034264" />
+						</list>
+						<locstring name="formatter" value="11204532" overrideParent="True" />
+					</template_reference>
+				</template_reference>
+			</list>
+			<template_reference name="help_text_formatter" value="ui_text_formatter" overrideParent="True">
+				<list name="formatter_arguments" overrideParent="True">
+					<int name="int_value" value="40" overrideParent="True" List.ItemID="31623094" />
+				</list>
+				<locstring name="formatter" value="11220658" overrideParent="True" />
+			</template_reference>
+			<string name="telemetry_name" value="Meinwerk Palace" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\requirement_ext" List.ItemID="-1410531980" List.ParentItemID="-1410531980">
+			<list name="requirement_table" overrideParent="True">
+				<template_reference name="required" value="requirements\required_not" List.ItemID="1506440658">
+					<enum name="reason" value="usage" />
+					<locstring name="ui_name" value="11142977" />
+					<list name="requirement_table">
+						<template_reference name="required" value="requirements\required_any_in_list" List.ItemID="1024439390">
+							<enum name="reason" value="usage" />
+							<locstring name="ui_name" value="0" />
+							<list name="requirements">
+								<template_reference name="requirement" value="requirements\required_structure" List.ItemID="1049319974">
+									<enum name="reason" value="usage" />
+									<locstring name="ui_name" value="0" />
+									<instance_reference name="structure_name" value="ebps\races\hre\buildings\building_landmark_age1_imperial_palace_of_paderborn_hre" />
+									<int name="required_structure_count" value="1" />
+									<bool name="check_team" value="False" />
+									<bool name="require_construction_complete" value="False" />
+									<group name="include_pbg_parenting">
+										<bool name="include_child_pbgs" value="False" />
+										<bool name="include_parent_pbgs" value="False" />
+									</group>
+								</template_reference>
+								<template_reference name="requirement" value="requirements\required_structure" List.ItemID="883063703">
+									<enum name="reason" value="usage" />
+									<locstring name="ui_name" value="0" />
+									<instance_reference name="structure_name" value="ebps\races\hre\buildings\building_landmark_age1_palantine_chapel_hre\building_landmark_age1_palantine_chapel_hre" />
+									<int name="required_structure_count" value="1" />
+									<bool name="check_team" value="False" />
+									<bool name="require_construction_complete" value="False" />
+									<group name="include_pbg_parenting">
+										<bool name="include_child_pbgs" value="False" />
+										<bool name="include_parent_pbgs" value="False" />
+									</group>
+								</template_reference>
+							</list>
+						</template_reference>
+					</list>
+				</template_reference>
+				<template_reference name="required" value="requirements\required_player_upgrade" List.ItemID="-449117652">
+					<enum name="reason" value="usage_and_display" />
+					<locstring name="ui_name" value="0" />
+					<bool name="is_present" value="False" />
+					<int name="max_completed" value="100" />
+					<int name="min_completed" value="1" />
+					<instance_reference name="upgrade_name" value="upgrade\dev\ages\feudal_age" />
+					<bool name="include_queued" value="False" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="False" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+					<bool name="include_completed" value="True" />
+				</template_reference>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\site_ext" List.ItemID="-1469122038" List.ParentItemID="-1469122038">
+			<bool name="snap_to_construction_grid" value="True" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\construction_ext" List.ItemID="-1019930499" List.ParentItemID="-1019930499">
+			<group name="on_construction_complete_state_tree_refs">
+				<string name="while_construction_complete_entity_state_tree_ref" value="meinwerk_palace_construction_complete_hre" overrideParent="True" />
+			</group>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\ability_ext" List.ItemID="203393663" List.ParentItemID="203393663">
+			<list name="abilities" overrideParent="True">
+				<instance_reference name="ability" value="abilities\timed_abilities\hre\influence_auto_repair_hre" List.ItemID="731199171" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\statemodel_ext" List.ItemID="340824163" List.ParentItemID="340824163">
+			<instance_reference name="schema" value="statemodel_schema\buildings\civilizations\hre\wonder_age1_hre" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\audio_ext" List.ItemID="2076616617" List.ParentItemID="2076616617">
+			<string name="single_select_event" value="sfx_ui_landmark_building_selection_play" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\upgrade_ext" List.ItemID="-255210680" List.ParentItemID="-255210680">
+			<list name="standard_upgrades" overrideParent="True">
+				<instance_reference name="upgrade" value="upgrade\races\common\research\upgrade_melee_damage_i" List.ItemID="2128134879" />
+				<instance_reference name="upgrade" value="upgrade\races\common\research\upgrade_melee_damage_ii" List.ItemID="1768432740" />
+				<instance_reference name="upgrade" value="upgrade\races\common\research\upgrade_melee_damage_iii" List.ItemID="382582371" />
+				<instance_reference name="upgrade" value="upgrade\races\common\research\upgrade_melee_armor_i" List.ItemID="-1348903289" />
+				<instance_reference name="upgrade" value="upgrade\races\common\research\upgrade_melee_armor_ii" List.ItemID="-218303796" />
+				<instance_reference name="upgrade" value="upgrade\races\common\research\upgrade_melee_armor_iii" List.ItemID="-913595356" />
+				<instance_reference name="upgrade" value="upgrade\races\common\research\upgrade_siege_engineers" List.ItemID="692162886" />
+				<instance_reference name="upgrade" value="upgrade\races\common\research\economy\upgrade_tech_military_academy" List.ItemID="193775804" />
+				<instance_reference name="upgrade" value="upgrade\races\common\research\upgrade_ranged_damage_i" List.ItemID="-1578907330" />
+				<instance_reference name="upgrade" value="upgrade\races\common\research\upgrade_ranged_damage_ii" List.ItemID="81884454" />
+				<instance_reference name="upgrade" value="upgrade\races\common\research\upgrade_ranged_damage_iii" List.ItemID="1033912650" />
+				<instance_reference name="upgrade" value="upgrade\races\common\research\upgrade_ranged_armor_i" List.ItemID="-1016145104" />
+				<instance_reference name="upgrade" value="upgrade\races\common\research\upgrade_ranged_armor_ii" List.ItemID="-1144344730" />
+				<instance_reference name="upgrade" value="upgrade\races\common\research\upgrade_ranged_armor_iii" List.ItemID="-1223676715" />
+				<instance_reference name="upgrade" value="upgrade\races\hre\research\upgrade_infantry_marching_drills_hre" List.ItemID="-1658724893" />
+				<instance_reference name="upgrade" value="upgrade\races\hre\research\upgrade_riveted_chain_armour_hre" overrideParent="True" List.ItemID="497465371" />
+				<instance_reference name="upgrade" value="upgrade\races\hre\research\upgrade_knight_barding_hre" List.ItemID="-1914979308" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\building_presentation_ext" List.ItemID="1440054338" List.ParentItemID="1440054338">
+			<file name="construction_stamp" value="art\stamps\scaffolding\hre\hre_palace_of_paderborn" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\tier_ext" List.ItemID="1038072050" List.ListAction="Append">
+			<list name="tier_group_list" overrideParent="True">
+				<list name="tier_group" List.ItemID="1162991070">
+					<group name="tier" List.ItemID="975167545">
+						<list name="tier_requirements">
+						</list>
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\hre\buildings\wonder_age1_imperial_palace_of_paderborn_hre" />
+						<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+							<state_tree_node name="ActionTree_OpeningBranch" value="" />
+							<bool name="start_suspended" value="False" />
+						</template_reference>
+						<instance_reference name="statetree_tier_requirements_pbg" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="" />
+						<string name="tier_attachment_action" value="" />
+						<template_reference name="blueprint_conversion_parameters" value="blueprint_conversion_parameters">
+							<bool name="reissue_commands" value="False" />
+							<bool name="continue_state_trees" value="False" />
+							<bool name="remove_from_pending_deaths" value="False" />
+						</template_reference>
+						<string name="inventory_category_to_refresh_on_tier_up" value="" />
+					</group>
+				</list>
+				<list name="tier_group" overrideParent="True" List.ItemID="-1061742511">
+					<group name="tier" List.ItemID="-42592432">
+						<list name="tier_requirements">
+						</list>
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\english\outskirts\military\military_01" overrideParent="True" />
+						<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+							<state_tree_node name="ActionTree_OpeningBranch" value="" />
+							<bool name="start_suspended" value="False" />
+						</template_reference>
+						<instance_reference name="statetree_tier_requirements_pbg" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="" />
+						<string name="tier_attachment_action" value="" />
+						<template_reference name="blueprint_conversion_parameters" value="blueprint_conversion_parameters">
+							<bool name="reissue_commands" value="False" />
+							<bool name="continue_state_trees" value="False" />
+							<bool name="remove_from_pending_deaths" value="False" />
+						</template_reference>
+						<string name="inventory_category_to_refresh_on_tier_up" value="" />
+					</group>
+				</list>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\district_bonuses_ext" List.ItemID="-1825995466" List.ListAction="Append">
+			<bool name="update_on_upgrade_changed" value="False" />
+			<bool name="update_on_construction_complete" value="True" />
+			<list name="district_bonuses" overrideParent="True">
+				<template_reference name="district_bonus" value="district_bonus" comment="population" List.ItemID="-640296769">
+					<template_reference name="requirement" value="options\ebpextensions\districtbonusesext\requirements\district_bonus_entity_requirement">
+						<list name="dynamic_requirements">
+						</list>
+						<list name="satisfying_entity_groups" overrideParent="True">
+							<group name="satisfying_entity_group" comment="Town Center Capital&#xD;&#xA;" List.ItemID="43146874">
+								<list name="satisfying_entities">
+									<instance_reference name="entity" value="ebps\races\hre\buildings\building_town_center_hre\building_town_center_capital_hre" List.ItemID="162066124" />
+								</list>
+							</group>
+							<group name="satisfying_entity_group" comment="Town Center" List.ItemID="1636743446">
+								<list name="satisfying_entities">
+									<instance_reference name="entity" value="ebps\races\hre\buildings\building_town_center_hre\building_town_center_hre" List.ItemID="-1076546414" />
+								</list>
+							</group>
+							<group name="satisfying_entity_group" comment="Palace of Swabia" List.ItemID="-281766369">
+								<list name="satisfying_entities">
+									<instance_reference name="entity" value="ebps\races\hre\buildings\building_landmark_age3_hohenzollern_castle_hre\building_landmark_age3_hohenzollern_castle_hre" overrideParent="True" List.ItemID="1876438259" />
+								</list>
+							</group>
+						</list>
+					</template_reference>
+					<uniqueid name="id" value="1473497" />
+					<template_reference name="action_tree" value="state_tree_reference_info">
+						<state_tree_node name="ActionTree_OpeningBranch" value="influence_auto_repair_hre\root" overrideParent="True" />
+						<bool name="start_suspended" value="False" />
+					</template_reference>
+				</template_reference>
+				<template_reference name="district_bonus" value="district_bonus" comment="Elzbach Palace Influence" List.ItemID="813126821">
+					<template_reference name="requirement" value="options\ebpextensions\districtbonusesext\requirements\district_bonus_entity_requirement">
+						<list name="dynamic_requirements">
+						</list>
+						<list name="satisfying_entity_groups" overrideParent="True">
+							<group name="satisfying_entity_group" comment="Elzbach Palace&#xD;&#xA;" List.ItemID="100341807">
+								<list name="satisfying_entities">
+									<instance_reference name="entity" value="ebps\races\hre\buildings\building_landmark_age3_eltz_castle_hre\building_landmark_age3_eltz_castle_hre" overrideParent="True" List.ItemID="1531965940" />
+								</list>
+							</group>
+						</list>
+					</template_reference>
+					<uniqueid name="id" value="1474661" />
+					<template_reference name="action_tree" value="state_tree_reference_info">
+						<state_tree_node name="ActionTree_OpeningBranch" value="elzbach_palace_influence_bonus_hre\root" overrideParent="True" />
+						<bool name="start_suspended" value="False" />
+					</template_reference>
+				</template_reference>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\district_generator_ext" List.ItemID="-837894951" List.ListAction="Append">
+			<float name="range_metres" value="4" overrideParent="True" />
+			<bool name="is_root_generator" value="False" />
+			<int name="generator_value" value="0" />
+			<bool name="disable_generation_on_spawn" value="False" />
+			<int name="district_palette_id" value="0" />
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="134915" />
+	<instance_reference name="parent_pbg" value="ebps\races\core\buildings\building_wonder_age1" />
+</instance>

@@ -1,0 +1,12 @@
+<instance version="4" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="811590333" List.ParentItemID="811590333">
+			<float name="entity_scale" value="75" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-1210690469" List.ParentItemID="-1210690469">
+			<float name="hitpoints" value="350" overrideParent="True" />
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="206824" />
+	<instance_reference name="parent_pbg" value="ebps\races\chinese\units\unit_springald_3_chi" />
+</instance>

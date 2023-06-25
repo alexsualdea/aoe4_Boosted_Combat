@@ -1,0 +1,16 @@
+<instance version="4" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-1152503433" List.ParentItemID="-1152503433">
+			<float name="entity_scale" value="75" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-609904250" List.ParentItemID="-609904250">
+			<float name="hitpoints" value="400" overrideParent="True" />
+			<enum_table name="armor_scaler_by_damage_type">
+				<float name="Melee" value="0" overrideParent="True" />
+				<float name="Ranged" value="8" overrideParent="True" />
+			</enum_table>
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="206823" />
+	<instance_reference name="parent_pbg" value="ebps\races\chinese\units\unit_mangonel_3_chi" />
+</instance>

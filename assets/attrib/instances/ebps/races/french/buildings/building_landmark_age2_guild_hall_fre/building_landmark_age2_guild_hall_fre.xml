@@ -1,0 +1,176 @@
+<instance version="4" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\requirement_ext" List.ItemID="-1138756103" List.ParentItemID="-1138756103">
+			<list name="requirement_table" overrideParent="True">
+				<template_reference name="required" value="requirements\required_not" List.ItemID="1420414614">
+					<enum name="reason" value="usage" />
+					<locstring name="ui_name" value="11142977" />
+					<list name="requirement_table">
+						<template_reference name="required" value="requirements\required_any_in_list" List.ItemID="-1746070056">
+							<enum name="reason" value="usage" />
+							<locstring name="ui_name" value="0" />
+							<list name="requirements">
+								<template_reference name="requirement" value="requirements\required_structure" List.ItemID="2092949025">
+									<enum name="reason" value="usage" />
+									<locstring name="ui_name" value="0" />
+									<instance_reference name="structure_name" value="ebps\races\french\buildings\building_landmark_age2_guild_hall_fre\building_landmark_age2_guild_hall_fre" />
+									<int name="required_structure_count" value="1" />
+									<bool name="check_team" value="False" />
+									<bool name="require_construction_complete" value="False" />
+									<group name="include_pbg_parenting">
+										<bool name="include_child_pbgs" value="False" />
+										<bool name="include_parent_pbgs" value="False" />
+									</group>
+								</template_reference>
+								<template_reference name="requirement" value="requirements\required_structure" List.ItemID="110841253">
+									<enum name="reason" value="usage" />
+									<locstring name="ui_name" value="0" />
+									<instance_reference name="structure_name" value="ebps\races\french\buildings\building_landmark_age3_le_grande_university_fre\building_landmark_age3_le_grande_university_fre" overrideParent="True" />
+									<int name="required_structure_count" value="1" />
+									<bool name="check_team" value="False" />
+									<bool name="require_construction_complete" value="False" />
+									<group name="include_pbg_parenting">
+										<bool name="include_child_pbgs" value="False" />
+										<bool name="include_parent_pbgs" value="False" />
+									</group>
+								</template_reference>
+							</list>
+						</template_reference>
+					</list>
+				</template_reference>
+				<template_reference name="required" value="requirements\required_player_upgrade" List.ItemID="473871244">
+					<enum name="reason" value="usage_and_display" />
+					<locstring name="ui_name" value="0" />
+					<bool name="is_present" value="False" />
+					<int name="max_completed" value="100" />
+					<int name="min_completed" value="1" />
+					<instance_reference name="upgrade_name" value="upgrade\dev\ages\castle_age" overrideParent="True" />
+					<bool name="include_queued" value="False" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="False" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+					<bool name="include_completed" value="True" />
+				</template_reference>
+				<template_reference name="required" value="requirements\required_player_upgrade" overrideParent="True" List.ItemID="922516359">
+					<enum name="reason" value="usage_and_display" />
+					<locstring name="ui_name" value="0" />
+					<bool name="is_present" value="True" />
+					<int name="max_completed" value="100" />
+					<int name="min_completed" value="1" />
+					<instance_reference name="upgrade_name" value="upgrade\dev\ages\feudal_age" />
+					<bool name="include_queued" value="False" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="False" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+					<bool name="include_completed" value="True" />
+				</template_reference>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="442418202" List.ParentItemID="442418202">
+			<bool name="can_repair" value="True" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1676377740" List.ParentItemID="1676377740">
+			<bool name="browsable_in_editor" value="True" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="31700595" List.ParentItemID="31700595">
+			<list name="unit_type_list" overrideParent="True">
+				<enum name="unit_type" value="building" List.ItemID="1754376180" />
+				<enum name="unit_type" value="wonder" List.ItemID="-1881125004" />
+				<enum name="unit_type" value="wonder_feudal_age" List.ItemID="1308773479" />
+				<enum name="unit_type" value="siegeable" List.ItemID="1931375348" />
+				<enum name="unit_type" value="select_special_building" List.ItemID="-1737063560" />
+				<enum name="unit_type" value="landmark" List.ItemID="421613124" />
+				<enum name="unit_type" value="age2_landmark2" overrideParent="True" List.ItemID="-1406471603" />
+				<enum name="unit_type" value="military_only_production" overrideParent="True" List.ItemID="-859508249" />
+				<enum name="unit_type" value="audio_production_landmark" List.ItemID="-1420766814" />
+			</list>
+			<list name="race_type_list" overrideParent="True">
+				<instance_reference name="race_type" value="racebps\french" List.ItemID="-1872648915" />
+			</list>
+			<list name="unit_type_list_selection_keybind_only" overrideParent="True">
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="466870777" List.ParentItemID="466870777">
+			<float name="decorator_height" value="11" overrideParent="True" />
+			<locstring name="help_text" value="11204528" overrideParent="True" />
+			<file name="icon_name" value="races\french\buildings\building-_landmark_age1_hotel_de_ville_central" overrideParent="True" />
+			<locstring name="screen_name" value="11145205" overrideParent="True" />
+			<locstring name="extra_text" value="11202511" overrideParent="True" />
+			<instance_reference name="district_info" value="ui_district_info\french\dib_fre_trade_cart_specializations" overrideParent="True" />
+			<string name="telemetry_name" value="Guild Hall" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\site_ext" List.ItemID="-264293052" List.ParentItemID="-264293052">
+			<bool name="snap_to_construction_grid" value="True" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\construction_ext" List.ItemID="484476401" List.ParentItemID="484476401">
+			<group name="on_construction_complete_state_tree_refs">
+				<string name="while_construction_complete_entity_state_tree_ref" value="guild_hall_construction_complete_fre\Master" overrideParent="True" />
+			</group>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\ability_ext" List.ItemID="-335360918" List.ParentItemID="-335360918">
+			<list name="abilities" overrideParent="True">
+				<instance_reference name="ability" value="abilities\toggle_abilities\french\toggle_guild_hall_resource_food_fre" List.ItemID="-133015907" />
+				<instance_reference name="ability" value="abilities\toggle_abilities\french\toggle_guild_hall_resource_gold_fre" List.ItemID="-1093878719" />
+				<instance_reference name="ability" value="abilities\toggle_abilities\french\toggle_guild_hall_resource_stone_fre" List.ItemID="1995318114" />
+				<instance_reference name="ability" value="abilities\toggle_abilities\french\toggle_guild_hall_resource_wood_fre" List.ItemID="-1958355200" />
+				<instance_reference name="ability" value="abilities\modal_abilities\french\guild_hall_collect_resources_fre" List.ItemID="1247405480" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\statemodel_ext" List.ItemID="-1319870754" List.ParentItemID="-1319870754">
+			<instance_reference name="schema" value="statemodel_schema\buildings\civilizations\french\landmark_guild_hall" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\building_presentation_ext" List.ItemID="-1064007581" List.ParentItemID="-1064007581">
+			<file name="construction_stamp" value="art\stamps\scaffolding\french\fre_hotel_de_ville_central" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\tier_ext" overrideParent="True" List.ItemID="1095418408" List.ListAction="Append">
+			<list name="tier_group_list" overrideParent="True">
+				<list name="tier_group" List.ItemID="1660570600">
+					<group name="tier" List.ItemID="-12896276">
+						<list name="tier_requirements">
+						</list>
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\french\buildings\landmark_hotel_de_ville_central_fre" overrideParent="True" />
+						<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+							<state_tree_node name="ActionTree_OpeningBranch" value="" />
+							<bool name="start_suspended" value="False" />
+						</template_reference>
+						<instance_reference name="statetree_tier_requirements_pbg" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="" />
+						<string name="tier_attachment_action" value="" />
+						<template_reference name="blueprint_conversion_parameters" value="blueprint_conversion_parameters">
+							<bool name="reissue_commands" value="False" />
+							<bool name="continue_state_trees" value="False" />
+							<bool name="remove_from_pending_deaths" value="False" />
+						</template_reference>
+						<string name="inventory_category_to_refresh_on_tier_up" value="" />
+					</group>
+				</list>
+				<list name="tier_group" overrideParent="True" List.ItemID="-745146490">
+					<group name="tier" List.ItemID="525736756">
+						<list name="tier_requirements">
+						</list>
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\french\outskirts\wonders\won_hdvcentral" overrideParent="True" />
+						<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+							<state_tree_node name="ActionTree_OpeningBranch" value="" />
+							<bool name="start_suspended" value="False" />
+						</template_reference>
+						<instance_reference name="statetree_tier_requirements_pbg" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="" />
+						<string name="tier_attachment_action" value="" />
+						<template_reference name="blueprint_conversion_parameters" value="blueprint_conversion_parameters">
+							<bool name="reissue_commands" value="False" />
+							<bool name="continue_state_trees" value="False" />
+							<bool name="remove_from_pending_deaths" value="False" />
+						</template_reference>
+						<string name="inventory_category_to_refresh_on_tier_up" value="" />
+					</group>
+				</list>
+			</list>
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="132779" />
+	<instance_reference name="parent_pbg" value="ebps\races\core\buildings\building_wonder_age2" />
+</instance>
