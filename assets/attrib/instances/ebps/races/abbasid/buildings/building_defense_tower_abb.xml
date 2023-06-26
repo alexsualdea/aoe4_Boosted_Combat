@@ -41,6 +41,6 @@
 			</list>
 		</template_reference>
 	</list>
-	<uniqueid name="pbgid" value="1073741935" />
+	<uniqueid name="pbgid" value="199627" />
 	<instance_reference name="parent_pbg" value="ebps\races\core\buildings\building_defense_tower" />
 </instance>

@@ -125,7 +125,7 @@
 						<list name="satisfying_entity_groups" overrideParent="True">
 							<group name="satisfying_entity_group" comment="Place of Knowledge&#xD;&#xA;" overrideParent="True" List.ItemID="487938384">
 								<list name="satisfying_entities">
-									<instance_reference name="entity" value="ebps\races\abbasid\buildings\building_house_of_wisdom_control_abb" overrideParent="True" List.ItemID="1988167550" />
+									<instance_reference name="entity" value="ebps\races\abbasid\buildings\building_house_of_wisdom_control_abb" mod="83583234c472401ea6ae8f205d1ee5a2" overrideParent="True" List.ItemID="1988167550" />
 								</list>
 							</group>
 						</list>

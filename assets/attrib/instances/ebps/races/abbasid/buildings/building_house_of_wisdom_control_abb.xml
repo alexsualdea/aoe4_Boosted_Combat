@@ -1,0 +1,453 @@
+<instance version="4" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\cost_ext" List.ItemID="-563024684" List.ParentItemID="-563024684">
+			<group name="time_cost">
+				<enum_table name="cost">
+					<float name="food" value="0" overrideParent="True" />
+					<float name="wood" value="50" overrideParent="True" />
+					<float name="gold" value="0" overrideParent="True" />
+				</enum_table>
+				<float name="time_seconds" value="30" overrideParent="True" />
+			</group>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\requirement_ext" List.ItemID="-1138756103" List.ParentItemID="-1138756103">
+			<list name="requirement_table" overrideParent="True">
+				<template_reference name="required" value="requirements\required_not" List.ItemID="1220129479">
+					<enum name="reason" value="usage" />
+					<locstring name="ui_name" value="11184323" />
+					<list name="requirement_table">
+						<template_reference name="required" value="requirements\required_any_in_list" List.ItemID="1424713892">
+							<enum name="reason" value="usage" />
+							<locstring name="ui_name" value="0" />
+							<list name="requirements">
+								<template_reference name="requirement" value="requirements\required_structure" List.ItemID="434774327">
+									<enum name="reason" value="usage" />
+									<locstring name="ui_name" value="0" />
+									<instance_reference name="structure_name" value="ebps\races\abbasid\buildings\building_house_of_wisdom_control_abb" mod="83583234c472401ea6ae8f205d1ee5a2" overrideParent="True" />
+									<int name="required_structure_count" value="1" />
+									<bool name="check_team" value="False" />
+									<bool name="require_construction_complete" value="False" />
+									<group name="include_pbg_parenting">
+										<bool name="include_child_pbgs" value="False" />
+										<bool name="include_parent_pbgs" value="False" />
+									</group>
+								</template_reference>
+								<template_reference name="requirement" value="requirements\required_structure" List.ItemID="1018309076">
+									<enum name="reason" value="usage" />
+									<locstring name="ui_name" value="0" />
+									<instance_reference name="structure_name" value="ebps\races\abbasid\buildings\building_house_of_wisdom_control_abb" mod="83583234c472401ea6ae8f205d1ee5a2" overrideParent="True" />
+									<int name="required_structure_count" value="1" />
+									<bool name="check_team" value="False" />
+									<bool name="require_construction_complete" value="False" />
+									<group name="include_pbg_parenting">
+										<bool name="include_child_pbgs" value="False" />
+										<bool name="include_parent_pbgs" value="False" />
+									</group>
+								</template_reference>
+							</list>
+						</template_reference>
+					</list>
+				</template_reference>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\action_apply_ext" List.ItemID="1912001137" List.ParentItemID="1912001137">
+			<list name="action_state_trees" overrideParent="True">
+				<group name="container" List.ItemID="-341462060">
+					<string name="state_tree" value="building_action_apply\buildings\landmark_age_1_action_apply" overrideParent="True" />
+				</group>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="442418202" List.ParentItemID="442418202">
+			<float name="hitpoints" value="18000" overrideParent="True" />
+			<enum_table name="armor_scaler_by_damage_type">
+				<float name="Fire" value="5" overrideParent="True" />
+			</enum_table>
+			<state_tree_node name="death_action_tree" value="building_death_actions\landmarks\landmarks_age1\abb_house_of_wisdom" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1676377740" List.ParentItemID="1676377740">
+			<file name="alternate_sua" value="art\civilizations\abbasids\structures\landmark_house_of_wisdom\abb_landmark_house_of_wisdom_control\layout_house_of_wisdom" overrideParent="True" />
+			<bool name="browsable_in_editor" value="True" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="31700595" List.ParentItemID="31700595">
+			<list name="unit_type_list" overrideParent="True">
+				<enum name="unit_type" value="building" List.ItemID="1427025878" />
+				<enum name="unit_type" value="wonder" List.ItemID="1089233172" />
+				<enum name="unit_type" value="wonder_feudal_age" List.ItemID="-1682547962" />
+				<enum name="unit_type" value="siegeable" List.ItemID="-1722336583" />
+				<enum name="unit_type" value="select_special_building" List.ItemID="1530804397" />
+				<enum name="unit_type" value="house_of_wisdom_abb" overrideParent="True" List.ItemID="-1648404484" />
+				<enum name="unit_type" value="golden_age_tier_1_building_abb" List.ItemID="687265793" />
+				<enum name="unit_type" value="research_building" List.ItemID="-2007557736" />
+				<enum name="unit_type" value="trade_post" List.ItemID="-1530349920" />
+				<enum name="unit_type" value="landmark" List.ItemID="-819090297" />
+			</list>
+			<list name="race_type_list" overrideParent="True">
+				<instance_reference name="race_type" value="racebps\abbasid" List.ItemID="-1672198313" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\sight_ext" List.ItemID="-1110061189" List.ParentItemID="-1110061189">
+			<group name="sight_package">
+				<float name="inner_height" value="8" overrideParent="True" />
+			</group>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="466870777" List.ParentItemID="466870777">
+			<float name="decorator_height" value="10" overrideParent="True" />
+			<file name="icon_name" value="races\abbasid\buildings\building_landmark_house_of_wisdom" overrideParent="True" />
+			<string name="debug_text" value="" overrideParent="True" />
+			<string name="decorator_data_template" value="HouseOfWisdomDistrictLandmarkDecoratorModel" overrideParent="True" />
+			<instance_reference name="district_info" value="ui_district_info\abbasid\golden_age_tiers" overrideParent="True" />
+			<enum name="decorator" value="EntityDistrictLandmark" overrideParent="True" />
+			<group name="ui_codex_info">
+				<int name="priority" value="5000" overrideParent="True" />
+				<bool name="exclusive" value="True" overrideParent="True" />
+			</group>
+			<list name="ui_extra_infos" overrideParent="True">
+				<template_reference name="ui_extra_info" value="info\ui_extra_info" List.ItemID="-127254727">
+					<file name="icon" value="influence_buff" overrideParent="True" />
+					<locstring name="description" value="0" />
+					<template_reference name="description_formatter" value="ui_text_formatter" overrideParent="True">
+						<list name="formatter_arguments">
+							<int name="int_value" value="5" overrideParent="True" List.ItemID="-240897634" />
+						</list>
+						<locstring name="formatter" value="11197638" />
+					</template_reference>
+				</template_reference>
+			</list>
+			<string name="telemetry_name" value="House of Wisdom" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\burn_ext" List.ItemID="-448897369" List.ParentItemID="-448897369">
+			<float name="on_fire_threshold" value="59" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\site_ext" List.ItemID="-264293052" List.ParentItemID="-264293052">
+			<group name="footprint_scale">
+				<float name="x" value="10" overrideParent="True" />
+				<float name="y" value="10" overrideParent="True" />
+			</group>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\construction_ext" List.ItemID="484476401" List.ParentItemID="484476401">
+			<template_reference name="construction_health_option" value="options\ebpextensions\constructionext\construction_health_option">
+				<float name="initial_health" value="200" overrideParent="True" />
+			</template_reference>
+			<group name="on_construction_complete_state_tree_refs">
+				<string name="while_construction_complete_entity_state_tree_ref" value="house_of_wisdom_construction_complete_abb" overrideParent="True" />
+			</group>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\ability_ext" List.ItemID="-335360918" List.ParentItemID="-335360918">
+			<list name="abilities" overrideParent="True">
+				<instance_reference name="ability" value="abilities\always_on_abilities\abbasid\golden_age\golden_age_tier_1" List.ItemID="-277664471" />
+				<instance_reference name="ability" value="abilities\always_on_abilities\abbasid\golden_age\golden_age_tier_2" overrideParent="True" List.ItemID="-325036389" />
+				<instance_reference name="ability" value="abilities\always_on_abilities\abbasid\golden_age\golden_age_tier_3" overrideParent="True" List.ItemID="1953866522" />
+				<instance_reference name="ability" value="abilities\always_on_abilities\abbasid\passives\golden_age_bonus_1_abb" List.ItemID="1819781469" />
+				<instance_reference name="ability" value="abilities\modal_abilities\abbasid\golden_age_passive_abb" List.ItemID="1341709394" />
+				<instance_reference name="ability" value="abilities\always_on_abilities\abbasid\passives\how_influence_abb" overrideParent="True" List.ItemID="1622234348" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\statemodel_ext" List.ItemID="-1319870754" List.ParentItemID="-1319870754">
+			<instance_reference name="schema" value="statemodel_schema\buildings\civilizations\abbasid\house_of_wisdom_abb" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\upgrade_ext" List.ItemID="96610941" List.ParentItemID="96610941">
+			<list name="standard_upgrades" overrideParent="True">
+				<instance_reference name="upgrade" value="upgrade\races\abbasid\research\house_of_wisdom\upgrade_add_culture_wing" overrideParent="True" List.ItemID="-316794009" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid\research\house_of_wisdom\upgrade_add_economy_wing" overrideParent="True" List.ItemID="-2045665236" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid\research\house_of_wisdom\upgrade_add_military_wing" overrideParent="True" List.ItemID="-294038946" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid\research\house_of_wisdom\upgrade_add_trade_wing" overrideParent="True" List.ItemID="1729114472" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid\research\house_of_wisdom\upgrade_add_culture_wing_feudal" overrideParent="True" List.ItemID="1761666173" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid\research\house_of_wisdom\upgrade_add_economy_wing_feudal" overrideParent="True" List.ItemID="-1264977544" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid\research\house_of_wisdom\upgrade_add_military_wing_feudal" overrideParent="True" List.ItemID="579924032" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid\research\house_of_wisdom\upgrade_add_trade_wing_feudal" overrideParent="True" List.ItemID="847172350" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid\research\house_of_wisdom\upgrade_add_culture_wing_castle" overrideParent="True" List.ItemID="-875586150" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid\research\house_of_wisdom\upgrade_add_economy_wing_castle" overrideParent="True" List.ItemID="693014242" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid\research\house_of_wisdom\upgrade_add_military_wing_castle" overrideParent="True" List.ItemID="1469610221" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid\research\house_of_wisdom\upgrade_add_trade_wing_castle" overrideParent="True" List.ItemID="258111946" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid\research\house_of_wisdom\upgrade_add_culture_wing_imperial" overrideParent="True" List.ItemID="1666366535" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid\research\house_of_wisdom\upgrade_add_economy_wing_imperial" overrideParent="True" List.ItemID="113951469" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid\research\house_of_wisdom\upgrade_add_military_wing_imperial" overrideParent="True" List.ItemID="921080625" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid\research\house_of_wisdom\upgrade_add_trade_wing_imperial" overrideParent="True" List.ItemID="-813820467" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid\research\upgrade_econ_agriculture_abb" List.ItemID="-2110686447" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid\research\upgrade_econ_improved_processing_abb" List.ItemID="243401826" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid\research\upgrade_mil_camel_archers_improved_weapon_abb" List.ItemID="1740652339" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid\research\upgrade_mil_camel_support_abb" List.ItemID="420956448" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid\research\upgrade_trade_commodity_trade_abb" List.ItemID="-1698291273" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid\research\upgrade_trade_gold_income_abb" List.ItemID="499408427" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid\research\upgrade_trade_trader_armor_abb" List.ItemID="2123229823" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid\research\upgrade_cul_cheaper_research_abb" List.ItemID="1655042008" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid\research\upgrade_cul_conversion_invuln_abb" overrideParent="True" List.ItemID="822978748" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid\research\upgrade_cul_medical_centers_abb" List.ItemID="1005920006" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid\research\upgrade_mameluke_damage_abb" List.ItemID="510254086" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid\research\upgrade_econ_fertile_crescent_abb" List.ItemID="-1048998297" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\building_presentation_ext" List.ItemID="-1064007581" List.ParentItemID="-1064007581">
+			<file name="construction_stamp" value="art\stamps\scaffolding\abbasid\abb_house_of_wisdom" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\tier_ext" List.ItemID="1134611580" List.ListAction="Append">
+			<list name="tier_group_list" overrideParent="True">
+				<list name="tier_group" List.ItemID="2051108196">
+					<group name="tier" List.ItemID="-647957473">
+						<list name="tier_requirements">
+						</list>
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\abbasid\buildings\house_of_wisdom_abb\house_of_wisdom_control_abb" overrideParent="True" />
+						<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+							<state_tree_node name="ActionTree_OpeningBranch" value="" />
+							<bool name="start_suspended" value="False" />
+						</template_reference>
+						<instance_reference name="statetree_tier_requirements_pbg" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="" />
+						<string name="tier_attachment_action" value="" />
+						<template_reference name="blueprint_conversion_parameters" value="blueprint_conversion_parameters">
+							<bool name="reissue_commands" value="False" />
+							<bool name="continue_state_trees" value="False" />
+							<bool name="remove_from_pending_deaths" value="False" />
+						</template_reference>
+						<string name="inventory_category_to_refresh_on_tier_up" value="" />
+					</group>
+				</list>
+				<list name="tier_group" overrideParent="True" List.ItemID="-1140145752">
+					<group name="tier" List.ItemID="-496314097">
+						<list name="tier_requirements">
+						</list>
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\abbasid\outskirts\general\abb_houseofwisdom" overrideParent="True" />
+						<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+							<state_tree_node name="ActionTree_OpeningBranch" value="" />
+							<bool name="start_suspended" value="False" />
+						</template_reference>
+						<instance_reference name="statetree_tier_requirements_pbg" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="" />
+						<string name="tier_attachment_action" value="" />
+						<template_reference name="blueprint_conversion_parameters" value="blueprint_conversion_parameters">
+							<bool name="reissue_commands" value="False" />
+							<bool name="continue_state_trees" value="False" />
+							<bool name="remove_from_pending_deaths" value="False" />
+						</template_reference>
+						<string name="inventory_category_to_refresh_on_tier_up" value="" />
+					</group>
+				</list>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\district_generator_ext" List.ItemID="903104764" List.ListAction="Append">
+			<float name="range_metres" value="8" overrideParent="True" />
+			<bool name="is_root_generator" value="True" overrideParent="True" />
+			<int name="generator_value" value="0" />
+			<bool name="disable_generation_on_spawn" value="False" />
+			<int name="district_palette_id" value="0" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\spawner_ext" List.ItemID="-92203468" List.ListAction="Append">
+			<bool name="must_be_in_supply" value="False" />
+			<float name="reinforce_radius" value="0" />
+			<list name="spawn_items" comment="IMPORTANT: If you change the number of units spawned in any of these sets, make sure to update the statetree so that it checks the right number when determining whether there is enough population available to spawn units. ex, condition at 8581048452440993459">
+				<group name="spawn_item" comment="Trade wing reward: 3 free traders" overrideParent="True" List.ItemID="-1238239690">
+					<group name="ui_position">
+						<int name="ui_position_row" value="-1" />
+						<int name="ui_position_column" value="-1" />
+					</group>
+					<instance_reference name="entity" value="" />
+					<instance_reference name="squad" value="sbps\races\abbasid\unit_trade_cart_free_2_abb" overrideParent="True" />
+					<bool name="spawn_at_map_entry_point" value="False" />
+					<instance_reference name="ui_menu" value="" />
+					<int name="number_to_spawn" value="1" />
+					<locstring name="ui_screen_name" value="0" />
+					<locstring name="ui_help_text" value="0" />
+					<enum_table name="item_cost_adjustment">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" />
+						<float name="food" value="0" />
+						<float name="wood" value="0" />
+						<float name="stone" value="0" />
+						<float name="gold" value="0" />
+						<float name="militia_hre" value="0" />
+					</enum_table>
+					<bool name="can_be_cancelled" value="True" />
+					<int name="number_to_queue_up_to_when_modified" value="5" />
+					<list name="additional_squads">
+						<instance_reference name="additional_squad" value="sbps\races\abbasid\unit_trade_cart_abb" List.ItemID="-180145626" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid\unit_trade_cart_abb" List.ItemID="-1593319920" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid\unit_trade_cart_abb" List.ItemID="-1106325598" />
+					</list>
+					<instance_reference name="hotkey_binding" value="" />
+				</group>
+				<group name="spawn_item" comment="Trade wing reward: 4 free traders" overrideParent="True" List.ItemID="-1354968783">
+					<group name="ui_position">
+						<int name="ui_position_row" value="-1" />
+						<int name="ui_position_column" value="-1" />
+					</group>
+					<instance_reference name="entity" value="" />
+					<instance_reference name="squad" value="sbps\races\abbasid\unit_trade_cart_free_3_abb" overrideParent="True" />
+					<bool name="spawn_at_map_entry_point" value="False" />
+					<instance_reference name="ui_menu" value="" />
+					<int name="number_to_spawn" value="1" />
+					<locstring name="ui_screen_name" value="0" />
+					<locstring name="ui_help_text" value="0" />
+					<enum_table name="item_cost_adjustment">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" />
+						<float name="food" value="0" />
+						<float name="wood" value="0" />
+						<float name="stone" value="0" />
+						<float name="gold" value="0" />
+						<float name="militia_hre" value="0" />
+					</enum_table>
+					<bool name="can_be_cancelled" value="True" />
+					<int name="number_to_queue_up_to_when_modified" value="5" />
+					<list name="additional_squads">
+						<instance_reference name="additional_squad" value="sbps\races\abbasid\unit_trade_cart_abb" List.ItemID="1346801998" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid\unit_trade_cart_abb" List.ItemID="-524273815" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid\unit_trade_cart_abb" List.ItemID="-1252377898" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid\unit_trade_cart_abb" List.ItemID="2020842063" />
+					</list>
+					<instance_reference name="hotkey_binding" value="" />
+				</group>
+				<group name="spawn_item" comment="Trade wing reward: 5 free traders" overrideParent="True" List.ItemID="-1601975024">
+					<group name="ui_position">
+						<int name="ui_position_row" value="-1" />
+						<int name="ui_position_column" value="-1" />
+					</group>
+					<instance_reference name="entity" value="" />
+					<instance_reference name="squad" value="sbps\races\abbasid\unit_trade_cart_free_4_abb" overrideParent="True" />
+					<bool name="spawn_at_map_entry_point" value="False" />
+					<instance_reference name="ui_menu" value="" />
+					<int name="number_to_spawn" value="1" />
+					<locstring name="ui_screen_name" value="0" />
+					<locstring name="ui_help_text" value="0" />
+					<enum_table name="item_cost_adjustment">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" />
+						<float name="food" value="0" />
+						<float name="wood" value="0" />
+						<float name="stone" value="0" />
+						<float name="gold" value="0" />
+						<float name="militia_hre" value="0" />
+					</enum_table>
+					<bool name="can_be_cancelled" value="True" />
+					<int name="number_to_queue_up_to_when_modified" value="5" />
+					<list name="additional_squads">
+						<instance_reference name="additional_squad" value="sbps\races\abbasid\unit_trade_cart_abb" List.ItemID="298905328" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid\unit_trade_cart_abb" List.ItemID="384928822" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid\unit_trade_cart_abb" List.ItemID="-1568723612" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid\unit_trade_cart_abb" List.ItemID="-622924579" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid\unit_trade_cart_abb" List.ItemID="-1594572736" />
+					</list>
+					<instance_reference name="hotkey_binding" value="" />
+				</group>
+				<group name="spawn_item" comment="Military wing reward, feudal age: 2 free spearmen, 2 free archer" List.ItemID="814899919">
+					<group name="ui_position">
+						<int name="ui_position_row" value="-1" />
+						<int name="ui_position_column" value="-1" />
+					</group>
+					<instance_reference name="entity" value="" />
+					<instance_reference name="squad" value="sbps\races\abbasid\unit_military_2_free_abb" overrideParent="True" />
+					<bool name="spawn_at_map_entry_point" value="False" />
+					<instance_reference name="ui_menu" value="" />
+					<int name="number_to_spawn" value="1" />
+					<locstring name="ui_screen_name" value="0" />
+					<locstring name="ui_help_text" value="0" />
+					<enum_table name="item_cost_adjustment">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" />
+						<float name="food" value="0" />
+						<float name="wood" value="0" />
+						<float name="stone" value="0" />
+						<float name="gold" value="0" />
+						<float name="militia_hre" value="0" />
+					</enum_table>
+					<bool name="can_be_cancelled" value="True" />
+					<int name="number_to_queue_up_to_when_modified" value="5" />
+					<list name="additional_squads">
+						<instance_reference name="additional_squad" value="sbps\races\abbasid\unit_spearman_1_abb" overrideParent="True" List.ItemID="-2028263394" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid\unit_spearman_1_abb" overrideParent="True" List.ItemID="-1894858696" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid\unit_archer_2_abb" overrideParent="True" List.ItemID="672583698" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid\unit_archer_2_abb" overrideParent="True" List.ItemID="-1338207030" />
+					</list>
+					<instance_reference name="hotkey_binding" value="" />
+				</group>
+				<group name="spawn_item" comment="Military wing reward, castle age: 2 free camel riders" List.ItemID="50286859">
+					<group name="ui_position">
+						<int name="ui_position_row" value="-1" />
+						<int name="ui_position_column" value="-1" />
+					</group>
+					<instance_reference name="entity" value="" />
+					<instance_reference name="squad" value="sbps\races\abbasid\unit_military_3_free_abb" overrideParent="True" />
+					<bool name="spawn_at_map_entry_point" value="False" />
+					<instance_reference name="ui_menu" value="" />
+					<int name="number_to_spawn" value="1" />
+					<locstring name="ui_screen_name" value="0" />
+					<locstring name="ui_help_text" value="0" />
+					<enum_table name="item_cost_adjustment">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" />
+						<float name="food" value="0" />
+						<float name="wood" value="0" />
+						<float name="stone" value="0" />
+						<float name="gold" value="0" />
+						<float name="militia_hre" value="0" />
+					</enum_table>
+					<bool name="can_be_cancelled" value="True" />
+					<int name="number_to_queue_up_to_when_modified" value="5" />
+					<list name="additional_squads">
+						<instance_reference name="additional_squad" value="sbps\races\abbasid\unit_camel_rider_3_abb" overrideParent="True" List.ItemID="-500815797" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid\unit_camel_rider_3_abb" overrideParent="True" List.ItemID="2140613912" />
+					</list>
+					<instance_reference name="hotkey_binding" value="" />
+				</group>
+				<group name="spawn_item" comment="Military wing reward, imperial age: 3 handcannons" List.ItemID="1769577706">
+					<group name="ui_position">
+						<int name="ui_position_row" value="-1" />
+						<int name="ui_position_column" value="-1" />
+					</group>
+					<instance_reference name="entity" value="" />
+					<instance_reference name="squad" value="sbps\races\abbasid\unit_military_4_free_abb" overrideParent="True" />
+					<bool name="spawn_at_map_entry_point" value="False" />
+					<instance_reference name="ui_menu" value="" />
+					<int name="number_to_spawn" value="1" />
+					<locstring name="ui_screen_name" value="0" />
+					<locstring name="ui_help_text" value="0" />
+					<enum_table name="item_cost_adjustment">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" />
+						<float name="food" value="0" />
+						<float name="wood" value="0" />
+						<float name="stone" value="0" />
+						<float name="gold" value="0" />
+						<float name="militia_hre" value="0" />
+					</enum_table>
+					<bool name="can_be_cancelled" value="True" />
+					<int name="number_to_queue_up_to_when_modified" value="5" />
+					<list name="additional_squads">
+						<instance_reference name="additional_squad" value="sbps\races\abbasid\unit_handcannon_4_abb" overrideParent="True" List.ItemID="1622541075" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid\unit_handcannon_4_abb" overrideParent="True" List.ItemID="-436883193" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid\unit_handcannon_4_abb" overrideParent="True" List.ItemID="-1759278796" />
+					</list>
+					<instance_reference name="hotkey_binding" value="" />
+				</group>
+			</list>
+			<list name="bonus_xp_from_hold_list">
+			</list>
+			<list name="reinforce_requirements">
+			</list>
+			<bool name="spawn_to_hold_try_first" value="False" />
+			<list name="queue_requirements">
+			</list>
+			<bool name="can_rally" value="True" />
+			<template_reference name="animated_spawn_option" value="options\none">
+			</template_reference>
+			<int name="max_queue_size_override" value="-1" />
+			<string name="queue_requirements_openingbranch" value="" />
+			<string name="reinforce_requirements_openingbranch" value="" />
+			<state_tree_node name="production_item_completed_openingbranch" value="" />
+			<bool name="enforce_minimum_clearance_at_spawn_positions" value="True" overrideParent="True" />
+			<bool name="enforce_minimum_clearance_if_entities_blocking" value="True" />
+			<float name="enforce_minimum_clearance_at_spawn_positions_search_range" value="30" overrideParent="True" />
+			<instance_reference name="rally_pass_type" value="pass_types\infantry" overrideParent="True" />
+			<bool name="reset_production_progress_at_current_pop_cap" value="True" />
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="199772" />
+	<instance_reference name="parent_pbg" value="ebps\races\core\buildings\building_wonder_age2" />
+</instance>

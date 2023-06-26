@@ -12,11 +12,6 @@
 				<instance_reference name="race_type" value="racebps\abbasid" List.ItemID="-1484813942" />
 			</list>
 		</template_reference>
-		<template_reference name="exts" value="ebpextensions\construction_ext" List.ItemID="649077203" List.ParentItemID="649077203">
-			<template_reference name="construction_health_option" value="options\ebpextensions\constructionext\construction_health_option">
-				<float name="initial_health" value="300" overrideParent="True" />
-			</template_reference>
-		</template_reference>
 		<template_reference name="exts" value="ebpextensions\cost_ext" List.ItemID="27741658" List.ParentItemID="27741658">
 			<group name="time_cost">
 				<enum_table name="cost">
@@ -91,6 +86,6 @@
 			</list>
 		</template_reference>
 	</list>
-	<uniqueid name="pbgid" value="1073741938" />
+	<uniqueid name="pbgid" value="199629" />
 	<instance_reference name="parent_pbg" value="ebps\races\core\buildings\building_defense_wall_gate" />
 </instance>
