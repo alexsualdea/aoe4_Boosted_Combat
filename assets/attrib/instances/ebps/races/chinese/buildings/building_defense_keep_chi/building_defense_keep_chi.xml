@@ -21,9 +21,9 @@
 		</template_reference>
 		<template_reference name="exts" value="ebpextensions\cost_ext" List.ItemID="-599506936" List.ParentItemID="-599506936">
 			<group name="time_cost">
-				<float name="time_seconds" value="288" overrideParent="True" />
+				<float name="time_seconds" value="500" overrideParent="True" />
 				<enum_table name="cost">
-					<float name="stone" value="1200" overrideParent="True" />
+					<float name="stone" value="1600" overrideParent="True" />
 				</enum_table>
 			</group>
 		</template_reference>

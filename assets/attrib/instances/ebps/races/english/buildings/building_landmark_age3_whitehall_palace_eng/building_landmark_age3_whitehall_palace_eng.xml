@@ -208,6 +208,28 @@
 						<instance_reference name="additional_squad" value="sbps\races\english\unit_spearman_2_eng" overrideParent="True" List.ItemID="1525036958" />
 					</list>
 					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_wyngard_palace\produce_wyngard_army" overrideParent="True" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
 				</group>
 				<group name="spawn_item" List.ItemID="-2136775378">
 					<group name="ui_position">
@@ -242,6 +264,28 @@
 						<instance_reference name="additional_squad" value="sbps\races\english\unit_horseman_2_eng" overrideParent="True" List.ItemID="-1381960038" />
 					</list>
 					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_wyngard_palace\produce_wyngard_raiders" overrideParent="True" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
 				</group>
 				<group name="spawn_item" List.ItemID="179044779">
 					<group name="ui_position">
@@ -276,6 +320,28 @@
 						<instance_reference name="additional_squad" value="sbps\races\english\unit_ranger_wynguard_4_eng" overrideParent="True" List.ItemID="1152914475" />
 					</list>
 					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_wyngard_palace\produce_wyngard_rangers" overrideParent="True" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
 				</group>
 				<group name="spawn_item" List.ItemID="-571992102">
 					<group name="ui_position">
@@ -310,6 +376,28 @@
 						<instance_reference name="additional_squad" value="sbps\races\english\unit_footman_wynguard_4_eng" overrideParent="True" List.ItemID="1152914475" />
 					</list>
 					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_wyngard_palace\produce_wyngard_footmen" overrideParent="True" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
 				</group>
 			</list>
 			<list name="bonus_xp_from_hold_list">

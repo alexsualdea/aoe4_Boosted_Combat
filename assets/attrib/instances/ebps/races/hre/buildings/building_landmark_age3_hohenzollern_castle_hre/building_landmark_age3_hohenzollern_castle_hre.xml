@@ -230,16 +230,13 @@
 			<bool name="show_ability_range_in_construction_item_preview" value="False" />
 			<bool name="construction_site_erase_inactive" value="False" />
 			<group name="preview_upgrade_effects">
-				<string name="statemachine_key" value="" />
-				<string name="on_key" value="" />
-				<string name="off_key" value="" />
-				<enum name="unit_type" value="" />
-				<instance_reference name="reticule" value="" />
-				<float name="reticule_radius" value="0" />
 				<template_reference name="area_info" value="">
 				</template_reference>
+				<list name="preview_upgrade_effects_list">
+				</list>
 			</group>
 			<bool name="placement_position_ignores_walkable_surfaces" value="False" />
+			<bool name="can_place_over_allied_buildings" value="False" />
 		</template_reference>
 		<template_reference name="exts" value="ebpextensions\requirement_ext" List.ItemID="1988372154">
 			<list name="requirement_table" overrideParent="True">
@@ -833,6 +830,28 @@
 					<list name="additional_squads">
 					</list>
 					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_town_center\train_villager" overrideParent="True" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
 				</group>
 				<group name="spawn_item" List.ItemID="1268669398">
 					<instance_reference name="entity" value="" />
@@ -861,6 +880,28 @@
 					<list name="additional_squads">
 					</list>
 					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_town_center\train_scout" overrideParent="True" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
 				</group>
 				<group name="spawn_item" comment="Monk&#xD;&#xA;" List.ItemID="-1429449642">
 					<group name="ui_position">
@@ -889,6 +930,28 @@
 					<list name="additional_squads">
 					</list>
 					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_town_center\train_prelate" overrideParent="True" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
 				</group>
 			</list>
 			<list name="bonus_xp_from_hold_list">

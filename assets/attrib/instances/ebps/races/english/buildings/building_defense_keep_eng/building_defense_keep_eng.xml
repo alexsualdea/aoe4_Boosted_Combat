@@ -35,9 +35,9 @@
 		<template_reference name="exts" value="ebpextensions\cost_ext" List.ItemID="-599506936" List.ParentItemID="-599506936">
 			<group name="time_cost">
 				<enum_table name="cost">
-					<float name="stone" value="1200" overrideParent="True" />
+					<float name="stone" value="1600" overrideParent="True" />
 				</enum_table>
-				<float name="time_seconds" value="225" overrideParent="True" />
+				<float name="time_seconds" value="450" overrideParent="True" />
 			</group>
 		</template_reference>
 		<template_reference name="exts" value="ebpextensions\impass_ext" List.ItemID="-1048125279" List.ParentItemID="-1048125279">
@@ -99,6 +99,28 @@
 					<list name="additional_squads">
 					</list>
 					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_keep\produce_keep_spearman_eng" overrideParent="True" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
 				</group>
 				<group name="spawn_item" comment="spearman - castle age" List.ItemID="138511462">
 					<instance_reference name="entity" value="" />
@@ -127,6 +149,28 @@
 					<list name="additional_squads">
 					</list>
 					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_keep\produce_keep_spearman_eng" overrideParent="True" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
 				</group>
 				<group name="spawn_item" comment="spearman - imperial age" List.ItemID="341908035">
 					<instance_reference name="entity" value="" />
@@ -155,6 +199,28 @@
 					<list name="additional_squads">
 					</list>
 					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_keep\produce_keep_spearman_eng" overrideParent="True" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
 				</group>
 				<group name="spawn_item" comment="man-at-arms - dark age&#xD;&#xA;" List.ItemID="-1425532435">
 					<instance_reference name="entity" value="" />
@@ -183,6 +249,28 @@
 					<list name="additional_squads">
 					</list>
 					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_keep\produce_keep_manatarms_eng" overrideParent="True" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
 				</group>
 				<group name="spawn_item" comment="man-at-arms - feudal age&#xD;&#xA;" List.ItemID="2078221035">
 					<instance_reference name="entity" value="" />
@@ -211,6 +299,28 @@
 					<list name="additional_squads">
 					</list>
 					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_keep\produce_keep_manatarms_eng" overrideParent="True" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
 				</group>
 				<group name="spawn_item" comment="man-at-arms - castle age&#xD;&#xA;" List.ItemID="-1806021582">
 					<instance_reference name="entity" value="" />
@@ -239,6 +349,28 @@
 					<list name="additional_squads">
 					</list>
 					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_keep\produce_keep_manatarms_eng" overrideParent="True" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
 				</group>
 				<group name="spawn_item" comment="man-at-arms - imperial age&#xD;&#xA;" List.ItemID="-1791663030">
 					<instance_reference name="entity" value="" />
@@ -267,6 +399,28 @@
 					<list name="additional_squads">
 					</list>
 					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_keep\produce_keep_manatarms_eng" overrideParent="True" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
 				</group>
 				<group name="spawn_item" comment="handcannon - imperial age + chemistry" List.ItemID="-561760831">
 					<instance_reference name="entity" value="" />
@@ -295,6 +449,28 @@
 					<list name="additional_squads">
 					</list>
 					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_keep\produce_keep_handcannoneer_eng" overrideParent="True" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
 				</group>
 				<group name="spawn_item" comment="archer - feudal age " List.ItemID="-150127379">
 					<instance_reference name="entity" value="" />
@@ -323,6 +499,28 @@
 					<list name="additional_squads">
 					</list>
 					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_keep\produce_keep_longbowman_eng" overrideParent="True" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
 				</group>
 				<group name="spawn_item" comment="archer - castle age " List.ItemID="1948920705">
 					<instance_reference name="entity" value="" />
@@ -351,6 +549,28 @@
 					<list name="additional_squads">
 					</list>
 					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_keep\produce_keep_longbowman_eng" overrideParent="True" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
 				</group>
 				<group name="spawn_item" comment="archer - imperial age " List.ItemID="-218884641">
 					<instance_reference name="entity" value="" />
@@ -379,6 +599,28 @@
 					<list name="additional_squads">
 					</list>
 					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_keep\produce_keep_longbowman_eng" overrideParent="True" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
 				</group>
 				<group name="spawn_item" comment="crossbowman - castle age" List.ItemID="857063219">
 					<instance_reference name="entity" value="" />
@@ -407,6 +649,28 @@
 					<list name="additional_squads">
 					</list>
 					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_keep\produce_keep_crossbowman_eng" overrideParent="True" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
 				</group>
 				<group name="spawn_item" comment="crossbowman - imperial age" List.ItemID="975175681">
 					<instance_reference name="entity" value="" />
@@ -435,6 +699,28 @@
 					<list name="additional_squads">
 					</list>
 					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_keep\produce_keep_crossbowman_eng" overrideParent="True" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
 				</group>
 				<group name="spawn_item" comment="hussar - feudal age" List.ItemID="-1065164079">
 					<instance_reference name="entity" value="" />
@@ -463,6 +749,28 @@
 					<list name="additional_squads">
 					</list>
 					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_keep\produce_keep_horseman_eng" overrideParent="True" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
 				</group>
 				<group name="spawn_item" comment="hussar - castle age" List.ItemID="7706727">
 					<instance_reference name="entity" value="" />
@@ -491,6 +799,28 @@
 					<list name="additional_squads">
 					</list>
 					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_keep\produce_keep_horseman_eng" overrideParent="True" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
 				</group>
 				<group name="spawn_item" comment="hussar - imperial age" List.ItemID="1822664281">
 					<instance_reference name="entity" value="" />
@@ -519,6 +849,28 @@
 					<list name="additional_squads">
 					</list>
 					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_keep\produce_keep_horseman_eng" overrideParent="True" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
 				</group>
 				<group name="spawn_item" comment="knight - castle age" List.ItemID="-1130811592">
 					<instance_reference name="entity" value="" />
@@ -547,6 +899,28 @@
 					<list name="additional_squads">
 					</list>
 					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_keep\produce_keep_knight_eng" overrideParent="True" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
 				</group>
 				<group name="spawn_item" comment="knight - imperial age" List.ItemID="-77848313">
 					<instance_reference name="entity" value="" />
@@ -575,6 +949,28 @@
 					<list name="additional_squads">
 					</list>
 					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_keep\produce_keep_knight_eng" overrideParent="True" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
 				</group>
 				<group name="spawn_item" comment="scorpion - castle" List.ItemID="986873867">
 					<instance_reference name="entity" value="" />
@@ -603,6 +999,28 @@
 					<list name="additional_squads">
 					</list>
 					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_keep\produce_keep_springald_eng" overrideParent="True" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
 				</group>
 				<group name="spawn_item" comment="mangonel - castle" List.ItemID="-674019031">
 					<instance_reference name="entity" value="" />
@@ -631,6 +1049,28 @@
 					<list name="additional_squads">
 					</list>
 					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_keep\produce_keep_mangonel_eng" overrideParent="True" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
 				</group>
 				<group name="spawn_item" comment="ribauld - imperial + chemistry" List.ItemID="1423444390">
 					<instance_reference name="entity" value="" />
@@ -659,6 +1099,28 @@
 					<list name="additional_squads">
 					</list>
 					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_keep\produce_keep_ribauldequin_eng" overrideParent="True" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
 				</group>
 				<group name="spawn_item" comment="trebuchet - imperial + counterweight" List.ItemID="-885026830">
 					<instance_reference name="entity" value="" />
@@ -687,6 +1149,28 @@
 					<list name="additional_squads">
 					</list>
 					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_keep\produce_keep_counterweight_treb_eng" overrideParent="True" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
 				</group>
 				<group name="spawn_item" comment="bombard - imperial + chemistry + unlock" List.ItemID="-787063100">
 					<group name="ui_position">
@@ -715,6 +1199,28 @@
 					<list name="additional_squads">
 					</list>
 					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_keep\produce_keep_bombard_eng" overrideParent="True" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
 				</group>
 				<group name="spawn_item" comment="Ram" List.ItemID="-452392598">
 					<group name="ui_position">
@@ -743,6 +1249,28 @@
 					<list name="additional_squads">
 					</list>
 					<instance_reference name="hotkey_binding" value="" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
 				</group>
 			</list>
 			<state_tree_node name="production_item_completed_openingbranch" value="building_production_item_completed\Master\building_production_item_complete\building_production_item_complete_keep" overrideParent="True" />

@@ -255,16 +255,13 @@
 			<bool name="show_ability_range_in_construction_item_preview" value="False" />
 			<bool name="construction_site_erase_inactive" value="False" />
 			<group name="preview_upgrade_effects">
-				<string name="statemachine_key" value="" />
-				<string name="on_key" value="" />
-				<string name="off_key" value="" />
-				<enum name="unit_type" value="" />
-				<instance_reference name="reticule" value="" />
-				<float name="reticule_radius" value="0" />
 				<template_reference name="area_info" value="">
 				</template_reference>
+				<list name="preview_upgrade_effects_list">
+				</list>
 			</group>
 			<bool name="placement_position_ignores_walkable_surfaces" value="True" />
+			<bool name="can_place_over_allied_buildings" value="False" />
 		</template_reference>
 		<template_reference name="exts" value="ebpextensions\cost_ext" List.ItemID="27741658">
 			<group name="time_cost">
@@ -514,6 +511,7 @@
 			<float name="segment_destroyed_neighbour_minimum_length" value="0" />
 			<bool name="should_kill_neighbour_slots_on_death" value="True" />
 			<bool name="should_be_killed_by_neighbour_slots" value="True" />
+			<enum name="destructible_type" value="none" />
 		</template_reference>
 		<template_reference name="exts" value="ebpextensions\action_apply_ext" List.ItemID="1996189072">
 			<list name="action_state_trees">
