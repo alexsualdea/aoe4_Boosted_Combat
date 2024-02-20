@@ -31,6 +31,7 @@
 					<float name="stone" value="350" />
 					<float name="gold" value="0" />
 					<float name="militia_hre" value="0" />
+					<float name="merc_byz" value="0" />
 				</enum_table>
 				<float name="time_seconds" value="90" />
 				<int name="time_turns" value="0" />
@@ -317,6 +318,7 @@
 			<float name="minimap_icon_zoom_scale" value="0" />
 			<locstring name="help_text_controller" value="0" />
 			<locstring name="extra_text_controller" value="0" />
+			<bool name="static_selection_bounds" value="False" />
 		</template_reference>
 		<template_reference name="exts" value="ebpextensions\combat_ext" List.ItemID="-2115950863">
 			<bool name="reject_attack_command" value="False" />
@@ -600,6 +602,8 @@
 			<bool name="ui_show_most_progressed_weapon_reload" value="False" />
 			<list name="target_scanning_priority_override">
 			</list>
+			<list name="block_ignore_damage_types">
+			</list>
 		</template_reference>
 		<template_reference name="exts" value="ebpextensions\upgrade_ext" List.ItemID="229543874">
 			<bool name="must_be_in_supply" value="False" />
@@ -657,6 +661,7 @@
 				<list name="block_path">
 				</list>
 			</group>
+			<bool name="attach_gap_fillers" value="False" />
 		</template_reference>
 		<template_reference name="exts" value="ebpextensions\construction_ext" List.ItemID="1200962088">
 			<bool name="automatic_fit_on_placement" value="False" />
@@ -752,9 +757,13 @@
 				</template_reference>
 				<list name="preview_upgrade_effects_list">
 				</list>
+				<bool name="ignore_depleted_resources" value="False" />
 			</group>
 			<bool name="placement_position_ignores_walkable_surfaces" value="True" />
-			<bool name="can_place_over_allied_buildings" value="False" />
+			<int name="aqueduct_network_increment_amount" value="0" />
+			<list name="ignorable_entity_types">
+			</list>
+			<float name="aqueduct_cistern_proximity_test_square_scale" value="0" />
 		</template_reference>
 		<template_reference name="exts" value="ebpextensions\requirement_ext" List.ItemID="-1728814585">
 			<list name="requirement_table">
@@ -817,9 +826,10 @@
 			</list>
 			<float name="segment_target_length" value="6" />
 			<float name="segment_destroyed_neighbour_minimum_length" value="0" />
-			<bool name="should_kill_neighbour_slots_on_death" value="False" />
 			<bool name="should_be_killed_by_neighbour_slots" value="True" />
 			<enum name="destructible_type" value="none" />
+			<float name="collapse_broad_phase_position_distance" value="7" />
+			<float name="collapse_narrow_phase_obb_distance" value="0" />
 		</template_reference>
 		<template_reference name="exts" value="ebpextensions\action_apply_ext" List.ItemID="-285991130">
 			<list name="action_state_trees">

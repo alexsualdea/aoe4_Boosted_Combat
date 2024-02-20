@@ -1,0 +1,23 @@
+<instance version="4" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="378232643" List.ParentItemID="378232643">
+			<float name="entity_scale" value="75" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\ability_ext" List.ItemID="-779430385" List.ParentItemID="-779430385">
+			<list name="abilities">
+				<instance_reference name="ability" value="abilities\timed_abilities\byzantine\cannon_swap_byz" overrideParent="True" List.ItemID="-2096774471" List.ParentItemID="-2096774471" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\cost_ext" List.ItemID="-112040889" List.ParentItemID="-112040889">
+			<group name="time_cost">
+				<enum_table name="cost">
+					<float name="wood" value="0" overrideParent="True" />
+					<float name="gold" value="0" overrideParent="True" />
+					<float name="merc_byz" value="900" overrideParent="True" />
+				</enum_table>
+			</group>
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="2138871" />
+	<instance_reference name="parent_pbg" value="ebps\races\french\units\royal_artillery\unit_cannon_4_royal_fre" />
+</instance>

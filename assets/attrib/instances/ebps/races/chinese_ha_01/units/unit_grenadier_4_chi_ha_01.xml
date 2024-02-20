@@ -1,0 +1,96 @@
+<instance version="4" description="Chinese Imperial Age Grenadier" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\tier_ext" overrideParent="True" List.ItemID="1708844278" List.ParentItemID="1708844278">
+			<list name="tier_group_list" overrideParent="True">
+				<list name="tier_group" overrideParent="True" List.ItemID="-1086662782">
+					<group name="tier" List.ItemID="687888027">
+						<list name="tier_requirements">
+						</list>
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\chinese\units\tier4_grenadier_chi" overrideParent="True" />
+						<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+							<state_tree_node name="ActionTree_OpeningBranch" value="tier_unit_exposure_dca" overrideParent="True" />
+							<bool name="start_suspended" value="False" />
+						</template_reference>
+						<instance_reference name="statetree_tier_requirements_pbg" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="" />
+						<string name="tier_attachment_action" value="" />
+						<template_reference name="blueprint_conversion_parameters" value="blueprint_conversion_parameters">
+							<bool name="reissue_commands" value="False" />
+							<bool name="continue_state_trees" value="True" />
+							<bool name="remove_from_pending_deaths" value="False" />
+							<bool name="enable_all_extensions" value="True" />
+						</template_reference>
+						<string name="inventory_category_to_refresh_on_tier_up" value="" />
+					</group>
+				</list>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-323710909" List.ParentItemID="-323710909">
+			<bool name="browsable_in_editor" value="True" overrideParent="True" />
+			<float name="entity_scale" value="75" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\action_apply_ext" List.ItemID="2146707795" List.ParentItemID="2146707795">
+			<list name="action_state_trees" overrideParent="True">
+				<group name="container" List.ItemID="-315367636">
+					<string name="state_tree" value="unit_action_apply\units\ranged_infantry_other" />
+				</group>
+				<group name="container" List.ItemID="-274995577">
+					<string name="state_tree" value="spirit_way_dynasty_unit_death_action\on_dynasty_unit_death" overrideParent="True" />
+				</group>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\cost_ext" List.ItemID="-1821619152" List.ParentItemID="-1821619152">
+			<group name="time_cost">
+				<enum_table name="cost">
+					<float name="food" value="120" overrideParent="True" />
+					<float name="wood" value="60" overrideParent="True" />
+				</enum_table>
+				<float name="time_seconds" value="30" overrideParent="True" />
+			</group>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-1933548135" List.ParentItemID="-1933548135">
+			<float name="hitpoints" value="150" overrideParent="True" />
+			<bool name="regeneration_disabled" value="False" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\sight_ext" List.ItemID="-1722342812" List.ParentItemID="-1722342812">
+			<group name="sight_package">
+				<float name="inner_height" value="10" overrideParent="True" />
+				<float name="inner_radius" value="20" overrideParent="True" />
+				<float name="outer_height" value="-15" overrideParent="True" />
+				<float name="outer_radius" value="50" overrideParent="True" />
+			</group>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="1149873509" List.ParentItemID="1149873509">
+			<list name="race_type_list" overrideParent="True">
+				<instance_reference name="race_type" value="racebps\chinese_ha_01" overrideParent="True" List.ItemID="1808864172" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\combat_ext" List.ItemID="1667880705" List.ParentItemID="1667880705">
+			<list name="hardpoints">
+				<group name="hardpoint" List.ItemID="-1851147479" List.ParentItemID="-1851147479">
+					<list name="weapon_table">
+						<group name="weapon" List.ItemID="159054103" List.ParentItemID="159054103">
+							<group name="origin">
+								<float name="y" value="2" overrideParent="True" />
+							</group>
+						</group>
+					</list>
+				</group>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\moving_ext" List.ItemID="744319089" List.ParentItemID="744319089">
+			<enum_table name="speed_scaling_table">
+				<float name="default_speed" value="4.5" overrideParent="True" />
+			</enum_table>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\action_tree_ext" List.ItemID="-677658307" List.ParentItemID="-677658307">
+			<list name="events" overrideParent="True">
+				<instance_reference name="statetree_event" value="statetree_event\statetree_event\statetree_event_on_wall_infantry" List.ItemID="894464484" />
+				<instance_reference name="statetree_event" value="statetree_event\statetree_event\statetree_event_on_great_wall_infantry_chi" overrideParent="True" List.ItemID="-649598453" />
+			</list>
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="8924145" />
+	<instance_reference name="parent_pbg" value="ebps\races\chinese_ha_01\units\unit_grenadier_3_chi_ha_01" mod="83583234c472401ea6ae8f205d1ee5a2" />
+</instance>

@@ -200,7 +200,6 @@
 				<template_reference name="permitted_replacement_option" value="options\ebpextensions\hexmapext\permitted_replacement_options\cannot_be_replaced" overrideParent="True">
 				</template_reference>
 			</template_reference>
-			<bool name="should_kill_neighbour_slots_on_death" value="False" overrideParent="True" />
 			<bool name="should_be_killed_by_neighbour_slots" value="False" overrideParent="True" />
 		</template_reference>
 		<template_reference name="exts" value="ebpextensions\action_apply_ext" List.ItemID="1996189072" List.ParentItemID="1996189072">
@@ -421,6 +420,8 @@
 			<bool name="unequip_weapons_on_death" value="True" />
 			<bool name="ui_show_most_progressed_weapon_reload" value="False" />
 			<list name="target_scanning_priority_override" overrideParent="True">
+			</list>
+			<list name="block_ignore_damage_types">
 			</list>
 		</template_reference>
 	</list>

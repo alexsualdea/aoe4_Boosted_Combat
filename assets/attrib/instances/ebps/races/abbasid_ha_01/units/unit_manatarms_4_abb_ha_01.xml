@@ -1,0 +1,21 @@
+<instance version="4" description="Imperial Age Man-at-arms" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-765163162" List.ParentItemID="-765163162">
+			<float name="entity_scale" value="75" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\ability_ext" List.ItemID="-487488271" List.ParentItemID="-487488271">
+			<list name="abilities" removedIds="1943519319">
+				<instance_reference name="ability" value="abilities\always_on_abilities\abbasid_ha_01\infantry_support_aura_abb_ha_01" List.ItemID="1424726512" List.ListAction="Append" />
+				<instance_reference name="ability" value="abilities\always_on_abilities\abbasid\ghulam_attack_abb" List.ItemID="-215165313" List.ListAction="Append" />
+				<instance_reference name="ability" value="abilities\always_on_abilities\abbasid_ha_01\passives\golden_age_bonus_1_abb_ha_01" List.ItemID="1826666583" List.ListAction="Append" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\combat_ext" List.ItemID="1697644820" List.ParentItemID="1697644820">
+			<template_reference name="kill_action_tree" value="state_tree_reference_info">
+				<state_tree_node name="ActionTree_OpeningBranch" value="Infantry_kill_action_abb_01\activate" overrideParent="True" />
+			</template_reference>
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="7136011" />
+	<instance_reference name="parent_pbg" value="ebps\races\abbasid\units\unit_manatarms_4_abb" />
+</instance>

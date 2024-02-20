@@ -1,0 +1,130 @@
+<instance version="6" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1356892678" List.ParentItemID="1356892678">
+			<bool name="browsable_in_editor" value="False" overrideParent="True" />
+			<float name="entity_scale" value="75" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\action_apply_ext" List.ItemID="-12513399" List.ParentItemID="-12513399">
+			<list name="action_state_trees" overrideParent="True">
+				<group name="container" List.ItemID="-178784153">
+					<string name="state_tree" value="unit_action_apply\units\knight" />
+				</group>
+				<group name="container" List.ItemID="270759579">
+					<string name="state_tree" value="unit_action_apply\units\knight\audio" />
+				</group>
+				<group name="container" List.ItemID="-158042175">
+					<string name="state_tree" value="king_action_apply" overrideParent="True" />
+				</group>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-788422057" List.ParentItemID="-788422057">
+			<float name="hitpoints" value="650" overrideParent="True" />
+			<float name="regeneration" value="0.0625" overrideParent="True" />
+			<bool name="regeneration_disabled" value="False" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\population_ext" List.ItemID="-1038753850" List.ParentItemID="-1038753850">
+			<float name="personnel_pop" value="0" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="-1786016482" List.ParentItemID="-1786016482">
+			<list name="race_type_list">
+				<instance_reference name="race_type" value="racebps\campaign_xp3\ayyubid_cmp" overrideParent="True" List.ItemID="1358069581" List.ParentItemID="1358069581" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\tier_ext" List.ItemID="1078428342" List.ParentItemID="1078428342">
+			<list name="tier_group_list">
+				<list name="tier_group" List.ItemID="1312574894" List.ParentItemID="1312574894">
+					<group name="tier" List.ItemID="-184542006" List.ParentItemID="-184542006">
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\ayyubid_cmp\units\tier1_leader_saladin_knight_ayy" overrideParent="True" />
+					</group>
+				</list>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\combat_ext" List.ItemID="1762200638" List.ParentItemID="1762200638">
+			<list name="hardpoints">
+				<group name="hardpoint" List.ItemID="1534383478" List.ParentItemID="1534383478">
+					<list name="weapon_table">
+						<group name="weapon" comment="default" List.ItemID="-1605222392" List.ParentItemID="-1605222392">
+							<template_reference name="non_entity_weapon_wrapper" value="non_entity_weapon_wrapper">
+								<instance_reference name="non_entity_weapon_wrapper_pbg" value="weapon\races\ayyubid_cmp\weapon_leader_saladin_knight_ayy" overrideParent="True" />
+							</template_reference>
+						</group>
+						<group name="weapon" comment="torch" List.ItemID="-815746252" List.ParentItemID="-815746252">
+						</group>
+						<group name="weapon" comment="charge" List.ItemID="1064922397" List.ParentItemID="1064922397">
+							<template_reference name="non_entity_weapon_wrapper" value="non_entity_weapon_wrapper">
+								<instance_reference name="non_entity_weapon_wrapper_pbg" value="weapon\races\ayyubid_cmp\weapon_leader_saladin_knight_charge_ayy" overrideParent="True" />
+							</template_reference>
+						</group>
+					</list>
+				</group>
+			</list>
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="2103080" />
+	<instance_reference name="parent_pbg" value="ebps\races\ayyubid_cmp\units\unit_knight_4_ayy" mod="83583234c472401ea6ae8f205d1ee5a2" />
+	<variant name="xp3">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1356892678" List.ParentItemID="1356892678">
+				<bool name="browsable_in_editor" value="False" overrideParent="True" />
+				<float name="entity_scale" value="75" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\action_apply_ext" List.ItemID="-12513399" List.ParentItemID="-12513399">
+				<list name="action_state_trees" overrideParent="True">
+					<group name="container" List.ItemID="34157447">
+						<string name="state_tree" value="xp3_unit_action_apply\units\knight" />
+					</group>
+					<group name="container" List.ItemID="644325257">
+						<string name="state_tree" value="xp3_unit_action_apply\units\knight\audio" />
+					</group>
+					<group name="container" List.ItemID="-468687367">
+						<string name="state_tree" value="xp3_king_action_apply" overrideParent="True" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-788422057" List.ParentItemID="-788422057">
+				<float name="hitpoints" value="650" overrideParent="True" />
+				<float name="regeneration" value="0.0625" overrideParent="True" />
+				<bool name="regeneration_disabled" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\population_ext" List.ItemID="-1038753850" List.ParentItemID="-1038753850">
+				<float name="personnel_pop" value="0" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="-1786016482" List.ParentItemID="-1786016482">
+				<list name="race_type_list">
+					<instance_reference name="race_type" value="racebps\campaign_xp3\ayyubid_cmp" overrideParent="True" List.ItemID="1358069581" List.ParentItemID="1358069581" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\tier_ext" List.ItemID="1078428342" List.ParentItemID="1078428342">
+				<list name="tier_group_list">
+					<list name="tier_group" List.ItemID="1312574894" List.ParentItemID="1312574894">
+						<group name="tier" List.ItemID="-184542006" List.ParentItemID="-184542006">
+							<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\ayyubid_cmp\units\tier1_leader_saladin_knight_ayy" overrideParent="True" />
+						</group>
+					</list>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\combat_ext" List.ItemID="1762200638" List.ParentItemID="1762200638">
+				<list name="hardpoints">
+					<group name="hardpoint" List.ItemID="1534383478" List.ParentItemID="1534383478">
+						<list name="weapon_table">
+							<group name="weapon" comment="default" List.ItemID="-1605222392" List.ParentItemID="-1605222392">
+								<template_reference name="non_entity_weapon_wrapper" value="non_entity_weapon_wrapper">
+									<instance_reference name="non_entity_weapon_wrapper_pbg" value="weapon\races\ayyubid_cmp\weapon_leader_saladin_knight_ayy" overrideParent="True" />
+								</template_reference>
+							</group>
+							<group name="weapon" comment="torch" List.ItemID="-815746252" List.ParentItemID="-815746252">
+							</group>
+							<group name="weapon" comment="charge" List.ItemID="1064922397" List.ParentItemID="1064922397">
+								<template_reference name="non_entity_weapon_wrapper" value="non_entity_weapon_wrapper">
+									<instance_reference name="non_entity_weapon_wrapper_pbg" value="weapon\races\ayyubid_cmp\weapon_leader_saladin_knight_charge_ayy" overrideParent="True" />
+								</template_reference>
+							</group>
+						</list>
+					</group>
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2103080" />
+		<instance_reference name="parent_pbg" value="ebps\races\ayyubid_cmp\units\unit_knight_4_ayy" mod="83583234c472401ea6ae8f205d1ee5a2" />
+	</variant>
+</instance>

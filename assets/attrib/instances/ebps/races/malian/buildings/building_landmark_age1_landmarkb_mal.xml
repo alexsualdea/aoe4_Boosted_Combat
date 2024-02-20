@@ -126,6 +126,7 @@
 			<float name="minimap_icon_zoom_scale" value="0" />
 			<locstring name="help_text_controller" value="0" />
 			<locstring name="extra_text_controller" value="0" />
+			<bool name="static_selection_bounds" value="False" />
 		</template_reference>
 		<template_reference name="exts" value="ebpextensions\action_apply_ext" List.ItemID="-1806850615">
 			<list name="action_state_trees">
@@ -240,9 +241,13 @@
 				</template_reference>
 				<list name="preview_upgrade_effects_list">
 				</list>
+				<bool name="ignore_depleted_resources" value="False" />
 			</group>
 			<bool name="placement_position_ignores_walkable_surfaces" value="False" />
-			<bool name="can_place_over_allied_buildings" value="False" />
+			<int name="aqueduct_network_increment_amount" value="0" />
+			<list name="ignorable_entity_types">
+			</list>
+			<float name="aqueduct_cistern_proximity_test_square_scale" value="0" />
 		</template_reference>
 		<template_reference name="exts" value="ebpextensions\requirement_ext" List.ItemID="-820478808">
 			<list name="requirement_table">
@@ -437,6 +442,7 @@
 					<float name="stone" value="0" />
 					<float name="gold" value="200" />
 					<float name="militia_hre" value="0" />
+					<float name="merc_byz" value="0" />
 				</enum_table>
 				<float name="time_seconds" value="190" />
 				<int name="time_turns" value="0" />
@@ -571,6 +577,7 @@
 				<list name="block_path">
 				</list>
 			</group>
+			<bool name="attach_gap_fillers" value="False" />
 		</template_reference>
 		<template_reference name="exts" value="ebpextensions\statemodel_ext" List.ItemID="571181488">
 			<instance_reference name="schema" value="statemodel_schema\buildings\civilizations\malian\landmark_pit_mine_mal" />
@@ -615,6 +622,7 @@
 							<bool name="reissue_commands" value="False" />
 							<bool name="continue_state_trees" value="False" />
 							<bool name="remove_from_pending_deaths" value="False" />
+							<bool name="enable_all_extensions" value="True" />
 						</template_reference>
 						<string name="inventory_category_to_refresh_on_tier_up" value="" />
 					</group>

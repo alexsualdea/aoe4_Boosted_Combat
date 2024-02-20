@@ -1,0 +1,22 @@
+<instance version="4" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\population_ext" List.ItemID="149232934" List.ParentItemID="149232934">
+			<float name="personnel_pop" value="1" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\combat_ext" List.ItemID="1247090283" List.ParentItemID="1247090283">
+			<list name="hardpoints">
+				<group name="hardpoint" List.ItemID="392243222" List.ParentItemID="392243222">
+					<list name="weapon_table">
+						<group name="weapon" List.ItemID="350673439" List.ParentItemID="350673439">
+							<template_reference name="non_entity_weapon_wrapper" value="non_entity_weapon_wrapper">
+								<instance_reference name="non_entity_weapon_wrapper_pbg" value="weapon\races\french\ranged\campaign\weapon_cannon_4_form_fre" overrideParent="True" />
+							</template_reference>
+						</group>
+					</list>
+				</group>
+			</list>
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="5486389" />
+	<instance_reference name="parent_pbg" value="ebps\races\french\units\unit_cannon_4_fre" />
+</instance>

@@ -1,0 +1,32 @@
+<instance version="4" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="1844382716" List.ParentItemID="1844382716">
+			<float name="hitpoints" value="150" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\combat_ext" List.ItemID="1246076922" List.ParentItemID="1246076922">
+			<list name="hardpoints">
+				<group name="hardpoint" List.ItemID="-1842440573" List.ParentItemID="-1842440573">
+					<list name="weapon_table">
+						<group name="weapon" List.ItemID="-336592328" List.ParentItemID="-336592328">
+							<template_reference name="weapon_entity_attachment" value="" overrideParent="True">
+							</template_reference>
+							<template_reference name="non_entity_weapon_wrapper" value="non_entity_weapon_wrapper" overrideParent="True">
+								<instance_reference name="non_entity_weapon_wrapper_pbg" value="weapon\races\common\ranged\weapon_culverin_4" overrideParent="True" />
+								<instance_reference name="animator_attachments" value="" overrideParent="True" />
+								<string name="marker_name_parent" value="" overrideParent="True" />
+							</template_reference>
+						</group>
+					</list>
+				</group>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\moving_ext" List.ItemID="1611895176" List.ParentItemID="1611895176">
+			<enum_table name="speed_scaling_table">
+				<float name="default_speed" value="1" overrideParent="True" />
+				<float name="max_speed" value="5" overrideParent="True" />
+			</enum_table>
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="6436702" />
+	<instance_reference name="parent_pbg" value="ebps\races\french\units\unit_culverin_4_fre" />
+</instance>

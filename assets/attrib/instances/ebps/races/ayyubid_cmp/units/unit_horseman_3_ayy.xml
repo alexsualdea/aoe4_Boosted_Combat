@@ -1,0 +1,50 @@
+<instance version="6" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1117396992" List.ParentItemID="1117396992">
+			<bool name="browsable_in_editor" value="False" overrideParent="True" />
+			<float name="entity_scale" value="75" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="-809868374" List.ParentItemID="-809868374">
+			<list name="race_type_list">
+				<instance_reference name="race_type" value="racebps\campaign_xp3\ayyubid_cmp" overrideParent="True" List.ItemID="-398980954" List.ParentItemID="-398980954" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\tier_ext" List.ItemID="-14762799" List.ParentItemID="-14762799">
+			<list name="tier_group_list">
+				<list name="tier_group" List.ItemID="-1074780366" List.ParentItemID="-1074780366">
+					<group name="tier" List.ItemID="-1000051360" List.ParentItemID="-1000051360">
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="ebps\races\ayyubid_cmp\units\unit_horseman_4_ayy" mod="83583234c472401ea6ae8f205d1ee5a2" overrideParent="True" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="sbps\races\ayyubid_cmp\unit_horseman_4_ayy" overrideParent="True" />
+					</group>
+				</list>
+			</list>
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="2103382" />
+	<instance_reference name="parent_pbg" value="ebps\races\abbasid\units\unit_horseman_3_abb" />
+	<variant name="xp3">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1117396992" List.ParentItemID="1117396992">
+				<bool name="browsable_in_editor" value="False" overrideParent="True" />
+				<float name="entity_scale" value="75" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="-809868374" List.ParentItemID="-809868374">
+				<list name="race_type_list">
+					<instance_reference name="race_type" value="racebps\campaign_xp3\ayyubid_cmp" overrideParent="True" List.ItemID="-398980954" List.ParentItemID="-398980954" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\tier_ext" List.ItemID="-14762799" List.ParentItemID="-14762799">
+				<list name="tier_group_list">
+					<list name="tier_group" List.ItemID="-1074780366" List.ParentItemID="-1074780366">
+						<group name="tier" List.ItemID="-1000051360" List.ParentItemID="-1000051360">
+							<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="ebps\races\ayyubid_cmp\units\unit_horseman_4_ayy" mod="83583234c472401ea6ae8f205d1ee5a2" overrideParent="True" />
+							<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="sbps\races\ayyubid_cmp\unit_horseman_4_ayy" overrideParent="True" />
+						</group>
+					</list>
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2103382" />
+		<instance_reference name="parent_pbg" value="ebps\races\abbasid\units\unit_horseman_3_abb" />
+	</variant>
+</instance>

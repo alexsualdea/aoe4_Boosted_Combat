@@ -1,0 +1,31 @@
+<instance version="4" description="Castle Age Man-at-arms" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-765163162" List.ParentItemID="-765163162">
+			<float name="entity_scale" value="75" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\ability_ext" List.ItemID="-487488271" List.ParentItemID="-487488271">
+			<list name="abilities" removedIds="-464731143">
+				<instance_reference name="ability" value="abilities\always_on_abilities\abbasid_ha_01\infantry_support_aura_abb_ha_01" List.ItemID="-1327930091" List.ListAction="Append" />
+				<instance_reference name="ability" value="abilities\always_on_abilities\abbasid\ghulam_attack_abb" List.ItemID="-2064862367" List.ListAction="Append" />
+				<instance_reference name="ability" value="abilities\always_on_abilities\abbasid_ha_01\passives\golden_age_bonus_1_abb_ha_01" List.ItemID="320648965" List.ListAction="Append" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\combat_ext" List.ItemID="1697644820" List.ParentItemID="1697644820">
+			<template_reference name="kill_action_tree" value="state_tree_reference_info">
+				<state_tree_node name="ActionTree_OpeningBranch" value="Infantry_kill_action_abb_01\activate" overrideParent="True" />
+			</template_reference>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\tier_ext" List.ItemID="1590686263" List.ParentItemID="1590686263">
+			<list name="tier_group_list">
+				<list name="tier_group" List.ItemID="-88923168" List.ParentItemID="-88923168">
+					<group name="tier" List.ItemID="1970503051" List.ParentItemID="1970503051">
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="ebps\races\abbasid_ha_01\units\unit_manatarms_4_abb_ha_01" mod="83583234c472401ea6ae8f205d1ee5a2" overrideParent="True" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="sbps\races\abbasid_ha_01\unit_manatarms_4_abb_ha_01" overrideParent="True" />
+					</group>
+				</list>
+			</list>
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="8488575" />
+	<instance_reference name="parent_pbg" value="ebps\races\abbasid\units\unit_manatarms_3_abb" />
+</instance>

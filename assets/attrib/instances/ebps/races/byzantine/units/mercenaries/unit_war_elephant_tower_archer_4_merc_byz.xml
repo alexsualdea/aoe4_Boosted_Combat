@@ -1,0 +1,84 @@
+<instance version="4" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-361112062" List.ParentItemID="-361112062">
+			<float name="entity_scale" value="75" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\tier_ext" List.ItemID="-2077139315" List.ParentItemID="-2077139315">
+			<list name="tier_group_list">
+				<list name="tier_group" List.ItemID="1337226120" List.ParentItemID="1337226120">
+					<group name="tier" List.ItemID="-696814716" List.ParentItemID="-696814716">
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\sultanate\units\tier4_war_elephant_tower_archer_sul" overrideParent="True" />
+					</group>
+				</list>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="-2135037099" List.ParentItemID="-2135037099">
+			<list name="unit_type_list">
+				<enum name="unit_type" value="archer" List.ItemID="-981644542" List.ListAction="Append" />
+				<enum name="unit_type" value="mercenary_byz" List.ItemID="-1577357697" List.ListAction="Append" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\combat_ext" List.ItemID="1897813712" List.ParentItemID="1897813712">
+			<list name="hardpoints">
+				<group name="hardpoint" List.ItemID="-514863562" List.ParentItemID="-514863562">
+					<list name="weapon_table">
+						<group name="weapon" List.ItemID="580523828" List.ParentItemID="580523828">
+							<template_reference name="non_entity_weapon_wrapper" value="non_entity_weapon_wrapper">
+								<instance_reference name="non_entity_weapon_wrapper_pbg" value="weapon\races\sultanate\ranged\weapon_torch_elephant_archer_sul" overrideParent="True" />
+								<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\sultanate\weapons\wpn_siege_torch_sul" overrideParent="True" />
+							</template_reference>
+						</group>
+						<group name="weapon" List.ItemID="2060200421" List.ParentItemID="2060200421">
+							<group name="origin">
+								<float name="y" value="0.5" overrideParent="True" />
+								<float name="z" value="0" overrideParent="True" />
+							</group>
+							<template_reference name="non_entity_weapon_wrapper" value="non_entity_weapon_wrapper">
+								<instance_reference name="non_entity_weapon_wrapper_pbg" value="weapon\races\sultanate\ranged\weapon_war_elephant_tower_crossbow_4_sul" overrideParent="True" />
+								<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\sultanate\weapons\wpn_range_crossbow_4_sul" overrideParent="True" />
+								<string name="marker_name_parent" value="MetaRig_RArmPalmSocket" overrideParent="True" />
+							</template_reference>
+						</group>
+						<group name="weapon" List.ItemID="-622459025" List.ParentItemID="-622459025">
+							<group name="origin">
+								<float name="y" value="1.66" overrideParent="True" />
+								<float name="z" value="0.75" overrideParent="True" />
+							</group>
+							<template_reference name="non_entity_weapon_wrapper" value="non_entity_weapon_wrapper">
+								<instance_reference name="non_entity_weapon_wrapper_pbg" value="weapon\races\sultanate\ranged\weapon_elephant_archer_incendiary_sul" overrideParent="True" />
+								<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\core\weapons\wpn_siege_archer_incendiary" overrideParent="True" />
+								<string name="marker_name_parent" value="MetaRig_LArmPalmSocket" overrideParent="True" />
+							</template_reference>
+						</group>
+						<group name="weapon" List.ItemID="-445002826" List.ListAction="Append">
+							<group name="heading">
+								<float name="x" value="0" />
+								<float name="y" value="0" />
+								<float name="z" value="1" />
+							</group>
+							<float name="length" value="0" />
+							<group name="origin">
+								<float name="x" value="0" />
+								<float name="y" value="0.5" />
+								<float name="z" value="0" />
+							</group>
+							<enum name="type" value="default" />
+							<template_reference name="weapon_entity_attachment" value="">
+							</template_reference>
+							<template_reference name="non_entity_weapon_wrapper" value="non_entity_weapon_wrapper">
+								<instance_reference name="non_entity_weapon_wrapper_pbg" value="weapon\races\sultanate\ranged\weapon_elephant_archer_crossbow_incendiary_sul" />
+								<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\core\weapons\wpn_siege_crossbow_incendiary" />
+								<string name="marker_name_parent" value="MetaRig_RArmPalmSocket" />
+							</template_reference>
+						</group>
+					</list>
+				</group>
+			</list>
+			<template_reference name="kill_action_tree" value="state_tree_reference_info">
+				<state_tree_node name="ActionTree_OpeningBranch" value="on_kill_byz" overrideParent="True" />
+			</template_reference>
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="2104128" />
+	<instance_reference name="parent_pbg" value="ebps\races\sultanate\units\unit_war_elephant_tower_archer_4_sul" />
+</instance>

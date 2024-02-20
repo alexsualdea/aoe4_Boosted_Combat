@@ -1,0 +1,23 @@
+<instance version="4" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="378232643" List.ParentItemID="378232643">
+			<float name="entity_scale" value="75" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="-2097533964" List.ParentItemID="-2097533964">
+			<list name="unit_type_list" overrideParent="True">
+				<enum name="unit_type" value="siege" List.ItemID="-1781054300" />
+				<enum name="unit_type" value="military" List.ItemID="167746857" />
+				<enum name="unit_type" value="gunpowder" List.ItemID="-1654811882" />
+				<enum name="unit_type" value="siege_range" List.ItemID="889543097" />
+				<enum name="unit_type" value="bombard_wheeled" List.ItemID="-2108300297" />
+				<enum name="unit_type" value="formational" List.ItemID="-603622253" />
+				<enum name="unit_type" value="annihilation_condition" List.ItemID="1443477632" />
+				<enum name="unit_type" value="included_by_military_hotkeys" List.ItemID="706230560" />
+				<enum name="unit_type" value="land_military" List.ItemID="43974788" />
+				<enum name="unit_type" value="royal_artillery" List.ItemID="-644684604" />
+			</list>
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="7902262" />
+	<instance_reference name="parent_pbg" value="ebps\races\french\units\royal_artillery\unit_cannon_4_royal_fre" />
+</instance>

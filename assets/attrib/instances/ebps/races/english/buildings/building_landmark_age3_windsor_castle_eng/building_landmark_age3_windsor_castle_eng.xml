@@ -94,9 +94,13 @@
 				</template_reference>
 				<list name="preview_upgrade_effects_list">
 				</list>
+				<bool name="ignore_depleted_resources" value="False" />
 			</group>
 			<bool name="placement_position_ignores_walkable_surfaces" value="False" />
-			<bool name="can_place_over_allied_buildings" value="False" />
+			<int name="aqueduct_network_increment_amount" value="0" />
+			<list name="ignorable_entity_types">
+			</list>
+			<float name="aqueduct_cistern_proximity_test_square_scale" value="0" />
 		</template_reference>
 		<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-535682071">
 			<bool name="ap_killed_kicker" value="True" />
@@ -224,6 +228,7 @@
 			<float name="minimap_icon_zoom_scale" value="0" />
 			<locstring name="help_text_controller" value="0" />
 			<locstring name="extra_text_controller" value="0" />
+			<bool name="static_selection_bounds" value="False" />
 		</template_reference>
 		<template_reference name="exts" value="ebpextensions\action_apply_ext" List.ItemID="-1987748673">
 			<list name="action_state_trees">
@@ -347,6 +352,7 @@
 					<float name="stone" value="0" />
 					<float name="gold" value="1200" />
 					<float name="militia_hre" value="0" />
+					<float name="merc_byz" value="0" />
 				</enum_table>
 				<float name="time_seconds" value="250" />
 				<int name="time_turns" value="0" />
@@ -625,6 +631,7 @@
 				<list name="block_path">
 				</list>
 			</group>
+			<bool name="attach_gap_fillers" value="False" />
 		</template_reference>
 		<template_reference name="exts" value="ebpextensions\tier_ext" List.ItemID="-1438416819">
 			<list name="tier_group_list" overrideParent="True">
@@ -645,6 +652,7 @@
 							<bool name="reissue_commands" value="False" />
 							<bool name="continue_state_trees" value="False" />
 							<bool name="remove_from_pending_deaths" value="False" />
+							<bool name="enable_all_extensions" value="True" />
 						</template_reference>
 						<string name="inventory_category_to_refresh_on_tier_up" value="" />
 					</group>
@@ -666,6 +674,7 @@
 							<bool name="reissue_commands" value="False" />
 							<bool name="continue_state_trees" value="False" />
 							<bool name="remove_from_pending_deaths" value="False" />
+							<bool name="enable_all_extensions" value="True" />
 						</template_reference>
 						<string name="inventory_category_to_refresh_on_tier_up" value="" />
 					</group>
@@ -2448,6 +2457,8 @@
 			<bool name="ui_show_most_progressed_weapon_reload" value="False" />
 			<list name="target_scanning_priority_override" overrideParent="True">
 			</list>
+			<list name="block_ignore_damage_types">
+			</list>
 		</template_reference>
 		<template_reference name="exts" value="ebpextensions\hold_ext" List.ItemID="-242962276">
 			<list name="acceptable_types">
@@ -2484,6 +2495,7 @@
 				<float name="stone" value="0" />
 				<float name="gold" value="0" />
 				<float name="militia_hre" value="0" />
+				<float name="merc_byz" value="0" />
 			</enum_table>
 			<bool name="shared_with_other_same_type_units" value="False" />
 			<float name="unload_seconds" value="0" />
@@ -2539,6 +2551,7 @@
 						<float name="stone" value="0" />
 						<float name="gold" value="0" />
 						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
 					</enum_table>
 					<locstring name="ui_screen_name" value="0" />
 					<locstring name="ui_help_text" value="0" />
@@ -2569,6 +2582,8 @@
 						</template_reference>
 						<enum name="observer_type" value="Disabled" />
 					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
 				</group>
 				<group name="spawn_item" comment="spearman - castle age" List.ItemID="956074919">
 					<instance_reference name="entity" value="" />
@@ -2589,6 +2604,7 @@
 						<float name="stone" value="0" />
 						<float name="gold" value="0" />
 						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
 					</enum_table>
 					<locstring name="ui_screen_name" value="0" />
 					<locstring name="ui_help_text" value="0" />
@@ -2619,6 +2635,8 @@
 						</template_reference>
 						<enum name="observer_type" value="Disabled" />
 					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
 				</group>
 				<group name="spawn_item" comment="spearman - imperial age" List.ItemID="-1276390331">
 					<instance_reference name="entity" value="" />
@@ -2639,6 +2657,7 @@
 						<float name="stone" value="0" />
 						<float name="gold" value="0" />
 						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
 					</enum_table>
 					<locstring name="ui_screen_name" value="0" />
 					<locstring name="ui_help_text" value="0" />
@@ -2669,6 +2688,8 @@
 						</template_reference>
 						<enum name="observer_type" value="Disabled" />
 					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
 				</group>
 				<group name="spawn_item" comment="man-at-arms - dark age&#xD;&#xA;" List.ItemID="-2027135131">
 					<instance_reference name="entity" value="" />
@@ -2689,6 +2710,7 @@
 						<float name="stone" value="0" />
 						<float name="gold" value="0" />
 						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
 					</enum_table>
 					<locstring name="ui_screen_name" value="0" />
 					<locstring name="ui_help_text" value="0" />
@@ -2719,6 +2741,8 @@
 						</template_reference>
 						<enum name="observer_type" value="Disabled" />
 					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
 				</group>
 				<group name="spawn_item" comment="man-at-arms - feudal age&#xD;&#xA;" List.ItemID="227801157">
 					<instance_reference name="entity" value="" />
@@ -2739,6 +2763,7 @@
 						<float name="stone" value="0" />
 						<float name="gold" value="0" />
 						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
 					</enum_table>
 					<locstring name="ui_screen_name" value="0" />
 					<locstring name="ui_help_text" value="0" />
@@ -2769,6 +2794,8 @@
 						</template_reference>
 						<enum name="observer_type" value="Disabled" />
 					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
 				</group>
 				<group name="spawn_item" comment="man-at-arms - castle age&#xD;&#xA;" List.ItemID="1575647416">
 					<instance_reference name="entity" value="" />
@@ -2789,6 +2816,7 @@
 						<float name="stone" value="0" />
 						<float name="gold" value="0" />
 						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
 					</enum_table>
 					<locstring name="ui_screen_name" value="0" />
 					<locstring name="ui_help_text" value="0" />
@@ -2819,6 +2847,8 @@
 						</template_reference>
 						<enum name="observer_type" value="Disabled" />
 					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
 				</group>
 				<group name="spawn_item" comment="man-at-arms - imperial age&#xD;&#xA;" List.ItemID="-27685208">
 					<instance_reference name="entity" value="" />
@@ -2839,6 +2869,7 @@
 						<float name="stone" value="0" />
 						<float name="gold" value="0" />
 						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
 					</enum_table>
 					<locstring name="ui_screen_name" value="0" />
 					<locstring name="ui_help_text" value="0" />
@@ -2869,6 +2900,8 @@
 						</template_reference>
 						<enum name="observer_type" value="Disabled" />
 					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
 				</group>
 				<group name="spawn_item" comment="handcannon - imperial age + chemistry" List.ItemID="1186190946">
 					<instance_reference name="entity" value="" />
@@ -2889,6 +2922,7 @@
 						<float name="stone" value="0" />
 						<float name="gold" value="0" />
 						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
 					</enum_table>
 					<locstring name="ui_screen_name" value="0" />
 					<locstring name="ui_help_text" value="0" />
@@ -2919,6 +2953,8 @@
 						</template_reference>
 						<enum name="observer_type" value="Disabled" />
 					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
 				</group>
 				<group name="spawn_item" comment="archer - feudal age " List.ItemID="561376267">
 					<instance_reference name="entity" value="" />
@@ -2939,6 +2975,7 @@
 						<float name="stone" value="0" />
 						<float name="gold" value="0" />
 						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
 					</enum_table>
 					<locstring name="ui_screen_name" value="0" />
 					<locstring name="ui_help_text" value="0" />
@@ -2969,6 +3006,8 @@
 						</template_reference>
 						<enum name="observer_type" value="Disabled" />
 					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
 				</group>
 				<group name="spawn_item" comment="archer - castle age " List.ItemID="-698489599">
 					<instance_reference name="entity" value="" />
@@ -2989,6 +3028,7 @@
 						<float name="stone" value="0" />
 						<float name="gold" value="0" />
 						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
 					</enum_table>
 					<locstring name="ui_screen_name" value="0" />
 					<locstring name="ui_help_text" value="0" />
@@ -3019,6 +3059,8 @@
 						</template_reference>
 						<enum name="observer_type" value="Disabled" />
 					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
 				</group>
 				<group name="spawn_item" comment="archer - imperial age " List.ItemID="462958859">
 					<instance_reference name="entity" value="" />
@@ -3039,6 +3081,7 @@
 						<float name="stone" value="0" />
 						<float name="gold" value="0" />
 						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
 					</enum_table>
 					<locstring name="ui_screen_name" value="0" />
 					<locstring name="ui_help_text" value="0" />
@@ -3069,6 +3112,8 @@
 						</template_reference>
 						<enum name="observer_type" value="Disabled" />
 					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
 				</group>
 				<group name="spawn_item" comment="crossbowman - castle age" List.ItemID="334633362">
 					<instance_reference name="entity" value="" />
@@ -3089,6 +3134,7 @@
 						<float name="stone" value="0" />
 						<float name="gold" value="0" />
 						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
 					</enum_table>
 					<locstring name="ui_screen_name" value="0" />
 					<locstring name="ui_help_text" value="0" />
@@ -3119,6 +3165,8 @@
 						</template_reference>
 						<enum name="observer_type" value="Disabled" />
 					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
 				</group>
 				<group name="spawn_item" comment="crossbowman - imperial age" List.ItemID="912215913">
 					<instance_reference name="entity" value="" />
@@ -3139,6 +3187,7 @@
 						<float name="stone" value="0" />
 						<float name="gold" value="0" />
 						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
 					</enum_table>
 					<locstring name="ui_screen_name" value="0" />
 					<locstring name="ui_help_text" value="0" />
@@ -3169,6 +3218,8 @@
 						</template_reference>
 						<enum name="observer_type" value="Disabled" />
 					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
 				</group>
 				<group name="spawn_item" comment="hussar - feudal age" List.ItemID="-772152865">
 					<instance_reference name="entity" value="" />
@@ -3189,6 +3240,7 @@
 						<float name="stone" value="0" />
 						<float name="gold" value="0" />
 						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
 					</enum_table>
 					<locstring name="ui_screen_name" value="0" />
 					<locstring name="ui_help_text" value="0" />
@@ -3219,6 +3271,8 @@
 						</template_reference>
 						<enum name="observer_type" value="Disabled" />
 					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
 				</group>
 				<group name="spawn_item" comment="hussar - castle age" List.ItemID="2076693224">
 					<instance_reference name="entity" value="" />
@@ -3239,6 +3293,7 @@
 						<float name="stone" value="0" />
 						<float name="gold" value="0" />
 						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
 					</enum_table>
 					<locstring name="ui_screen_name" value="0" />
 					<locstring name="ui_help_text" value="0" />
@@ -3269,6 +3324,8 @@
 						</template_reference>
 						<enum name="observer_type" value="Disabled" />
 					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
 				</group>
 				<group name="spawn_item" comment="hussar - imperial age" List.ItemID="-275023404">
 					<instance_reference name="entity" value="" />
@@ -3289,6 +3346,7 @@
 						<float name="stone" value="0" />
 						<float name="gold" value="0" />
 						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
 					</enum_table>
 					<locstring name="ui_screen_name" value="0" />
 					<locstring name="ui_help_text" value="0" />
@@ -3319,6 +3377,8 @@
 						</template_reference>
 						<enum name="observer_type" value="Disabled" />
 					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
 				</group>
 				<group name="spawn_item" comment="knight - castle age" List.ItemID="113467577">
 					<instance_reference name="entity" value="" />
@@ -3339,6 +3399,7 @@
 						<float name="stone" value="0" />
 						<float name="gold" value="0" />
 						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
 					</enum_table>
 					<locstring name="ui_screen_name" value="0" />
 					<locstring name="ui_help_text" value="0" />
@@ -3369,6 +3430,8 @@
 						</template_reference>
 						<enum name="observer_type" value="Disabled" />
 					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
 				</group>
 				<group name="spawn_item" comment="knight - imperial age" List.ItemID="-831286765">
 					<instance_reference name="entity" value="" />
@@ -3389,6 +3452,7 @@
 						<float name="stone" value="0" />
 						<float name="gold" value="0" />
 						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
 					</enum_table>
 					<locstring name="ui_screen_name" value="0" />
 					<locstring name="ui_help_text" value="0" />
@@ -3419,6 +3483,8 @@
 						</template_reference>
 						<enum name="observer_type" value="Disabled" />
 					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
 				</group>
 				<group name="spawn_item" comment="scorpion - castle" List.ItemID="-312463726">
 					<instance_reference name="entity" value="" />
@@ -3439,6 +3505,7 @@
 						<float name="stone" value="0" />
 						<float name="gold" value="0" overrideParent="True" />
 						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
 					</enum_table>
 					<locstring name="ui_screen_name" value="0" />
 					<locstring name="ui_help_text" value="0" />
@@ -3469,6 +3536,8 @@
 						</template_reference>
 						<enum name="observer_type" value="Disabled" />
 					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
 				</group>
 				<group name="spawn_item" comment="mangonel - castle" List.ItemID="1664261111">
 					<instance_reference name="entity" value="" />
@@ -3489,6 +3558,7 @@
 						<float name="stone" value="0" />
 						<float name="gold" value="0" overrideParent="True" />
 						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
 					</enum_table>
 					<locstring name="ui_screen_name" value="0" />
 					<locstring name="ui_help_text" value="0" />
@@ -3519,6 +3589,8 @@
 						</template_reference>
 						<enum name="observer_type" value="Disabled" />
 					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
 				</group>
 				<group name="spawn_item" comment="ribauld - imperial + chemistry" List.ItemID="-447507657">
 					<instance_reference name="entity" value="" />
@@ -3539,6 +3611,7 @@
 						<float name="stone" value="0" />
 						<float name="gold" value="0" overrideParent="True" />
 						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
 					</enum_table>
 					<locstring name="ui_screen_name" value="0" />
 					<locstring name="ui_help_text" value="0" />
@@ -3569,6 +3642,8 @@
 						</template_reference>
 						<enum name="observer_type" value="Disabled" />
 					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
 				</group>
 				<group name="spawn_item" comment="trebuchet - imperial + counterweight" List.ItemID="-1781375901">
 					<instance_reference name="entity" value="" />
@@ -3589,6 +3664,7 @@
 						<float name="stone" value="0" />
 						<float name="gold" value="0" overrideParent="True" />
 						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
 					</enum_table>
 					<locstring name="ui_screen_name" value="0" />
 					<locstring name="ui_help_text" value="0" />
@@ -3619,6 +3695,8 @@
 						</template_reference>
 						<enum name="observer_type" value="Disabled" />
 					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
 				</group>
 				<group name="spawn_item" comment="bombard - imperial + chemistry + unlock" List.ItemID="100141886">
 					<group name="ui_position">
@@ -3639,6 +3717,7 @@
 						<float name="stone" value="0" />
 						<float name="gold" value="0" overrideParent="True" />
 						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
 					</enum_table>
 					<locstring name="ui_screen_name" value="0" />
 					<locstring name="ui_help_text" value="0" />
@@ -3669,6 +3748,8 @@
 						</template_reference>
 						<enum name="observer_type" value="Disabled" />
 					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
 				</group>
 				<group name="spawn_item" comment="Ram" List.ItemID="1070138490">
 					<group name="ui_position">
@@ -3691,6 +3772,7 @@
 						<float name="stone" value="0" />
 						<float name="gold" value="0" />
 						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
 					</enum_table>
 					<bool name="can_be_cancelled" value="True" />
 					<int name="number_to_queue_up_to_when_modified" value="5" />
@@ -3719,6 +3801,8 @@
 						</template_reference>
 						<enum name="observer_type" value="Disabled" />
 					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
 				</group>
 			</list>
 			<list name="bonus_xp_from_hold_list">
@@ -3740,6 +3824,7 @@
 			<float name="enforce_minimum_clearance_at_spawn_positions_search_range" value="30" />
 			<instance_reference name="rally_pass_type" value="pass_types\infantry" overrideParent="True" />
 			<bool name="reset_production_progress_at_current_pop_cap" value="True" />
+			<bool name="can_spawn_if_neutral" value="False" />
 		</template_reference>
 		<template_reference name="exts" value="ebpextensions\trigger_volume_ext" List.ItemID="-389524833">
 		</template_reference>

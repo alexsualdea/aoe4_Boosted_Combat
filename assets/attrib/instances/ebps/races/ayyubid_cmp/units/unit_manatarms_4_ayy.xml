@@ -1,0 +1,30 @@
+<instance version="6" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-765163162" List.ParentItemID="-765163162">
+			<bool name="browsable_in_editor" value="False" overrideParent="True" />
+			<float name="entity_scale" value="75" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="-782585427" List.ParentItemID="-782585427">
+			<list name="race_type_list">
+				<instance_reference name="race_type" value="racebps\campaign_xp3\ayyubid_cmp" overrideParent="True" List.ItemID="-1408557425" List.ParentItemID="-1408557425" />
+			</list>
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="2103387" />
+	<instance_reference name="parent_pbg" value="ebps\races\abbasid\units\unit_manatarms_4_abb" />
+	<variant name="xp3">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-765163162" List.ParentItemID="-765163162">
+				<bool name="browsable_in_editor" value="False" overrideParent="True" />
+				<float name="entity_scale" value="75" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="-782585427" List.ParentItemID="-782585427">
+				<list name="race_type_list">
+					<instance_reference name="race_type" value="racebps\campaign_xp3\ayyubid_cmp" overrideParent="True" List.ItemID="-1408557425" List.ParentItemID="-1408557425" />
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2103387" />
+		<instance_reference name="parent_pbg" value="ebps\races\abbasid\units\unit_manatarms_4_abb" />
+	</variant>
+</instance>

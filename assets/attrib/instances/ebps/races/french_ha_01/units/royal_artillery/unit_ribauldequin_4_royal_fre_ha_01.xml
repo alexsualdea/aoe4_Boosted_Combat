@@ -1,0 +1,14 @@
+<instance version="4" description="French Imperial Age Ribauldequin&#xD;&#xA;" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-164298849" List.ParentItemID="-164298849">
+			<float name="entity_scale" value="75" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="223061918" List.ParentItemID="223061918">
+			<list name="unit_type_list" removedIds="-1601644573">
+				<enum name="unit_type" value="royal_artillery" List.ItemID="911206648" List.ListAction="Append" />
+			</list>
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="5300296" />
+	<instance_reference name="parent_pbg" value="ebps\races\french\units\royal_artillery\unit_ribauldequin_4_royal_fre" />
+</instance>

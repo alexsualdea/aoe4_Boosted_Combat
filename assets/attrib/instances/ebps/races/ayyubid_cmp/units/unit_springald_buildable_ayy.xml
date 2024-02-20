@@ -1,0 +1,36 @@
+<instance version="6" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="811590333" List.ParentItemID="811590333">
+			<bool name="browsable_in_editor" value="False" overrideParent="True" />
+			<float name="entity_scale" value="75" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="1224301896" List.ParentItemID="1224301896">
+			<list name="race_type_list" overrideParent="True">
+				<instance_reference name="race_type" value="racebps\campaign_xp3\ayyubid_cmp" overrideParent="True" List.ItemID="-1265062049" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\construction_ext" List.ItemID="378935698" List.ParentItemID="378935698">
+			<instance_reference name="on_construction_squad" value="sbps\races\ayyubid_cmp\unit_springald_buildable_ayy" overrideParent="True" />
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="2101198" />
+	<instance_reference name="parent_pbg" value="ebps\races\abbasid\units\unit_springald_3_buildable_abb" />
+	<variant name="xp3">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="811590333" List.ParentItemID="811590333">
+				<bool name="browsable_in_editor" value="False" overrideParent="True" />
+				<float name="entity_scale" value="75" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="1224301896" List.ParentItemID="1224301896">
+				<list name="race_type_list" overrideParent="True">
+					<instance_reference name="race_type" value="racebps\campaign_xp3\ayyubid_cmp" overrideParent="True" List.ItemID="-1293294370" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\construction_ext" List.ItemID="378935698" List.ParentItemID="378935698">
+				<instance_reference name="on_construction_squad" value="sbps\races\ayyubid_cmp\unit_springald_buildable_ayy" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2101198" />
+		<instance_reference name="parent_pbg" value="ebps\races\abbasid\units\unit_springald_3_buildable_abb" />
+	</variant>
+</instance>

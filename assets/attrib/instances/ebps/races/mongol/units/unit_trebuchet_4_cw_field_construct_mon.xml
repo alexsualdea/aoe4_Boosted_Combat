@@ -146,9 +146,13 @@
 				</template_reference>
 				<list name="preview_upgrade_effects_list">
 				</list>
+				<bool name="ignore_depleted_resources" value="False" />
 			</group>
 			<bool name="placement_position_ignores_walkable_surfaces" value="False" />
-			<bool name="can_place_over_allied_buildings" value="False" />
+			<int name="aqueduct_network_increment_amount" value="0" />
+			<list name="ignorable_entity_types">
+			</list>
+			<float name="aqueduct_cistern_proximity_test_square_scale" value="0" />
 		</template_reference>
 		<template_reference name="exts" value="ebpextensions\requirement_ext" List.ItemID="1644592157" List.ListAction="Append">
 			<list name="requirement_table" overrideParent="True">

@@ -1,0 +1,22 @@
+<instance version="4" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\population_ext" List.ItemID="-1856811533" List.ParentItemID="-1856811533">
+			<float name="personnel_pop" value="1" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\combat_ext" List.ItemID="1246076922" List.ParentItemID="1246076922">
+			<list name="hardpoints">
+				<group name="hardpoint" List.ItemID="-1842440573" List.ParentItemID="-1842440573">
+					<list name="weapon_table">
+						<group name="weapon" List.ItemID="-336592328" List.ParentItemID="-336592328">
+							<template_reference name="non_entity_weapon_wrapper" value="non_entity_weapon_wrapper">
+								<instance_reference name="non_entity_weapon_wrapper_pbg" value="weapon\races\french\ranged\campaign\weapon_culverin_4_form_fre" overrideParent="True" />
+							</template_reference>
+						</group>
+					</list>
+				</group>
+			</list>
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="6496923" />
+	<instance_reference name="parent_pbg" value="ebps\races\french\units\unit_culverin_4_fre" />
+</instance>

@@ -1,0 +1,204 @@
+<instance version="6" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-694954717" List.ParentItemID="-694954717">
+			<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\core\units\unit_archer_2" overrideParent="True" />
+			<float name="animator_scale" value="122" overrideParent="True" />
+			<bool name="browsable_in_editor" value="False" overrideParent="True" />
+			<float name="entity_scale" value="75" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\action_apply_ext" List.ItemID="-1585086845" List.ParentItemID="-1585086845">
+			<list name="action_state_trees">
+				<group name="container" List.ItemID="1706473285" List.ParentItemID="1706473285">
+					<string name="state_tree" value="unit_action_apply\units\archer" overrideParent="True" />
+				</group>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="1861449306" List.ParentItemID="1861449306">
+			<enum_table name="armor_scaler_by_damage_type">
+				<float name="Melee" value="0" overrideParent="True" />
+				<float name="Ranged" value="0" overrideParent="True" />
+			</enum_table>
+			<float name="hitpoints" value="50" overrideParent="True" />
+			<enum name="armor_type" value="None" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="-608938671" List.ParentItemID="-608938671">
+			<list name="unit_type_list" overrideParent="True">
+				<enum name="unit_type" value="military" List.ItemID="-1141584956" />
+				<enum name="unit_type" value="archer" List.ItemID="-1246731664" />
+				<enum name="unit_type" value="human" List.ItemID="-1659430548" />
+				<enum name="unit_type" value="infantry" List.ItemID="-2041523885" />
+				<enum name="unit_type" value="ranged" List.ItemID="-1108251110" />
+				<enum name="unit_type" value="formational" List.ItemID="843640564" />
+				<enum name="unit_type" value="annihilation_condition" List.ItemID="85529843" />
+				<enum name="unit_type" value="archer_incendiary_age_2" List.ItemID="1051782412" />
+				<enum name="unit_type" value="included_by_military_hotkeys" List.ItemID="-372389739" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\combat_ext" List.ItemID="1934131166" List.ParentItemID="1934131166">
+			<list name="hardpoints">
+				<group name="hardpoint" List.ItemID="-826010839" List.ParentItemID="-826010839">
+					<list name="weapon_table" overrideParent="True">
+						<group name="weapon" List.ItemID="-69294356">
+							<group name="heading">
+								<float name="x" value="0" />
+								<float name="y" value="0" />
+								<float name="z" value="0" />
+							</group>
+							<float name="length" value="0" />
+							<group name="origin">
+								<float name="x" value="0" />
+								<float name="y" value="1.75" />
+								<float name="z" value="1" />
+							</group>
+							<enum name="type" value="default" />
+							<template_reference name="weapon_entity_attachment" value="" overrideParent="True">
+							</template_reference>
+							<template_reference name="non_entity_weapon_wrapper" value="non_entity_weapon_wrapper" overrideParent="True">
+								<instance_reference name="non_entity_weapon_wrapper_pbg" value="weapon\races\english\ranged\weapon_villager_hunt_ranged_eng" overrideParent="True" />
+								<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\abbasid\weapons\wpn_range_archer_2_abb" overrideParent="True" />
+								<string name="marker_name_parent" value="MetaRig_LArmPalmSocket" overrideParent="True" />
+							</template_reference>
+						</group>
+						<group name="weapon" List.ItemID="140562060">
+							<group name="heading">
+								<float name="x" value="0" />
+								<float name="y" value="0" />
+								<float name="z" value="0" />
+							</group>
+							<float name="length" value="0" />
+							<group name="origin">
+								<float name="x" value="0.5" />
+								<float name="y" value="1.5" />
+								<float name="z" value="0" />
+							</group>
+							<enum name="type" value="default" />
+							<template_reference name="weapon_entity_attachment" value="" overrideParent="True">
+							</template_reference>
+							<template_reference name="non_entity_weapon_wrapper" value="non_entity_weapon_wrapper" overrideParent="True">
+								<instance_reference name="non_entity_weapon_wrapper_pbg" value="weapon\races\common\melee\weapon_archer_2_melee" overrideParent="True" />
+								<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\abbasid\weapons\wpn_melee_archer_2_melee_abb" overrideParent="True" />
+								<string name="marker_name_parent" value="MetaRig_RArmPalmSocket" overrideParent="True" />
+							</template_reference>
+						</group>
+					</list>
+				</group>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\tier_ext" List.ItemID="650057187" List.ParentItemID="650057187">
+			<list name="tier_group_list">
+				<list name="tier_group" List.ItemID="-21672434" List.ParentItemID="-21672434">
+					<group name="tier" List.ItemID="2124742111" List.ParentItemID="2124742111">
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\ayyubid_cmp\units\tier1_pirate_archer_ayy" overrideParent="True" />
+						<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+							<state_tree_node name="ActionTree_OpeningBranch" value="archer_weapon_conversions_abb" overrideParent="True" />
+						</template_reference>
+					</group>
+				</list>
+			</list>
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="2138719" />
+	<instance_reference name="parent_pbg" value="ebps\races\ayyubid_cmp\units\unit_pirate_ayy" mod="83583234c472401ea6ae8f205d1ee5a2" />
+	<variant name="xp3">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-694954717" List.ParentItemID="-694954717">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\core\units\unit_archer_2" overrideParent="True" />
+				<float name="animator_scale" value="122" overrideParent="True" />
+				<bool name="browsable_in_editor" value="False" overrideParent="True" />
+				<float name="entity_scale" value="75" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\action_apply_ext" List.ItemID="-1585086845" List.ParentItemID="-1585086845">
+				<list name="action_state_trees">
+					<group name="container" List.ItemID="1706473285" List.ParentItemID="1706473285">
+						<string name="state_tree" value="xp3_unit_action_apply\units\archer" overrideParent="True" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="1861449306" List.ParentItemID="1861449306">
+				<enum_table name="armor_scaler_by_damage_type">
+					<float name="Melee" value="0" overrideParent="True" />
+					<float name="Ranged" value="0" overrideParent="True" />
+				</enum_table>
+				<float name="hitpoints" value="50" overrideParent="True" />
+				<enum name="armor_type" value="None" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="-608938671" List.ParentItemID="-608938671">
+				<list name="unit_type_list" overrideParent="True">
+					<enum name="unit_type" value="military" List.ItemID="1322844476" />
+					<enum name="unit_type" value="archer" List.ItemID="-734777777" />
+					<enum name="unit_type" value="human" List.ItemID="-459512839" />
+					<enum name="unit_type" value="infantry" List.ItemID="233780808" />
+					<enum name="unit_type" value="ranged" List.ItemID="1297929281" />
+					<enum name="unit_type" value="formational" List.ItemID="-1126496323" />
+					<enum name="unit_type" value="annihilation_condition" List.ItemID="476180068" />
+					<enum name="unit_type" value="archer_incendiary_age_2" List.ItemID="-465309697" />
+					<enum name="unit_type" value="included_by_military_hotkeys" List.ItemID="-602307483" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\combat_ext" List.ItemID="1934131166" List.ParentItemID="1934131166">
+				<list name="hardpoints">
+					<group name="hardpoint" List.ItemID="-826010839" List.ParentItemID="-826010839">
+						<list name="weapon_table" overrideParent="True">
+							<group name="weapon" List.ItemID="-729305369">
+								<group name="heading">
+									<float name="x" value="0" />
+									<float name="y" value="0" />
+									<float name="z" value="0" />
+								</group>
+								<float name="length" value="0" />
+								<group name="origin">
+									<float name="x" value="0" />
+									<float name="y" value="1.75" />
+									<float name="z" value="1" />
+								</group>
+								<enum name="type" value="default" />
+								<template_reference name="weapon_entity_attachment" value="" overrideParent="True">
+								</template_reference>
+								<template_reference name="non_entity_weapon_wrapper" value="non_entity_weapon_wrapper" overrideParent="True">
+									<instance_reference name="non_entity_weapon_wrapper_pbg" value="weapon\races\english\ranged\weapon_villager_hunt_ranged_eng" overrideParent="True" />
+									<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\abbasid\weapons\wpn_range_archer_2_abb" overrideParent="True" />
+									<string name="marker_name_parent" value="MetaRig_LArmPalmSocket" overrideParent="True" />
+								</template_reference>
+							</group>
+							<group name="weapon" List.ItemID="431023774">
+								<group name="heading">
+									<float name="x" value="0" />
+									<float name="y" value="0" />
+									<float name="z" value="0" />
+								</group>
+								<float name="length" value="0" />
+								<group name="origin">
+									<float name="x" value="0.5" />
+									<float name="y" value="1.5" />
+									<float name="z" value="0" />
+								</group>
+								<enum name="type" value="default" />
+								<template_reference name="weapon_entity_attachment" value="" overrideParent="True">
+								</template_reference>
+								<template_reference name="non_entity_weapon_wrapper" value="non_entity_weapon_wrapper" overrideParent="True">
+									<instance_reference name="non_entity_weapon_wrapper_pbg" value="weapon\races\common\melee\weapon_archer_2_melee" overrideParent="True" />
+									<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\abbasid\weapons\wpn_melee_archer_2_melee_abb" overrideParent="True" />
+									<string name="marker_name_parent" value="MetaRig_RArmPalmSocket" overrideParent="True" />
+								</template_reference>
+							</group>
+						</list>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\tier_ext" List.ItemID="650057187" List.ParentItemID="650057187">
+				<list name="tier_group_list">
+					<list name="tier_group" List.ItemID="-21672434" List.ParentItemID="-21672434">
+						<group name="tier" List.ItemID="2124742111" List.ParentItemID="2124742111">
+							<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\ayyubid_cmp\units\tier1_pirate_archer_ayy" overrideParent="True" />
+							<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+								<state_tree_node name="ActionTree_OpeningBranch" value="xp3_archer_weapon_conversions_abb" overrideParent="True" />
+							</template_reference>
+						</group>
+					</list>
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2138719" />
+		<instance_reference name="parent_pbg" value="ebps\races\ayyubid_cmp\units\unit_pirate_ayy" mod="83583234c472401ea6ae8f205d1ee5a2" />
+	</variant>
+</instance>

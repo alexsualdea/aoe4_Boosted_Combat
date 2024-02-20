@@ -1,0 +1,45 @@
+<instance version="4" description="Castle Age Horseman" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\tier_ext" List.ItemID="1634360977" List.ParentItemID="1634360977">
+			<list name="tier_group_list">
+				<list name="tier_group" List.ItemID="-654447714" List.ParentItemID="-654447714">
+					<group name="tier" List.ItemID="-435828115" List.ParentItemID="-435828115">
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\abbasid\units\tier3_cavalry_camel_abb" overrideParent="True" />
+					</group>
+					<group name="tier" List.ItemID="900373679" List.ParentItemID="900373679">
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\abbasid\units\tier4_cavalry_camel_abb" overrideParent="True" />
+						<instance_reference name="statetree_tier_requirements_pbg" value="upgrade\races\byzantine\units\upgrade_unit_mercenary_4_byz" overrideParent="True" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="ebps\races\byzantine\units\mercenaries\unit_camel_4_merc_byz" mod="83583234c472401ea6ae8f205d1ee5a2" overrideParent="True" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="sbps\races\byzantine\mercenaries\contract_03\unit_camel_rider_4_merc_byz" overrideParent="True" />
+					</group>
+				</list>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="452991839" List.ParentItemID="452991839">
+			<float name="entity_scale" value="75" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\combat_ext" List.ItemID="1316018211" List.ParentItemID="1316018211">
+			<template_reference name="kill_action_tree" value="state_tree_reference_info">
+				<state_tree_node name="ActionTree_OpeningBranch" value="on_kill_byz" overrideParent="True" />
+			</template_reference>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\cost_ext" List.ItemID="2119039331" List.ParentItemID="2119039331">
+			<group name="time_cost">
+				<enum_table name="cost">
+					<float name="food" value="0" overrideParent="True" />
+					<float name="gold" value="0" overrideParent="True" />
+					<float name="merc_byz" value="240" overrideParent="True" />
+					<float name="wood" value="0" overrideParent="True" />
+				</enum_table>
+				<float name="time_seconds" value="73" overrideParent="True" />
+			</group>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="-1752877578" List.ParentItemID="-1752877578">
+			<list name="unit_type_list">
+				<enum name="unit_type" value="mercenary_byz" List.ItemID="813465795" List.ListAction="Append" />
+			</list>
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="2104111" />
+	<instance_reference name="parent_pbg" value="ebps\races\abbasid\units\unit_camel_3_abb" />
+</instance>

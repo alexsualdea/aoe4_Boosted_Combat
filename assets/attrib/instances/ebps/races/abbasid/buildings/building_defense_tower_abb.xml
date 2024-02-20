@@ -12,7 +12,7 @@
 			</group>
 		</template_reference>
 		<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="2028962899" List.ParentItemID="2028962899">
-			<float name="hitpoints" value="4500" overrideParent="True" />
+			<float name="hitpoints" value="7000" overrideParent="True" />
 		</template_reference>
 		<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="-923485527" List.ParentItemID="-923485527">
 			<list name="unit_type_list" overrideParent="True">

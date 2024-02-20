@@ -1,0 +1,78 @@
+<instance version="6" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="847857005" List.ParentItemID="847857005">
+			<bool name="browsable_in_editor" value="False" overrideParent="True" />
+			<float name="entity_scale" value="75" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\cost_ext" List.ItemID="163824703" List.ParentItemID="163824703">
+			<group name="time_cost">
+				<enum_table name="cost">
+					<float name="food" value="35" overrideParent="True" />
+				</enum_table>
+				<float name="time_seconds" value="15" overrideParent="True" />
+			</group>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="125879439" List.ParentItemID="125879439">
+			<list name="race_type_list" overrideParent="True">
+				<instance_reference name="race_type" value="racebps\campaign_xp3\ayyubid_cmp" overrideParent="True" List.ItemID="791508032" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\statemodel_ext" List.ItemID="-195887779" List.ParentItemID="-195887779">
+			<instance_reference name="schema" value="statemodel_schema\units\civilizations\abbasid\villager_abb_xp3" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\interactive_object_ext" List.ItemID="1128646356" List.ListAction="Append">
+			<list name="type_list" overrideParent="True">
+				<group name="type" List.ItemID="-1811663828">
+					<enum name="interaction_type" value="inspire_hre" overrideParent="True" />
+					<int name="prefer_number" value="1" overrideParent="True" />
+					<int name="max_number" value="1" overrideParent="True" />
+					<enum name="interaction_target_type" value="entity" />
+					<template_reference name="node_list_option" value="options\none" overrideParent="True">
+					</template_reference>
+					<bool name="block_pathing_when_interacted" value="False" />
+				</group>
+			</list>
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="2101109" />
+	<instance_reference name="parent_pbg" value="ebps\races\abbasid\units\unit_villager_1_abb" />
+	<variant name="xp3">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="847857005" List.ParentItemID="847857005">
+				<bool name="browsable_in_editor" value="False" overrideParent="True" />
+				<float name="entity_scale" value="75" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\cost_ext" List.ItemID="163824703" List.ParentItemID="163824703">
+				<group name="time_cost">
+					<enum_table name="cost">
+						<float name="food" value="35" overrideParent="True" />
+					</enum_table>
+					<float name="time_seconds" value="15" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="125879439" List.ParentItemID="125879439">
+				<list name="race_type_list" overrideParent="True">
+					<instance_reference name="race_type" value="racebps\campaign_xp3\ayyubid_cmp" overrideParent="True" List.ItemID="-912864418" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\statemodel_ext" List.ItemID="-195887779" List.ParentItemID="-195887779">
+				<instance_reference name="schema" value="statemodel_schema\units\civilizations\abbasid\villager_abb_xp3" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\interactive_object_ext" List.ItemID="-1077720879" List.ListAction="Append">
+				<list name="type_list" overrideParent="True">
+					<group name="type" List.ItemID="-1636368190">
+						<enum name="interaction_type" value="inspire_hre" overrideParent="True" />
+						<int name="prefer_number" value="1" overrideParent="True" />
+						<int name="max_number" value="1" overrideParent="True" />
+						<enum name="interaction_target_type" value="entity" />
+						<template_reference name="node_list_option" value="options\none" overrideParent="True">
+						</template_reference>
+						<bool name="block_pathing_when_interacted" value="False" />
+					</group>
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2101109" />
+		<instance_reference name="parent_pbg" value="ebps\races\abbasid\units\unit_villager_1_abb" />
+	</variant>
+</instance>

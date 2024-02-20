@@ -1,0 +1,32 @@
+<instance version="4" description="" template="ebps">
+	<list name="extensions" removedIds="-685505201, -195927456, 1104871875, -1078831794, 66500991, 1843700163, -1271886283, -1307763351, -1290137626, 257961566, -1743383531, 1203298234, -1953778708">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-1291264015" List.ParentItemID="-1291264015">
+			<float name="entity_scale" value="80" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="-26664171" List.ParentItemID="-26664171">
+			<list name="race_type_list">
+				<instance_reference name="race_type" value="racebps\abbasid_ha_01" List.ItemID="-334751769" List.ListAction="Append" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\tier_ext" List.ItemID="-1178329849" List.ParentItemID="-1178329849">
+			<list name="tier_group_list">
+				<list name="tier_group" List.ItemID="1503111385" List.ParentItemID="1503111385">
+					<group name="tier" List.ItemID="1814506053" List.ParentItemID="1814506053">
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\abbasid\units\tier2_trade_cart_abb" overrideParent="True" />
+					</group>
+					<group name="tier" List.ItemID="-323743716" List.ParentItemID="-323743716">
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\abbasid\units\tier3_trade_cart_abb" overrideParent="True" />
+					</group>
+					<group name="tier" List.ItemID="-613616508" List.ParentItemID="-613616508">
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\abbasid\units\tier4_trade_cart_abb" overrideParent="True" />
+					</group>
+				</list>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\statemodel_ext" List.ItemID="-2086016410" List.ParentItemID="-2086016410">
+			<instance_reference name="schema" value="statemodel_schema\units\civilizations\abbasid_ha_01\trader_viz" overrideParent="True" />
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="2145101" />
+	<instance_reference name="parent_pbg" value="ebps\races\core\units\unit_trade_cart" />
+</instance>

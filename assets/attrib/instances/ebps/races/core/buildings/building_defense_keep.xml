@@ -260,9 +260,13 @@
 				</template_reference>
 				<list name="preview_upgrade_effects_list">
 				</list>
+				<bool name="ignore_depleted_resources" value="False" />
 			</group>
 			<bool name="placement_position_ignores_walkable_surfaces" value="False" />
-			<bool name="can_place_over_allied_buildings" value="False" />
+			<int name="aqueduct_network_increment_amount" value="0" />
+			<list name="ignorable_entity_types">
+			</list>
+			<float name="aqueduct_cistern_proximity_test_square_scale" value="0" />
 		</template_reference>
 		<template_reference name="exts" value="ebpextensions\cost_ext" List.ItemID="-599506936">
 			<group name="time_cost">
@@ -275,6 +279,7 @@
 					<float name="stone" value="1200" />
 					<float name="gold" value="0" />
 					<float name="militia_hre" value="0" />
+					<float name="merc_byz" value="0" />
 				</enum_table>
 				<float name="time_seconds" value="225" />
 				<int name="time_turns" value="0" />
@@ -299,6 +304,7 @@
 				<list name="block_path">
 				</list>
 			</group>
+			<bool name="attach_gap_fillers" value="False" />
 		</template_reference>
 		<template_reference name="exts" value="ebpextensions\sight_ext" List.ItemID="-785711550">
 			<group name="detect_camouflage">
@@ -456,6 +462,7 @@
 			<float name="minimap_icon_zoom_scale" value="0" />
 			<locstring name="help_text_controller" value="0" />
 			<locstring name="extra_text_controller" value="0" />
+			<bool name="static_selection_bounds" value="False" />
 		</template_reference>
 		<template_reference name="exts" value="ebpextensions\combat_ext" List.ItemID="519464119">
 			<bool name="reject_attack_command" value="False" />
@@ -2179,6 +2186,8 @@
 			<bool name="ui_show_most_progressed_weapon_reload" value="False" />
 			<list name="target_scanning_priority_override">
 			</list>
+			<list name="block_ignore_damage_types">
+			</list>
 		</template_reference>
 		<template_reference name="exts" value="ebpextensions\spawner_ext" List.ItemID="-1174991843">
 			<bool name="must_be_in_supply" value="False" />
@@ -2204,6 +2213,7 @@
 			<float name="enforce_minimum_clearance_at_spawn_positions_search_range" value="30" />
 			<instance_reference name="rally_pass_type" value="pass_types\infantry" />
 			<bool name="reset_production_progress_at_current_pop_cap" value="True" />
+			<bool name="can_spawn_if_neutral" value="False" />
 		</template_reference>
 		<template_reference name="exts" value="ebpextensions\upgrade_ext" List.ItemID="-57558359">
 			<bool name="must_be_in_supply" value="False" />
@@ -2271,6 +2281,7 @@
 				<float name="stone" value="0" />
 				<float name="gold" value="0" />
 				<float name="militia_hre" value="0" />
+				<float name="merc_byz" value="0" />
 			</enum_table>
 			<bool name="shared_with_other_same_type_units" value="False" />
 			<float name="unload_seconds" value="0" />

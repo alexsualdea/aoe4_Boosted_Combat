@@ -27,7 +27,7 @@
 		</template_reference>
 		<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="1344262557" List.ParentItemID="1344262557">
 			<list name="unit_type_list">
-				<enum name="unit_type" value="spearman_shield" overrideParent="True" List.ItemID="1791810939" List.ParentItemID="1791810939" />
+				<enum name="unit_type" value="spear_shield" overrideParent="True" List.ItemID="1791810939" List.ParentItemID="1791810939" />
 			</list>
 			<list name="race_type_list" overrideParent="True">
 				<instance_reference name="race_type" value="racebps\malian" overrideParent="True" List.ItemID="1159343553" />
@@ -174,6 +174,7 @@
 							<bool name="reissue_commands" value="False" />
 							<bool name="continue_state_trees" value="True" />
 							<bool name="remove_from_pending_deaths" value="False" />
+							<bool name="enable_all_extensions" value="True" />
 						</template_reference>
 						<string name="inventory_category_to_refresh_on_tier_up" value="" />
 					</group>
@@ -193,6 +194,7 @@
 							<bool name="reissue_commands" value="False" />
 							<bool name="continue_state_trees" value="True" />
 							<bool name="remove_from_pending_deaths" value="False" />
+							<bool name="enable_all_extensions" value="True" />
 						</template_reference>
 						<string name="inventory_category_to_refresh_on_tier_up" value="" />
 					</group>

@@ -1,0 +1,21 @@
+<instance version="4" description="French Castle Age Crossbowman" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-1979743353" List.ParentItemID="-1979743353">
+			<float name="entity_scale" value="75" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\tier_ext" List.ItemID="-1178936770" List.ParentItemID="-1178936770">
+			<list name="tier_group_list">
+				<list name="tier_group" List.ItemID="1833134032" List.ParentItemID="1833134032">
+					<group name="tier" List.ItemID="-1935434955" List.ParentItemID="-1935434955">
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\french_ha_01\units\tier3_rally_crossbowman_fre_ha_01" overrideParent="True" />
+					</group>
+					<group name="tier" List.ItemID="1526334638" List.ParentItemID="1526334638">
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\french_ha_01\units\tier4_rally_crossbowman_fre_ha_01" overrideParent="True" />
+					</group>
+				</list>
+			</list>
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="2143633" />
+	<instance_reference name="parent_pbg" value="ebps\races\french_ha_01\units\unit_crossbowman_3_fre_ha_01" mod="83583234c472401ea6ae8f205d1ee5a2" />
+</instance>

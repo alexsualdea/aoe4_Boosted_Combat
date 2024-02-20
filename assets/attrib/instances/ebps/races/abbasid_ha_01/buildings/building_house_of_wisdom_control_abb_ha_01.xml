@@ -1,0 +1,1488 @@
+<instance version="4" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\cost_ext" List.ItemID="-563024684" List.ParentItemID="-563024684">
+			<group name="time_cost">
+				<enum_table name="cost">
+					<float name="food" value="0" overrideParent="True" />
+					<float name="wood" value="50" overrideParent="True" />
+					<float name="gold" value="0" overrideParent="True" />
+				</enum_table>
+				<float name="time_seconds" value="30" overrideParent="True" />
+			</group>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\requirement_ext" List.ItemID="-1138756103" List.ParentItemID="-1138756103">
+			<list name="requirement_table">
+				<template_reference name="required" value="requirements\required_not" List.ItemID="-1132164974" List.ParentItemID="-1132164974">
+					<list name="requirement_table">
+						<template_reference name="required" value="requirements\required_structure" List.ItemID="-1026590189" List.ParentItemID="-1026590189">
+							<instance_reference name="structure_name" value="ebps\races\abbasid_ha_01\buildings\building_house_of_wisdom_control_abb_ha_01" mod="83583234c472401ea6ae8f205d1ee5a2" overrideParent="True" />
+						</template_reference>
+					</list>
+				</template_reference>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\action_apply_ext" List.ItemID="1912001137" List.ParentItemID="1912001137">
+			<list name="action_state_trees" overrideParent="True">
+				<group name="container" List.ItemID="492678235">
+					<string name="state_tree" value="building_action_apply\buildings\landmark_age_1_action_apply" overrideParent="True" />
+				</group>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="442418202" List.ParentItemID="442418202">
+			<float name="hitpoints" value="18000" overrideParent="True" />
+			<enum_table name="armor_scaler_by_damage_type">
+				<float name="Fire" value="5" overrideParent="True" />
+			</enum_table>
+			<state_tree_node name="death_action_tree" value="building_death_actions\landmarks\landmarks_common\common_landmark_shared_death" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1676377740" List.ParentItemID="1676377740">
+			<file name="alternate_sua" value="art\civilizations\abbasids\structures\landmark_house_of_wisdom\abb_landmark_house_of_wisdom_control\layout_house_of_wisdom" overrideParent="True" />
+			<bool name="browsable_in_editor" value="True" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="31700595" List.ParentItemID="31700595">
+			<list name="unit_type_list" overrideParent="True">
+				<enum name="unit_type" value="building" List.ItemID="-933010691" />
+				<enum name="unit_type" value="wonder" List.ItemID="-1274980491" />
+				<enum name="unit_type" value="wonder_feudal_age" List.ItemID="1128003272" />
+				<enum name="unit_type" value="siegeable" List.ItemID="103831898" />
+				<enum name="unit_type" value="select_special_building" List.ItemID="-968528492" />
+				<enum name="unit_type" value="house_of_wisdom_abb" overrideParent="True" List.ItemID="-1747072811" />
+				<enum name="unit_type" value="golden_age_tier_1_building_abb" List.ItemID="-110327923" />
+				<enum name="unit_type" value="research_building" List.ItemID="-1029189536" />
+				<enum name="unit_type" value="town_center_or_landmark" List.ItemID="1659314347" />
+				<enum name="unit_type" value="trade_post" overrideParent="True" List.ItemID="1780887960" />
+				<enum name="unit_type" value="landmark" List.ItemID="-1207305967" />
+			</list>
+			<list name="race_type_list" overrideParent="True">
+				<instance_reference name="race_type" value="racebps\abbasid_ha_01" overrideParent="True" List.ItemID="1007113680" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\sight_ext" List.ItemID="-1110061189" List.ParentItemID="-1110061189">
+			<group name="sight_package">
+				<float name="inner_height" value="8" overrideParent="True" />
+			</group>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="466870777" List.ParentItemID="466870777">
+			<float name="decorator_height" value="10" overrideParent="True" />
+			<file name="icon_name" value="races\abbasid\buildings\building_landmark_house_of_wisdom" overrideParent="True" />
+			<string name="debug_text" value="" overrideParent="True" />
+			<string name="decorator_data_template" value="HouseOfWisdomDistrictLandmarkDecoratorModel" overrideParent="True" />
+			<instance_reference name="district_info" value="ui_district_info\abbasid_ha_01\golden_age_tiers_ha_01" overrideParent="True" />
+			<enum name="decorator" value="EntityDistrictLandmark" overrideParent="True" />
+			<group name="ui_codex_info">
+				<int name="priority" value="5000" overrideParent="True" />
+			</group>
+			<list name="ui_extra_infos" overrideParent="True">
+				<template_reference name="ui_extra_info" value="info\ui_extra_info" List.ItemID="-1160102917">
+					<file name="icon" value="influence_buff" overrideParent="True" />
+					<locstring name="description" value="0" />
+					<template_reference name="description_formatter" value="ui_text_formatter" overrideParent="True">
+						<list name="formatter_arguments">
+							<int name="int_value" value="5" overrideParent="True" List.ItemID="-18986353" />
+						</list>
+						<locstring name="formatter" value="0" />
+					</template_reference>
+				</template_reference>
+			</list>
+			<string name="telemetry_name" value="House of Wisdom" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\burn_ext" List.ItemID="-448897369" List.ParentItemID="-448897369">
+			<float name="on_fire_threshold" value="59" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\site_ext" List.ItemID="-264293052" List.ParentItemID="-264293052">
+			<group name="footprint_scale">
+				<float name="x" value="10" overrideParent="True" />
+				<float name="y" value="10" overrideParent="True" />
+			</group>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\construction_ext" List.ItemID="484476401" List.ParentItemID="484476401">
+			<template_reference name="construction_health_option" value="options\ebpextensions\constructionext\construction_health_option">
+				<float name="initial_health" value="200" overrideParent="True" />
+			</template_reference>
+			<group name="on_construction_complete_state_tree_refs">
+				<string name="while_construction_complete_entity_state_tree_ref" value="house_of_wisdom_construction_complete_abb_ha_01" overrideParent="True" />
+			</group>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\ability_ext" List.ItemID="-335360918" List.ParentItemID="-335360918">
+			<list name="abilities" overrideParent="True">
+				<instance_reference name="ability" value="abilities\always_on_abilities\abbasid_ha_01\golden_age\golden_age_tier_1_ha_01" overrideParent="True" List.ItemID="-1533991555" />
+				<instance_reference name="ability" value="abilities\always_on_abilities\abbasid_ha_01\golden_age\golden_age_tier_2_ha_01" overrideParent="True" List.ItemID="-2064873371" />
+				<instance_reference name="ability" value="abilities\always_on_abilities\abbasid_ha_01\golden_age\golden_age_tier_3_ha_01" overrideParent="True" List.ItemID="-1117577454" />
+				<instance_reference name="ability" value="abilities\always_on_abilities\abbasid_ha_01\golden_age\golden_age_tier_4_ha_01" overrideParent="True" List.ItemID="-1734784444" />
+				<instance_reference name="ability" value="abilities\always_on_abilities\abbasid_ha_01\golden_age\golden_age_tier_5_ha_01" overrideParent="True" List.ItemID="2107180143" />
+				<instance_reference name="ability" value="abilities\modal_abilities\abbasid\golden_age_passive_abb" List.ItemID="1360205327" />
+				<instance_reference name="ability" value="abilities\always_on_abilities\abbasid\passives\how_influence_abb" overrideParent="True" List.ItemID="-461972246" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\statemodel_ext" List.ItemID="-1319870754" List.ParentItemID="-1319870754">
+			<instance_reference name="schema" value="statemodel_schema\buildings\civilizations\abbasid_ha_01\house_of_wisdom_abb_ha_01" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\upgrade_ext" List.ItemID="96610941" List.ParentItemID="96610941">
+			<list name="standard_upgrades" overrideParent="True">
+				<instance_reference name="upgrade" value="upgrade\races\abbasid_ha_01\research\house_of_wisdom\upgrade_add_culture_wing_dark_a_abb_ha_01" List.ItemID="1274092027" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid_ha_01\research\house_of_wisdom\upgrade_add_culture_wing_dark_b_abb_ha_01" overrideParent="True" List.ItemID="2074598805" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid_ha_01\research\house_of_wisdom\upgrade_add_culture_wing_feudal_a_abb_ha_01" overrideParent="True" List.ItemID="62058536" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid_ha_01\research\house_of_wisdom\upgrade_add_culture_wing_feudal_b_abb_ha_01" overrideParent="True" List.ItemID="968396812" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid_ha_01\research\house_of_wisdom\upgrade_add_culture_wing_castle_a_abb_ha_01" overrideParent="True" List.ItemID="-1320959263" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid_ha_01\research\house_of_wisdom\upgrade_add_culture_wing_castle_b_abb_ha_01" overrideParent="True" List.ItemID="-1355654834" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid_ha_01\research\house_of_wisdom\upgrade_add_culture_wing_imperial_a_abb_ha_01" overrideParent="True" List.ItemID="1900026223" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid_ha_01\research\house_of_wisdom\upgrade_add_culture_wing_imperial_b_abb_ha_01" overrideParent="True" List.ItemID="-741248667" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid_ha_01\research\house_of_wisdom\upgrade_add_economy_wing_dark_a_abb_ha_01" overrideParent="True" List.ItemID="1778130720" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid_ha_01\research\house_of_wisdom\upgrade_add_economy_wing_dark_b_abb_ha_01" overrideParent="True" List.ItemID="411148381" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid_ha_01\research\house_of_wisdom\upgrade_add_economy_wing_feudal_a_abb_ha_01" overrideParent="True" List.ItemID="-1409161749" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid_ha_01\research\house_of_wisdom\upgrade_add_economy_wing_feudal_b_abb_ha_01" overrideParent="True" List.ItemID="747062074" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid_ha_01\research\house_of_wisdom\upgrade_add_economy_wing_castle_a_abb_ha_01" overrideParent="True" List.ItemID="-1611599163" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid_ha_01\research\house_of_wisdom\upgrade_add_economy_wing_castle_b_abb_ha_01" overrideParent="True" List.ItemID="-567454955" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid_ha_01\research\house_of_wisdom\upgrade_add_economy_wing_imperial_a_abb_ha_01" overrideParent="True" List.ItemID="-515414872" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid_ha_01\research\house_of_wisdom\upgrade_add_economy_wing_imperial_b_abb_ha_01" overrideParent="True" List.ItemID="-297605086" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid_ha_01\research\house_of_wisdom\upgrade_add_military_wing_dark_a_abb_ha_01" overrideParent="True" List.ItemID="1440431529" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid_ha_01\research\house_of_wisdom\upgrade_add_military_wing_dark_b_abb_ha_01" overrideParent="True" List.ItemID="-1389608341" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid_ha_01\research\house_of_wisdom\upgrade_add_military_wing_feudal_a_abb_ha_01" overrideParent="True" List.ItemID="-942725912" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid_ha_01\research\house_of_wisdom\upgrade_add_military_wing_feudal_b_abb_ha_01" overrideParent="True" List.ItemID="-1863056293" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid_ha_01\research\house_of_wisdom\upgrade_add_military_wing_castle_a_abb_ha_01" overrideParent="True" List.ItemID="-727812142" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid_ha_01\research\house_of_wisdom\upgrade_add_military_wing_castle_b_abb_ha_01" overrideParent="True" List.ItemID="-1381197450" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid_ha_01\research\house_of_wisdom\upgrade_add_military_wing_imperial_a_abb_ha_01" overrideParent="True" List.ItemID="888816598" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid_ha_01\research\house_of_wisdom\upgrade_add_military_wing_imperial_b_abb_ha_01" overrideParent="True" List.ItemID="-1914853136" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid_ha_01\research\house_of_wisdom\upgrade_add_trade_wing_dark_a_abb_ha_01" overrideParent="True" List.ItemID="1934593077" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid_ha_01\research\house_of_wisdom\upgrade_add_trade_wing_dark_b_abb_ha_01" overrideParent="True" List.ItemID="-1128520528" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid_ha_01\research\house_of_wisdom\upgrade_add_trade_wing_feudal_a_abb_ha_01" overrideParent="True" List.ItemID="1407667423" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid_ha_01\research\house_of_wisdom\upgrade_add_trade_wing_feudal_b_abb_ha_01" overrideParent="True" List.ItemID="-1118439647" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid_ha_01\research\house_of_wisdom\upgrade_add_trade_wing_castle_a_abb_ha_01" overrideParent="True" List.ItemID="-867298898" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid_ha_01\research\house_of_wisdom\upgrade_add_trade_wing_castle_b_abb_ha_01" overrideParent="True" List.ItemID="863908292" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid_ha_01\research\house_of_wisdom\upgrade_add_trade_wing_imperial_a_abb_ha_01" overrideParent="True" List.ItemID="-783578026" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid_ha_01\research\house_of_wisdom\upgrade_add_trade_wing_imperial_b_abb_ha_01" overrideParent="True" List.ItemID="905268034" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid_ha_01\research\house_of_wisdom\passive_dummies\culture_abb_ha_01" List.ItemID="606140393" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid_ha_01\research\house_of_wisdom\passive_dummies\economy_abb_ha_01" List.ItemID="-823514366" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid_ha_01\research\house_of_wisdom\passive_dummies\military_abb_ha_01" List.ItemID="1942688229" />
+				<instance_reference name="upgrade" value="upgrade\races\abbasid_ha_01\research\house_of_wisdom\passive_dummies\trade_abb_ha_01" List.ItemID="-1480263636" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\building_presentation_ext" List.ItemID="-1064007581" List.ParentItemID="-1064007581">
+			<file name="construction_stamp" value="art\stamps\scaffolding\abbasid\abb_house_of_wisdom" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\tier_ext" List.ItemID="-1404250958" List.ParentItemID="-1404250958">
+			<list name="tier_group_list" overrideParent="True">
+				<list name="tier_group" List.ItemID="-883058508">
+					<group name="tier" List.ItemID="1538215274">
+						<list name="tier_requirements">
+						</list>
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\abbasid\buildings\house_of_wisdom_abb\house_of_wisdom_control_abb" />
+						<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+							<state_tree_node name="ActionTree_OpeningBranch" value="" />
+							<bool name="start_suspended" value="False" />
+						</template_reference>
+						<instance_reference name="statetree_tier_requirements_pbg" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="" />
+						<string name="tier_attachment_action" value="" />
+						<template_reference name="blueprint_conversion_parameters" value="blueprint_conversion_parameters">
+							<bool name="reissue_commands" value="False" />
+							<bool name="continue_state_trees" value="False" />
+							<bool name="remove_from_pending_deaths" value="False" />
+							<bool name="enable_all_extensions" value="True" />
+						</template_reference>
+						<string name="inventory_category_to_refresh_on_tier_up" value="" />
+					</group>
+				</list>
+				<list name="tier_group" overrideParent="True" List.ItemID="-2086829032">
+					<group name="tier" List.ItemID="2133768387">
+						<list name="tier_requirements">
+						</list>
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\abbasid\outskirts\general\abb_houseofwisdom" overrideParent="True" />
+						<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+							<state_tree_node name="ActionTree_OpeningBranch" value="" />
+							<bool name="start_suspended" value="False" />
+						</template_reference>
+						<instance_reference name="statetree_tier_requirements_pbg" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="" />
+						<string name="tier_attachment_action" value="" />
+						<template_reference name="blueprint_conversion_parameters" value="blueprint_conversion_parameters">
+							<bool name="reissue_commands" value="False" />
+							<bool name="continue_state_trees" value="False" />
+							<bool name="remove_from_pending_deaths" value="False" />
+							<bool name="enable_all_extensions" value="True" />
+						</template_reference>
+						<string name="inventory_category_to_refresh_on_tier_up" value="" />
+					</group>
+				</list>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\district_generator_ext" List.ItemID="-546246717" List.ParentItemID="-546246717">
+			<float name="range_metres" value="8" overrideParent="True" />
+			<bool name="is_root_generator" value="True" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\spawner_ext" List.ItemID="-1427242785" List.ParentItemID="-1427242785">
+			<list name="spawn_items" removedIds="1902052761, -342125887, -590147108, 1467964752, -2142980990, -1592943753">
+				<group name="spawn_item" comment="Society Wing - Feudal Age: 1 Cambulance" List.ItemID="707325913" List.ListAction="Append">
+					<group name="ui_position">
+						<int name="ui_position_row" value="-1" />
+						<int name="ui_position_column" value="-1" />
+					</group>
+					<instance_reference name="entity" value="" />
+					<instance_reference name="squad" value="sbps\races\abbasid_ha_01\unit_culture_2_free_abb_ha_01" overrideParent="True" />
+					<bool name="spawn_at_map_entry_point" value="False" />
+					<instance_reference name="ui_menu" value="" />
+					<int name="number_to_spawn" value="1" />
+					<locstring name="ui_screen_name" value="0" />
+					<locstring name="ui_help_text" value="0" />
+					<enum_table name="item_cost_adjustment">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" />
+						<float name="food" value="0" />
+						<float name="wood" value="0" />
+						<float name="stone" value="0" />
+						<float name="gold" value="0" />
+						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
+					</enum_table>
+					<bool name="can_be_cancelled" value="True" />
+					<int name="number_to_queue_up_to_when_modified" value="5" />
+					<list name="additional_squads">
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_monk_3_cambulance_abb_ha_01" List.ItemID="-122618293" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_monk_3_cambulance_abb_ha_01" List.ItemID="1357237765" />
+					</list>
+					<instance_reference name="hotkey_binding" value="" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
+				</group>
+				<group name="spawn_item" comment="Society Wing - Castle Age: 2 Cambulances" List.ItemID="-1409252365" List.ListAction="Append">
+					<group name="ui_position">
+						<int name="ui_position_row" value="-1" />
+						<int name="ui_position_column" value="-1" />
+					</group>
+					<instance_reference name="entity" value="" />
+					<instance_reference name="squad" value="sbps\races\abbasid_ha_01\unit_culture_3_free_abb_ha_01" overrideParent="True" />
+					<bool name="spawn_at_map_entry_point" value="False" />
+					<instance_reference name="ui_menu" value="" />
+					<int name="number_to_spawn" value="1" />
+					<locstring name="ui_screen_name" value="0" />
+					<locstring name="ui_help_text" value="0" />
+					<enum_table name="item_cost_adjustment">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" />
+						<float name="food" value="0" />
+						<float name="wood" value="0" />
+						<float name="stone" value="0" />
+						<float name="gold" value="0" />
+						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
+					</enum_table>
+					<bool name="can_be_cancelled" value="True" />
+					<int name="number_to_queue_up_to_when_modified" value="5" />
+					<list name="additional_squads">
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_monk_3_cambulance_abb_ha_01" List.ItemID="1441509584" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_monk_3_cambulance_abb_ha_01" List.ItemID="1237333961" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_monk_3_cambulance_abb_ha_01" List.ItemID="302484322" />
+					</list>
+					<instance_reference name="hotkey_binding" value="" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
+				</group>
+				<group name="spawn_item" comment="Society Wing - Imperial Age: 4 Cambulances" List.ItemID="667182571" List.ListAction="Append">
+					<group name="ui_position">
+						<int name="ui_position_row" value="-1" />
+						<int name="ui_position_column" value="-1" />
+					</group>
+					<instance_reference name="entity" value="" />
+					<instance_reference name="squad" value="sbps\races\abbasid_ha_01\unit_culture_4_free_abb_ha_01" overrideParent="True" />
+					<bool name="spawn_at_map_entry_point" value="False" />
+					<instance_reference name="ui_menu" value="" />
+					<int name="number_to_spawn" value="1" />
+					<locstring name="ui_screen_name" value="0" />
+					<locstring name="ui_help_text" value="0" />
+					<enum_table name="item_cost_adjustment">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" />
+						<float name="food" value="0" />
+						<float name="wood" value="0" />
+						<float name="stone" value="0" />
+						<float name="gold" value="0" />
+						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
+					</enum_table>
+					<bool name="can_be_cancelled" value="True" />
+					<int name="number_to_queue_up_to_when_modified" value="5" />
+					<list name="additional_squads">
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_monk_3_cambulance_abb_ha_01" List.ItemID="-1165804073" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_monk_3_cambulance_abb_ha_01" List.ItemID="-1513457849" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_monk_3_cambulance_abb_ha_01" List.ItemID="-248197721" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_monk_3_cambulance_abb_ha_01" List.ItemID="1190439954" />
+					</list>
+					<instance_reference name="hotkey_binding" value="" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
+				</group>
+				<group name="spawn_item" comment="Economic Wing - Feudal Age: 3 Villagers" List.ItemID="-1091640390" List.ListAction="Append">
+					<group name="ui_position">
+						<int name="ui_position_row" value="-1" />
+						<int name="ui_position_column" value="-1" />
+					</group>
+					<instance_reference name="entity" value="" />
+					<instance_reference name="squad" value="sbps\races\abbasid_ha_01\unit_economic_2_free_abb_ha_01" overrideParent="True" />
+					<bool name="spawn_at_map_entry_point" value="False" />
+					<instance_reference name="ui_menu" value="" />
+					<int name="number_to_spawn" value="1" />
+					<locstring name="ui_screen_name" value="0" />
+					<locstring name="ui_help_text" value="0" />
+					<enum_table name="item_cost_adjustment">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" />
+						<float name="food" value="0" />
+						<float name="wood" value="0" />
+						<float name="stone" value="0" />
+						<float name="gold" value="0" />
+						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
+					</enum_table>
+					<bool name="can_be_cancelled" value="True" />
+					<int name="number_to_queue_up_to_when_modified" value="5" />
+					<list name="additional_squads">
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_villager_1_abb_ha_01" List.ItemID="-2103774568" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_villager_1_abb_ha_01" List.ItemID="2047207141" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_villager_1_abb_ha_01" List.ItemID="-1161031722" />
+					</list>
+					<instance_reference name="hotkey_binding" value="" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
+				</group>
+				<group name="spawn_item" comment="Economic Wing - Castle Age: 8 Villagers" List.ItemID="1260480814" List.ListAction="Append">
+					<group name="ui_position">
+						<int name="ui_position_row" value="-1" />
+						<int name="ui_position_column" value="-1" />
+					</group>
+					<instance_reference name="entity" value="" />
+					<instance_reference name="squad" value="sbps\races\abbasid_ha_01\unit_economic_3_free_abb_ha_01" overrideParent="True" />
+					<bool name="spawn_at_map_entry_point" value="False" />
+					<instance_reference name="ui_menu" value="" />
+					<int name="number_to_spawn" value="1" />
+					<locstring name="ui_screen_name" value="0" />
+					<locstring name="ui_help_text" value="0" />
+					<enum_table name="item_cost_adjustment">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" />
+						<float name="food" value="0" />
+						<float name="wood" value="0" />
+						<float name="stone" value="0" />
+						<float name="gold" value="0" />
+						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
+					</enum_table>
+					<bool name="can_be_cancelled" value="True" />
+					<int name="number_to_queue_up_to_when_modified" value="5" />
+					<list name="additional_squads">
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_villager_1_abb_ha_01" List.ItemID="-573271641" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_villager_1_abb_ha_01" List.ItemID="1563265296" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_villager_1_abb_ha_01" List.ItemID="-431803117" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_villager_1_abb_ha_01" List.ItemID="753590520" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_villager_1_abb_ha_01" List.ItemID="245578930" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_villager_1_abb_ha_01" List.ItemID="-272005561" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_villager_1_abb_ha_01" List.ItemID="-1205771695" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_villager_1_abb_ha_01" List.ItemID="1202594808" />
+					</list>
+					<instance_reference name="hotkey_binding" value="" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
+				</group>
+				<group name="spawn_item" comment="Economic Wing - Imperial Age: 10 Villagers" List.ItemID="2085402665" List.ListAction="Append">
+					<group name="ui_position">
+						<int name="ui_position_row" value="-1" />
+						<int name="ui_position_column" value="-1" />
+					</group>
+					<instance_reference name="entity" value="" />
+					<instance_reference name="squad" value="sbps\races\abbasid_ha_01\unit_economic_4_free_abb_ha_01" overrideParent="True" />
+					<bool name="spawn_at_map_entry_point" value="False" />
+					<instance_reference name="ui_menu" value="" />
+					<int name="number_to_spawn" value="1" />
+					<locstring name="ui_screen_name" value="0" />
+					<locstring name="ui_help_text" value="0" />
+					<enum_table name="item_cost_adjustment">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" />
+						<float name="food" value="0" />
+						<float name="wood" value="0" />
+						<float name="stone" value="0" />
+						<float name="gold" value="0" />
+						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
+					</enum_table>
+					<bool name="can_be_cancelled" value="True" />
+					<int name="number_to_queue_up_to_when_modified" value="5" />
+					<list name="additional_squads">
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_villager_1_abb_ha_01" List.ItemID="-1292173358" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_villager_1_abb_ha_01" List.ItemID="-1231988379" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_villager_1_abb_ha_01" List.ItemID="465230878" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_villager_1_abb_ha_01" List.ItemID="-394372042" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_villager_1_abb_ha_01" List.ItemID="844006285" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_villager_1_abb_ha_01" List.ItemID="-588654179" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_villager_1_abb_ha_01" List.ItemID="797612327" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_villager_1_abb_ha_01" List.ItemID="-397249094" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_villager_1_abb_ha_01" List.ItemID="-230562467" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_villager_1_abb_ha_01" List.ItemID="572155108" />
+					</list>
+					<instance_reference name="hotkey_binding" value="" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
+				</group>
+				<group name="spawn_item" comment="Military Wing - Feudal Age: 1 Mamluk" List.ItemID="-1453080262" List.ListAction="Append">
+					<group name="ui_position">
+						<int name="ui_position_row" value="-1" />
+						<int name="ui_position_column" value="-1" />
+					</group>
+					<instance_reference name="entity" value="" />
+					<instance_reference name="squad" value="sbps\races\abbasid_ha_01\unit_military_2_free_abb_ha_01" overrideParent="True" />
+					<bool name="spawn_at_map_entry_point" value="False" />
+					<instance_reference name="ui_menu" value="" />
+					<int name="number_to_spawn" value="1" />
+					<locstring name="ui_screen_name" value="0" />
+					<locstring name="ui_help_text" value="0" />
+					<enum_table name="item_cost_adjustment">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" />
+						<float name="food" value="0" />
+						<float name="wood" value="0" />
+						<float name="stone" value="0" />
+						<float name="gold" value="0" />
+						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
+					</enum_table>
+					<bool name="can_be_cancelled" value="True" />
+					<int name="number_to_queue_up_to_when_modified" value="5" />
+					<list name="additional_squads">
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_mamluk_2_abb_ha_01" List.ItemID="-1186358092" />
+					</list>
+					<instance_reference name="hotkey_binding" value="" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
+				</group>
+				<group name="spawn_item" comment="Military Wing - Castle Age: 3 Mamluks. Spawns the lowest tier Mamluks as the tier.ext will convert them if player has the needed upgrades. " List.ItemID="487008564" List.ListAction="Append">
+					<group name="ui_position">
+						<int name="ui_position_row" value="-1" />
+						<int name="ui_position_column" value="-1" />
+					</group>
+					<instance_reference name="entity" value="" />
+					<instance_reference name="squad" value="sbps\races\abbasid_ha_01\unit_military_3_free_abb_ha_01" overrideParent="True" />
+					<bool name="spawn_at_map_entry_point" value="False" />
+					<instance_reference name="ui_menu" value="" />
+					<int name="number_to_spawn" value="1" />
+					<locstring name="ui_screen_name" value="0" />
+					<locstring name="ui_help_text" value="0" />
+					<enum_table name="item_cost_adjustment">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" />
+						<float name="food" value="0" />
+						<float name="wood" value="0" />
+						<float name="stone" value="0" />
+						<float name="gold" value="0" />
+						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
+					</enum_table>
+					<bool name="can_be_cancelled" value="True" />
+					<int name="number_to_queue_up_to_when_modified" value="5" />
+					<list name="additional_squads">
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_mamluk_2_abb_ha_01" overrideParent="True" List.ItemID="-1438292144" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_mamluk_2_abb_ha_01" overrideParent="True" List.ItemID="-152409015" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_mamluk_2_abb_ha_01" overrideParent="True" List.ItemID="-1255103679" />
+					</list>
+					<instance_reference name="hotkey_binding" value="" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
+				</group>
+				<group name="spawn_item" comment="Military Wing - Imperial Age: 7 Mamluks. Spawns the lowest tier Mamluks as the tier.ext will convert them if player has the needed upgrades. " List.ItemID="737620931" List.ListAction="Append">
+					<group name="ui_position">
+						<int name="ui_position_row" value="-1" />
+						<int name="ui_position_column" value="-1" />
+					</group>
+					<instance_reference name="entity" value="" />
+					<instance_reference name="squad" value="sbps\races\abbasid_ha_01\unit_military_4_free_abb_ha_01" overrideParent="True" />
+					<bool name="spawn_at_map_entry_point" value="False" />
+					<instance_reference name="ui_menu" value="" />
+					<int name="number_to_spawn" value="1" />
+					<locstring name="ui_screen_name" value="0" />
+					<locstring name="ui_help_text" value="0" />
+					<enum_table name="item_cost_adjustment">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" />
+						<float name="food" value="0" />
+						<float name="wood" value="0" />
+						<float name="stone" value="0" />
+						<float name="gold" value="0" />
+						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
+					</enum_table>
+					<bool name="can_be_cancelled" value="True" />
+					<int name="number_to_queue_up_to_when_modified" value="5" />
+					<list name="additional_squads">
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_mamluk_2_abb_ha_01" overrideParent="True" List.ItemID="1495206965" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_mamluk_2_abb_ha_01" overrideParent="True" List.ItemID="1143271189" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_mamluk_2_abb_ha_01" overrideParent="True" List.ItemID="-885458334" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_mamluk_2_abb_ha_01" overrideParent="True" List.ItemID="264098875" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_mamluk_2_abb_ha_01" overrideParent="True" List.ItemID="1528883135" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_mamluk_2_abb_ha_01" overrideParent="True" List.ItemID="1206181573" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_mamluk_2_abb_ha_01" overrideParent="True" List.ItemID="103277626" />
+					</list>
+					<instance_reference name="hotkey_binding" value="" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
+				</group>
+				<group name="spawn_item" comment="Mercantile Wing - Feudal Age: 2 Camel Traders" List.ItemID="-275385477" List.ListAction="Append">
+					<group name="ui_position">
+						<int name="ui_position_row" value="-1" />
+						<int name="ui_position_column" value="-1" />
+					</group>
+					<instance_reference name="entity" value="" />
+					<instance_reference name="squad" value="sbps\races\abbasid_ha_01\unit_trade_commerce_2_free_abb_ha_01" overrideParent="True" />
+					<bool name="spawn_at_map_entry_point" value="False" />
+					<instance_reference name="ui_menu" value="" />
+					<int name="number_to_spawn" value="1" />
+					<locstring name="ui_screen_name" value="0" />
+					<locstring name="ui_help_text" value="0" />
+					<enum_table name="item_cost_adjustment">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" />
+						<float name="food" value="0" />
+						<float name="wood" value="0" />
+						<float name="stone" value="0" />
+						<float name="gold" value="0" />
+						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
+					</enum_table>
+					<bool name="can_be_cancelled" value="True" />
+					<int name="number_to_queue_up_to_when_modified" value="5" />
+					<list name="additional_squads">
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_trade_camel_abb_ha_01" overrideParent="True" List.ItemID="553761634" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_trade_camel_abb_ha_01" overrideParent="True" List.ItemID="445785837" />
+					</list>
+					<instance_reference name="hotkey_binding" value="" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
+				</group>
+				<group name="spawn_item" comment="Mercantile Wing - Castle Age: 4 Camel Traders" List.ItemID="147162784" List.ListAction="Append">
+					<group name="ui_position">
+						<int name="ui_position_row" value="-1" />
+						<int name="ui_position_column" value="-1" />
+					</group>
+					<instance_reference name="entity" value="" />
+					<instance_reference name="squad" value="sbps\races\abbasid_ha_01\unit_trade_commerce_3_free_abb_ha_01" overrideParent="True" />
+					<bool name="spawn_at_map_entry_point" value="False" />
+					<instance_reference name="ui_menu" value="" />
+					<int name="number_to_spawn" value="1" />
+					<locstring name="ui_screen_name" value="0" />
+					<locstring name="ui_help_text" value="0" />
+					<enum_table name="item_cost_adjustment">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" />
+						<float name="food" value="0" />
+						<float name="wood" value="0" />
+						<float name="stone" value="0" />
+						<float name="gold" value="0" />
+						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
+					</enum_table>
+					<bool name="can_be_cancelled" value="True" />
+					<int name="number_to_queue_up_to_when_modified" value="5" />
+					<list name="additional_squads">
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_trade_camel_abb_ha_01" overrideParent="True" List.ItemID="1844188523" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_trade_camel_abb_ha_01" overrideParent="True" List.ItemID="-551426893" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_trade_camel_abb_ha_01" overrideParent="True" List.ItemID="-338275173" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_trade_camel_abb_ha_01" overrideParent="True" List.ItemID="656423288" />
+					</list>
+					<instance_reference name="hotkey_binding" value="" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
+				</group>
+				<group name="spawn_item" comment="Mercantile Wing - Imperial Age: 7 Camel Traders" List.ItemID="1937063611" List.ListAction="Append">
+					<group name="ui_position">
+						<int name="ui_position_row" value="-1" />
+						<int name="ui_position_column" value="-1" />
+					</group>
+					<instance_reference name="entity" value="" />
+					<instance_reference name="squad" value="sbps\races\abbasid_ha_01\unit_trade_commerce_4_free_abb_ha_01" overrideParent="True" />
+					<bool name="spawn_at_map_entry_point" value="False" />
+					<instance_reference name="ui_menu" value="" />
+					<int name="number_to_spawn" value="1" />
+					<locstring name="ui_screen_name" value="0" />
+					<locstring name="ui_help_text" value="0" />
+					<enum_table name="item_cost_adjustment">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" />
+						<float name="food" value="0" />
+						<float name="wood" value="0" />
+						<float name="stone" value="0" />
+						<float name="gold" value="0" />
+						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
+					</enum_table>
+					<bool name="can_be_cancelled" value="True" />
+					<int name="number_to_queue_up_to_when_modified" value="5" />
+					<list name="additional_squads">
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_trade_camel_abb_ha_01" overrideParent="True" List.ItemID="995535535" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_trade_camel_abb_ha_01" overrideParent="True" List.ItemID="-1213097666" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_trade_camel_abb_ha_01" overrideParent="True" List.ItemID="-560317957" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_trade_camel_abb_ha_01" overrideParent="True" List.ItemID="147610006" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_trade_camel_abb_ha_01" overrideParent="True" List.ItemID="1803228894" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_trade_camel_abb_ha_01" overrideParent="True" List.ItemID="-342012207" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_trade_camel_abb_ha_01" overrideParent="True" List.ItemID="1918959554" />
+					</list>
+					<instance_reference name="hotkey_binding" value="" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
+				</group>
+				<group name="spawn_item" comment="Mercantile Wing - Camel Trader" List.ItemID="-1294955910" List.ListAction="Append">
+					<group name="ui_position">
+						<int name="ui_position_row" value="1" overrideParent="True" />
+						<int name="ui_position_column" value="1" overrideParent="True" />
+					</group>
+					<instance_reference name="entity" value="" />
+					<instance_reference name="squad" value="sbps\races\abbasid_ha_01\unit_trade_camel_abb_ha_01" overrideParent="True" />
+					<bool name="spawn_at_map_entry_point" value="False" />
+					<instance_reference name="ui_menu" value="menu\abbasid\wings_of_knowledge" overrideParent="True" />
+					<int name="number_to_spawn" value="1" />
+					<locstring name="ui_screen_name" value="0" />
+					<locstring name="ui_help_text" value="0" />
+					<enum_table name="item_cost_adjustment">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" />
+						<float name="food" value="100" overrideParent="True" />
+						<float name="wood" value="0" />
+						<float name="stone" value="0" />
+						<float name="gold" value="100" overrideParent="True" />
+						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
+					</enum_table>
+					<bool name="can_be_cancelled" value="True" />
+					<int name="number_to_queue_up_to_when_modified" value="5" />
+					<list name="additional_squads">
+					</list>
+					<instance_reference name="hotkey_binding" value="hotkeys\hotkey_binding\building_house_of_wisdom\produce_atabeg_abb" overrideParent="True" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
+				</group>
+				<group name="spawn_item" comment="Trade Wing - Feudal Age: 2 Traders" List.ItemID="-735940613" List.ListAction="Append">
+					<group name="ui_position">
+						<int name="ui_position_row" value="-1" overrideParent="True" />
+						<int name="ui_position_column" value="-1" overrideParent="True" />
+					</group>
+					<instance_reference name="entity" value="" />
+					<instance_reference name="squad" value="sbps\races\abbasid_ha_01\unit_trade_2_free_abb_ha_01" overrideParent="True" />
+					<bool name="spawn_at_map_entry_point" value="False" />
+					<instance_reference name="ui_menu" value="" overrideParent="True" />
+					<int name="number_to_spawn" value="1" />
+					<locstring name="ui_screen_name" value="0" />
+					<locstring name="ui_help_text" value="0" />
+					<enum_table name="item_cost_adjustment">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" overrideParent="True" />
+						<float name="food" value="0" />
+						<float name="wood" value="0" />
+						<float name="stone" value="0" />
+						<float name="gold" value="0" overrideParent="True" />
+						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
+					</enum_table>
+					<bool name="can_be_cancelled" value="True" />
+					<int name="number_to_queue_up_to_when_modified" value="5" />
+					<list name="additional_squads" overrideParent="True">
+						<instance_reference name="additional_squad" value="sbps\races\abbasid\unit_trade_cart_abb" overrideParent="True" List.ItemID="763281060" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid\unit_trade_cart_abb" overrideParent="True" List.ItemID="472839112" />
+					</list>
+					<instance_reference name="hotkey_binding" value="" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
+				</group>
+				<group name="spawn_item" comment="Trade Wing - Castle Age: 4 Traders" List.ItemID="-933083906" List.ListAction="Append">
+					<group name="ui_position">
+						<int name="ui_position_row" value="-1" overrideParent="True" />
+						<int name="ui_position_column" value="-1" overrideParent="True" />
+					</group>
+					<instance_reference name="entity" value="" />
+					<instance_reference name="squad" value="sbps\races\abbasid_ha_01\unit_trade_3_free_abb_ha_01" overrideParent="True" />
+					<bool name="spawn_at_map_entry_point" value="False" />
+					<instance_reference name="ui_menu" value="" overrideParent="True" />
+					<int name="number_to_spawn" value="1" overrideParent="True" />
+					<locstring name="ui_screen_name" value="0" />
+					<locstring name="ui_help_text" value="0" />
+					<enum_table name="item_cost_adjustment">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" overrideParent="True" />
+						<float name="food" value="0" />
+						<float name="wood" value="0" />
+						<float name="stone" value="0" />
+						<float name="gold" value="0" overrideParent="True" />
+						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
+					</enum_table>
+					<bool name="can_be_cancelled" value="True" />
+					<int name="number_to_queue_up_to_when_modified" value="5" />
+					<list name="additional_squads">
+						<instance_reference name="additional_squad" value="sbps\races\abbasid\unit_trade_cart_abb" overrideParent="True" List.ItemID="1952091323" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid\unit_trade_cart_abb" overrideParent="True" List.ItemID="-2140387081" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid\unit_trade_cart_abb" overrideParent="True" List.ItemID="350422382" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid\unit_trade_cart_abb" overrideParent="True" List.ItemID="261686425" />
+					</list>
+					<instance_reference name="hotkey_binding" value="" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
+				</group>
+				<group name="spawn_item" comment="Trade Wing - Imperial Age: 6 Traders" List.ItemID="308979270" List.ListAction="Append">
+					<group name="ui_position">
+						<int name="ui_position_row" value="-1" overrideParent="True" />
+						<int name="ui_position_column" value="-1" overrideParent="True" />
+					</group>
+					<instance_reference name="entity" value="" />
+					<instance_reference name="squad" value="sbps\races\abbasid_ha_01\unit_trade_4_free_abb_ha_01" overrideParent="True" />
+					<bool name="spawn_at_map_entry_point" value="False" />
+					<instance_reference name="ui_menu" value="" overrideParent="True" />
+					<int name="number_to_spawn" value="1" />
+					<locstring name="ui_screen_name" value="0" />
+					<locstring name="ui_help_text" value="0" />
+					<enum_table name="item_cost_adjustment">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" overrideParent="True" />
+						<float name="food" value="0" />
+						<float name="wood" value="0" />
+						<float name="stone" value="0" />
+						<float name="gold" value="0" overrideParent="True" />
+						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
+					</enum_table>
+					<bool name="can_be_cancelled" value="True" />
+					<int name="number_to_queue_up_to_when_modified" value="5" />
+					<list name="additional_squads">
+						<instance_reference name="additional_squad" value="sbps\races\abbasid\unit_trade_cart_abb" overrideParent="True" List.ItemID="762954002" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid\unit_trade_cart_abb" overrideParent="True" List.ItemID="692260810" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid\unit_trade_cart_abb" overrideParent="True" List.ItemID="-82645243" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid\unit_trade_cart_abb" overrideParent="True" List.ItemID="360018248" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid\unit_trade_cart_abb" overrideParent="True" List.ItemID="-1208158749" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid\unit_trade_cart_abb" overrideParent="True" List.ItemID="-1101392132" />
+					</list>
+					<instance_reference name="hotkey_binding" value="" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
+				</group>
+				<group name="spawn_item" comment="Trade Wing - Feudal Age: 2 Swordmaster" List.ItemID="-1187984159" List.ListAction="Append">
+					<group name="ui_position">
+						<int name="ui_position_row" value="-1" overrideParent="True" />
+						<int name="ui_position_column" value="-1" overrideParent="True" />
+					</group>
+					<instance_reference name="entity" value="" />
+					<instance_reference name="squad" value="sbps\races\abbasid_ha_01\unit_swordmaster_2_free_abb_ha_01" overrideParent="True" />
+					<bool name="spawn_at_map_entry_point" value="False" />
+					<instance_reference name="ui_menu" value="" overrideParent="True" />
+					<int name="number_to_spawn" value="1" />
+					<locstring name="ui_screen_name" value="0" />
+					<locstring name="ui_help_text" value="0" />
+					<enum_table name="item_cost_adjustment">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" overrideParent="True" />
+						<float name="food" value="0" />
+						<float name="wood" value="0" />
+						<float name="stone" value="0" />
+						<float name="gold" value="0" overrideParent="True" />
+						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
+					</enum_table>
+					<bool name="can_be_cancelled" value="True" />
+					<int name="number_to_queue_up_to_when_modified" value="5" />
+					<list name="additional_squads">
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_pirate_abb_ha_01" overrideParent="True" List.ItemID="-1866846101" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_pirate_abb_ha_01" overrideParent="True" List.ItemID="-1783849675" />
+					</list>
+					<instance_reference name="hotkey_binding" value="" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
+				</group>
+				<group name="spawn_item" comment="Trade Wing - Castle Age: 5 Swordmasters" List.ItemID="-526708277" List.ListAction="Append">
+					<group name="ui_position">
+						<int name="ui_position_row" value="-1" overrideParent="True" />
+						<int name="ui_position_column" value="-1" overrideParent="True" />
+					</group>
+					<instance_reference name="entity" value="" />
+					<instance_reference name="squad" value="sbps\races\abbasid_ha_01\unit_swordmaster_3_free_abb_ha_01" overrideParent="True" />
+					<bool name="spawn_at_map_entry_point" value="False" />
+					<instance_reference name="ui_menu" value="" overrideParent="True" />
+					<int name="number_to_spawn" value="1" />
+					<locstring name="ui_screen_name" value="0" />
+					<locstring name="ui_help_text" value="0" />
+					<enum_table name="item_cost_adjustment">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" overrideParent="True" />
+						<float name="food" value="0" />
+						<float name="wood" value="0" />
+						<float name="stone" value="0" />
+						<float name="gold" value="0" overrideParent="True" />
+						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
+					</enum_table>
+					<bool name="can_be_cancelled" value="True" />
+					<int name="number_to_queue_up_to_when_modified" value="5" />
+					<list name="additional_squads">
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_pirate_abb_ha_01" overrideParent="True" List.ItemID="-73800186" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_pirate_abb_ha_01" overrideParent="True" List.ItemID="725303613" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_pirate_abb_ha_01" overrideParent="True" List.ItemID="-1324898333" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_pirate_abb_ha_01" overrideParent="True" List.ItemID="-1781902337" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_pirate_abb_ha_01" overrideParent="True" List.ItemID="-71453568" />
+					</list>
+					<instance_reference name="hotkey_binding" value="" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
+				</group>
+				<group name="spawn_item" comment="Trade Wing - Imperial Age: 8 Swordmasters" List.ItemID="-196989088" List.ListAction="Append">
+					<group name="ui_position">
+						<int name="ui_position_row" value="-1" overrideParent="True" />
+						<int name="ui_position_column" value="-1" overrideParent="True" />
+					</group>
+					<instance_reference name="entity" value="" />
+					<instance_reference name="squad" value="sbps\races\abbasid_ha_01\unit_swordmaster_4_free_abb_ha_01" overrideParent="True" />
+					<bool name="spawn_at_map_entry_point" value="False" />
+					<instance_reference name="ui_menu" value="" overrideParent="True" />
+					<int name="number_to_spawn" value="1" />
+					<locstring name="ui_screen_name" value="0" />
+					<locstring name="ui_help_text" value="0" />
+					<enum_table name="item_cost_adjustment">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" overrideParent="True" />
+						<float name="food" value="0" />
+						<float name="wood" value="0" />
+						<float name="stone" value="0" />
+						<float name="gold" value="0" overrideParent="True" />
+						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
+					</enum_table>
+					<bool name="can_be_cancelled" value="True" />
+					<int name="number_to_queue_up_to_when_modified" value="5" />
+					<list name="additional_squads">
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_pirate_abb_ha_01" overrideParent="True" List.ItemID="-1989385785" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_pirate_abb_ha_01" overrideParent="True" List.ItemID="808583155" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_pirate_abb_ha_01" overrideParent="True" List.ItemID="-214541214" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_pirate_abb_ha_01" overrideParent="True" List.ItemID="-1272336823" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_pirate_abb_ha_01" overrideParent="True" List.ItemID="797344784" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_pirate_abb_ha_01" overrideParent="True" List.ItemID="1845970928" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_pirate_abb_ha_01" overrideParent="True" List.ItemID="463936880" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_pirate_abb_ha_01" overrideParent="True" List.ItemID="-411037253" />
+					</list>
+					<instance_reference name="hotkey_binding" value="" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
+				</group>
+				<group name="spawn_item" comment="Trade Wing - Feudal Age: 2 Skirmisher" List.ItemID="-717945334" List.ListAction="Append">
+					<group name="ui_position">
+						<int name="ui_position_row" value="-1" overrideParent="True" />
+						<int name="ui_position_column" value="-1" overrideParent="True" />
+					</group>
+					<instance_reference name="entity" value="" />
+					<instance_reference name="squad" value="sbps\races\abbasid_ha_01\unit_skirmisher_2_free_abb_ha_01" overrideParent="True" />
+					<bool name="spawn_at_map_entry_point" value="False" />
+					<instance_reference name="ui_menu" value="" overrideParent="True" />
+					<int name="number_to_spawn" value="1" />
+					<locstring name="ui_screen_name" value="0" />
+					<locstring name="ui_help_text" value="0" />
+					<enum_table name="item_cost_adjustment">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" overrideParent="True" />
+						<float name="food" value="0" />
+						<float name="wood" value="0" />
+						<float name="stone" value="0" />
+						<float name="gold" value="0" overrideParent="True" />
+						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
+					</enum_table>
+					<bool name="can_be_cancelled" value="True" />
+					<int name="number_to_queue_up_to_when_modified" value="5" />
+					<list name="additional_squads">
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_javelin_2_abb_ha_01" overrideParent="True" List.ItemID="-798965513" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_javelin_2_abb_ha_01" overrideParent="True" List.ItemID="-759962100" />
+					</list>
+					<instance_reference name="hotkey_binding" value="" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
+				</group>
+				<group name="spawn_item" comment="Trade Wing - Castle Age: 5 Skirmishers" List.ItemID="-1441252137" List.ListAction="Append">
+					<group name="ui_position">
+						<int name="ui_position_row" value="-1" overrideParent="True" />
+						<int name="ui_position_column" value="-1" overrideParent="True" />
+					</group>
+					<instance_reference name="entity" value="" />
+					<instance_reference name="squad" value="sbps\races\abbasid_ha_01\unit_skirmisher_3_free_abb_ha_01" overrideParent="True" />
+					<bool name="spawn_at_map_entry_point" value="False" />
+					<instance_reference name="ui_menu" value="" overrideParent="True" />
+					<int name="number_to_spawn" value="1" />
+					<locstring name="ui_screen_name" value="0" />
+					<locstring name="ui_help_text" value="0" />
+					<enum_table name="item_cost_adjustment">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" overrideParent="True" />
+						<float name="food" value="0" />
+						<float name="wood" value="0" />
+						<float name="stone" value="0" />
+						<float name="gold" value="0" overrideParent="True" />
+						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
+					</enum_table>
+					<bool name="can_be_cancelled" value="True" />
+					<int name="number_to_queue_up_to_when_modified" value="5" />
+					<list name="additional_squads">
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_javelin_2_abb_ha_01" overrideParent="True" List.ItemID="667583470" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_javelin_2_abb_ha_01" overrideParent="True" List.ItemID="-1259394253" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_javelin_2_abb_ha_01" overrideParent="True" List.ItemID="-265541377" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_javelin_2_abb_ha_01" overrideParent="True" List.ItemID="-543727592" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_javelin_2_abb_ha_01" overrideParent="True" List.ItemID="1399200830" />
+					</list>
+					<instance_reference name="hotkey_binding" value="" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
+				</group>
+				<group name="spawn_item" comment="Trade Wing - Imperial Age: 8 Skirmishers" List.ItemID="1226269793" List.ListAction="Append">
+					<group name="ui_position">
+						<int name="ui_position_row" value="-1" overrideParent="True" />
+						<int name="ui_position_column" value="-1" overrideParent="True" />
+					</group>
+					<instance_reference name="entity" value="" />
+					<instance_reference name="squad" value="sbps\races\abbasid_ha_01\unit_skirmisher_4_free_abb_ha_01" overrideParent="True" />
+					<bool name="spawn_at_map_entry_point" value="False" />
+					<instance_reference name="ui_menu" value="" overrideParent="True" />
+					<int name="number_to_spawn" value="1" />
+					<locstring name="ui_screen_name" value="0" />
+					<locstring name="ui_help_text" value="0" />
+					<enum_table name="item_cost_adjustment">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" overrideParent="True" />
+						<float name="food" value="0" />
+						<float name="wood" value="0" />
+						<float name="stone" value="0" />
+						<float name="gold" value="0" overrideParent="True" />
+						<float name="militia_hre" value="0" />
+						<float name="merc_byz" value="0" />
+					</enum_table>
+					<bool name="can_be_cancelled" value="True" />
+					<int name="number_to_queue_up_to_when_modified" value="5" />
+					<list name="additional_squads">
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_javelin_2_abb_ha_01" overrideParent="True" List.ItemID="-1517588494" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_javelin_2_abb_ha_01" overrideParent="True" List.ItemID="1374671892" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_javelin_2_abb_ha_01" overrideParent="True" List.ItemID="2083703218" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_javelin_2_abb_ha_01" overrideParent="True" List.ItemID="-58653903" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_javelin_2_abb_ha_01" overrideParent="True" List.ItemID="-52963058" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_javelin_2_abb_ha_01" overrideParent="True" List.ItemID="989997408" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_javelin_2_abb_ha_01" overrideParent="True" List.ItemID="-1198867259" />
+						<instance_reference name="additional_squad" value="sbps\races\abbasid_ha_01\unit_javelin_2_abb_ha_01" overrideParent="True" List.ItemID="1987629604" />
+					</list>
+					<instance_reference name="hotkey_binding" value="" />
+					<template_reference name="ui_info_extended" value="tables\ui_info_ext">
+						<template_reference name="command_card_info" value="">
+						</template_reference>
+						<template_reference name="quick_abilities_info" value="">
+						</template_reference>
+						<template_reference name="quick_commands_info" value="">
+						</template_reference>
+						<template_reference name="quick_formation_info" value="">
+						</template_reference>
+						<template_reference name="ping_menu_info" value="">
+						</template_reference>
+						<enum name="category" value="Economic" />
+						<template_reference name="quick_commands_launch_hud_info" value="ui_quick_commands_launch_hud_info">
+							<enum name="quick_commands_hotkey" value="" />
+							<int name="quick_commands_priority" value="-1" />
+							<int name="quick_commands_slot_index" value="-1" />
+							<enum name="quick_commands_hold_time" value="quick_command_hold_time" />
+						</template_reference>
+						<template_reference name="relic_radial_menu_info" value="">
+						</template_reference>
+						<enum name="observer_type" value="Disabled" />
+					</template_reference>
+					<file name="ui_icon_name" value="" />
+					<string name="ui_tooltip_data_template" value="" />
+				</group>
+			</list>
+			<bool name="enforce_minimum_clearance_at_spawn_positions" value="True" overrideParent="True" />
+			<float name="enforce_minimum_clearance_at_spawn_positions_search_range" value="30" overrideParent="True" />
+			<instance_reference name="rally_pass_type" value="pass_types\infantry" overrideParent="True" />
+			<state_tree_node name="production_item_completed_openingbranch" value="building_production_item_completed\Master\building_production_item_complete\building_production_item_complete_house_of_wisdom" overrideParent="True" />
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="2985508" />
+	<instance_reference name="parent_pbg" value="ebps\races\abbasid\buildings\building_house_of_wisdom_control_abb" />
+</instance>

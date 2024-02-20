@@ -1,0 +1,66 @@
+<instance version="6" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="803033353" List.ParentItemID="803033353">
+			<bool name="browsable_in_editor" value="False" overrideParent="True" />
+			<float name="entity_scale" value="75" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="1344262557" List.ParentItemID="1344262557">
+			<list name="race_type_list">
+				<instance_reference name="race_type" value="racebps\campaign_xp3\ayyubid_cmp" overrideParent="True" List.ItemID="-846389198" List.ParentItemID="-846389198" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\tier_ext" List.ItemID="-1906910378" List.ParentItemID="-1906910378">
+			<list name="tier_group_list">
+				<list name="tier_group" List.ItemID="152859173" List.ParentItemID="152859173">
+					<group name="tier" List.ItemID="-885237693" List.ParentItemID="-885237693">
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="ebps\races\ayyubid_cmp\units\unit_spearman_2_ayy" mod="83583234c472401ea6ae8f205d1ee5a2" overrideParent="True" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="sbps\races\ayyubid_cmp\unit_spearman_2_ayy" overrideParent="True" />
+					</group>
+					<group name="tier" List.ItemID="1288410459" List.ParentItemID="1288410459">
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="ebps\races\ayyubid_cmp\units\unit_spearman_3_ayy" mod="83583234c472401ea6ae8f205d1ee5a2" overrideParent="True" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="sbps\races\ayyubid_cmp\unit_spearman_3_ayy" overrideParent="True" />
+					</group>
+					<group name="tier" List.ItemID="-891643975" List.ParentItemID="-891643975">
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="ebps\races\ayyubid_cmp\units\unit_spearman_4_ayy" mod="83583234c472401ea6ae8f205d1ee5a2" overrideParent="True" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="sbps\races\ayyubid_cmp\unit_spearman_4_ayy" overrideParent="True" />
+					</group>
+				</list>
+			</list>
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="2103399" />
+	<instance_reference name="parent_pbg" value="ebps\races\abbasid\units\unit_spearman_1_abb" />
+	<variant name="xp3">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="803033353" List.ParentItemID="803033353">
+				<bool name="browsable_in_editor" value="False" overrideParent="True" />
+				<float name="entity_scale" value="75" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="1344262557" List.ParentItemID="1344262557">
+				<list name="race_type_list">
+					<instance_reference name="race_type" value="racebps\campaign_xp3\ayyubid_cmp" overrideParent="True" List.ItemID="-846389198" List.ParentItemID="-846389198" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\tier_ext" List.ItemID="-1906910378" List.ParentItemID="-1906910378">
+				<list name="tier_group_list">
+					<list name="tier_group" List.ItemID="152859173" List.ParentItemID="152859173">
+						<group name="tier" List.ItemID="-885237693" List.ParentItemID="-885237693">
+							<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="ebps\races\ayyubid_cmp\units\unit_spearman_2_ayy" mod="83583234c472401ea6ae8f205d1ee5a2" overrideParent="True" />
+							<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="sbps\races\ayyubid_cmp\unit_spearman_2_ayy" overrideParent="True" />
+						</group>
+						<group name="tier" List.ItemID="1288410459" List.ParentItemID="1288410459">
+							<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="ebps\races\ayyubid_cmp\units\unit_spearman_3_ayy" mod="83583234c472401ea6ae8f205d1ee5a2" overrideParent="True" />
+							<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="sbps\races\ayyubid_cmp\unit_spearman_3_ayy" overrideParent="True" />
+						</group>
+						<group name="tier" List.ItemID="-891643975" List.ParentItemID="-891643975">
+							<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="ebps\races\ayyubid_cmp\units\unit_spearman_4_ayy" mod="83583234c472401ea6ae8f205d1ee5a2" overrideParent="True" />
+							<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="sbps\races\ayyubid_cmp\unit_spearman_4_ayy" overrideParent="True" />
+						</group>
+					</list>
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2103399" />
+		<instance_reference name="parent_pbg" value="ebps\races\abbasid\units\unit_spearman_1_abb" />
+	</variant>
+</instance>

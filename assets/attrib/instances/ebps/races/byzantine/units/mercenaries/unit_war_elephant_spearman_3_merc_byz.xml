@@ -1,0 +1,28 @@
+<instance version="4" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="308348141" List.ParentItemID="308348141">
+			<float name="entity_scale" value="75" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\tier_ext" List.ItemID="-382161615" List.ParentItemID="-382161615">
+			<list name="tier_group_list">
+				<list name="tier_group" List.ItemID="1473909122" List.ParentItemID="1473909122">
+					<group name="tier" List.ItemID="139643846" List.ParentItemID="139643846">
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\sultanate\units\tier3_war_elephant_spearman_sul" overrideParent="True" />
+					</group>
+				</list>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="-1726328649" List.ParentItemID="-1726328649">
+			<list name="unit_type_list">
+				<enum name="unit_type" value="mercenary_byz" List.ItemID="777881762" List.ListAction="Append" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\combat_ext" List.ItemID="-294654378" List.ParentItemID="-294654378">
+			<template_reference name="kill_action_tree" value="state_tree_reference_info">
+				<state_tree_node name="ActionTree_OpeningBranch" value="on_kill_byz" overrideParent="True" />
+			</template_reference>
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="2104126" />
+	<instance_reference name="parent_pbg" value="ebps\races\sultanate\units\unit_war_elephant_spearman_3_sul" />
+</instance>

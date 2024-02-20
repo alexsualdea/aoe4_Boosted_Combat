@@ -1,0 +1,137 @@
+<instance version="4" description="The Beast!" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-1410792167" List.ParentItemID="-1410792167">
+			<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\french\units\unit_ram_3_fre" overrideParent="True" />
+			<bool name="browsable_in_editor" value="False" overrideParent="True" />
+			<file name="alternate_sua" value="art\civilizations\english\team_weapons\eng_siege_tower\eng_siege_tower" overrideParent="True" />
+			<float name="entity_scale" value="75" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\cost_ext" List.ItemID="1004494232" List.ParentItemID="1004494232">
+			<group name="time_cost">
+				<enum_table name="cost">
+					<float name="wood" value="650" overrideParent="True" />
+					<float name="gold" value="350" overrideParent="True" />
+					<float name="popcap" value="0" overrideParent="True" />
+				</enum_table>
+				<float name="time_seconds" value="200" overrideParent="True" />
+			</group>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-487450359" List.ParentItemID="-487450359">
+			<float name="hitpoints" value="800" overrideParent="True" />
+			<enum_table name="armor_scaler_by_damage_type">
+				<float name="Ranged" value="20" overrideParent="True" />
+			</enum_table>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="-1903432945" List.ParentItemID="-1903432945">
+			<list name="unit_type_list" overrideParent="True">
+				<enum name="unit_type" value="siege" List.ItemID="1083192497" />
+				<enum name="unit_type" value="ram" List.ItemID="-1595685360" />
+				<enum name="unit_type" value="military" List.ItemID="-611213870" />
+				<enum name="unit_type" value="formational" List.ItemID="1471931639" />
+				<enum name="unit_type" value="transport" List.ItemID="-17481583" />
+				<enum name="unit_type" value="annihilation_condition" List.ItemID="-690546578" />
+				<enum name="unit_type" value="included_by_military_hotkeys" List.ItemID="-889441030" />
+				<enum name="unit_type" value="ram_tower" List.ItemID="-1657305370" />
+			</list>
+			<list name="race_type_list" overrideParent="True">
+				<instance_reference name="race_type" value="racebps\campaign_xp3\crusader_cmp" List.ItemID="1113649973" />
+			</list>
+			<enum_table name="weapon_category_targeting_filter">
+				<bool name="1melee" value="False" overrideParent="True" />
+			</enum_table>
+			<list name="attack_target_restriction_on_victim" removedIds="1936881931, -1032832326, 812379461">
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="517696132" List.ParentItemID="517696132">
+			<float name="decorator_height" value="15" overrideParent="True" />
+			<file name="icon_name" value="races\abbasid_historic\units\tower_of_the_sultan" overrideParent="True" />
+			<bool name="is_unique_to_race" value="True" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\combat_ext" List.ItemID="-780527790" List.ParentItemID="-780527790">
+			<list name="hardpoints">
+				<group name="hardpoint" List.ItemID="1886312333" List.ParentItemID="1886312333">
+					<list name="weapon_table">
+						<group name="weapon" List.ItemID="827192862" List.ParentItemID="827192862">
+							<template_reference name="non_entity_weapon_wrapper" value="non_entity_weapon_wrapper">
+								<instance_reference name="non_entity_weapon_wrapper_pbg" value="weapon\races\abbasid_ha_01\weapon_ram_tower_3_abb_ha_01" overrideParent="True" />
+							</template_reference>
+						</group>
+					</list>
+				</group>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\moving_ext" List.ItemID="1862066662" List.ParentItemID="1862066662">
+			<instance_reference name="navigation_agent_info" value="navigation\agent_info\campaign\ram_tower" overrideParent="True" />
+			<enum_table name="speed_scaling_table">
+				<float name="default_speed" value="2" overrideParent="True" />
+				<float name="max_speed" value="4.5" overrideParent="True" />
+			</enum_table>
+			<enum_table name="speed_levels">
+				<float name="speed_level_0" value="1.25" overrideParent="True" />
+				<float name="speed_level_1" value="2" overrideParent="True" />
+				<float name="speed_level_2" value="2.5" overrideParent="True" />
+				<float name="speed_level_3" value="3" overrideParent="True" />
+				<float name="speed_level_4" value="3.5" overrideParent="True" />
+			</enum_table>
+			<float name="rotation_rate" value="100" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\construction_ext" List.ItemID="1982550370" List.ParentItemID="1982550370">
+			<instance_reference name="on_construction_squad" value="sbps\races\abbasid_ha_01\unit_ram_tower_3_abb_ha_01" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\requirement_ext" List.ItemID="-37156415" List.ParentItemID="-37156415">
+			<list name="requirement_table" removedIds="487091217">
+				<template_reference name="required" value="requirements\required_player_upgrade" List.ItemID="-567189815" List.ListAction="Append">
+					<enum name="reason" value="usage" />
+					<locstring name="ui_name" value="0" />
+					<bool name="is_present" value="True" />
+					<int name="max_completed" value="100" />
+					<int name="min_completed" value="1" />
+					<instance_reference name="upgrade_name" value="upgrade\dev\ages\castle_age" overrideParent="True" />
+					<bool name="include_queued" value="False" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="False" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+					<bool name="include_completed" value="True" />
+				</template_reference>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\hold_ext" List.ItemID="-1301307975" List.ParentItemID="-1301307975">
+			<float name="num_slots" value="20" overrideParent="True" />
+			<float name="num_squad_slots" value="20" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\tier_ext" List.ItemID="190341173" List.ParentItemID="190341173">
+			<list name="tier_group_list" overrideParent="True">
+				<list name="tier_group" overrideParent="True" List.ItemID="205902393">
+					<group name="tier" List.ItemID="-1135675044">
+						<list name="tier_requirements" overrideParent="True">
+						</list>
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\abbasid_ha_01\units\ram_tower_abbasid_ha_01" overrideParent="True" />
+						<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+							<state_tree_node name="ActionTree_OpeningBranch" value="" overrideParent="True" />
+							<bool name="start_suspended" value="False" />
+						</template_reference>
+						<instance_reference name="statetree_tier_requirements_pbg" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="" />
+						<string name="tier_attachment_action" value="" />
+						<template_reference name="blueprint_conversion_parameters" value="blueprint_conversion_parameters">
+							<bool name="reissue_commands" value="False" />
+							<bool name="continue_state_trees" value="True" />
+							<bool name="remove_from_pending_deaths" value="False" />
+							<bool name="enable_all_extensions" value="True" />
+						</template_reference>
+						<string name="inventory_category_to_refresh_on_tier_up" value="" />
+					</group>
+				</list>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\population_ext" List.ItemID="-740053457" List.ParentItemID="-740053457">
+			<float name="personnel_pop" value="3" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\marker_ext" overrideParent="True" List.ItemID="-1917358769" List.ListAction="Append">
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="2141356" />
+	<instance_reference name="parent_pbg" value="ebps\races\core\units_buildable\unit_ram_3" />
+</instance>

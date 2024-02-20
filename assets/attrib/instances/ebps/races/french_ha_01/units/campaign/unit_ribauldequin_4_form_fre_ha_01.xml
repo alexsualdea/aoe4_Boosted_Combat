@@ -1,0 +1,27 @@
+<instance version="4" description="French Imperial Age Ribauldequin&#xD;&#xA;" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\population_ext" List.ItemID="-934385575" List.ParentItemID="-934385575">
+			<float name="personnel_pop" value="1" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="223061918" List.ParentItemID="223061918">
+			<list name="race_type_list">
+				<instance_reference name="race_type" value="racebps\french_ha_01" overrideParent="True" List.ItemID="1340851388" List.ParentItemID="1340851388" />
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\combat_ext" List.ItemID="-1258960924" List.ParentItemID="-1258960924">
+			<list name="hardpoints">
+				<group name="hardpoint" List.ItemID="-1376879454" List.ParentItemID="-1376879454">
+					<list name="weapon_table">
+						<group name="weapon" List.ItemID="-542612263" List.ParentItemID="-542612263">
+							<template_reference name="non_entity_weapon_wrapper" value="non_entity_weapon_wrapper">
+								<instance_reference name="non_entity_weapon_wrapper_pbg" value="weapon\races\french\ranged\campaign\weapon_ribauldequin_4_form_fre" overrideParent="True" />
+							</template_reference>
+						</group>
+					</list>
+				</group>
+			</list>
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="5528112" />
+	<instance_reference name="parent_pbg" value="ebps\races\french\units\unit_ribauldequin_4_fre" />
+</instance>

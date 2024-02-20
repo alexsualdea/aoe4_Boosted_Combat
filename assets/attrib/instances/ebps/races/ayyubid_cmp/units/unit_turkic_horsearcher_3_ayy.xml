@@ -1,0 +1,290 @@
+<instance version="6" description="" template="ebps">
+	<list name="extensions">
+		<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1491559579" List.ParentItemID="1491559579">
+			<bool name="browsable_in_editor" value="False" overrideParent="True" />
+			<float name="entity_scale" value="75" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\cost_ext" List.ItemID="1012099503" List.ParentItemID="1012099503">
+			<group name="time_cost">
+				<enum_table name="cost">
+					<float name="food" value="80" overrideParent="True" />
+					<float name="gold" value="60" overrideParent="True" />
+				</enum_table>
+			</group>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="-2085794998" List.ParentItemID="-2085794998">
+			<list name="race_type_list" overrideParent="True">
+				<instance_reference name="race_type" value="racebps\campaign_xp3\ayyubid_cmp" overrideParent="True" List.ItemID="-1726315579" />
+			</list>
+			<list name="unit_type_list" removedIds="275598377">
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="-85834097" List.ParentItemID="-85834097">
+			<string name="speaker_code" value="archer" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\tier_ext" List.ItemID="181591875" List.ParentItemID="181591875">
+			<list name="tier_group_list">
+				<list name="tier_group" List.ItemID="-78734107" List.ParentItemID="-78734107">
+					<group name="tier" List.ItemID="134421859" List.ParentItemID="134421859">
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="" overrideParent="True" />
+						<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+							<state_tree_node name="ActionTree_OpeningBranch" value="tier_unit_exposure_dca\Master\reapply_upgrades\reapply_turkic_horsearcher_weapon_upgrades" overrideParent="True" />
+						</template_reference>
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\ayyubid_cmp\units\tier3_cavalry_horsearcher_ayy" overrideParent="True" />
+					</group>
+					<group name="tier" List.ItemID="1544028076" List.ParentItemID="1544028076">
+						<instance_reference name="statetree_tier_requirements_pbg" value="upgrade\races\ayyubid_cmp\units\upgrade_unit_turkic_horse_archer_4_ayy" overrideParent="True" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="ebps\races\ayyubid_cmp\units\unit_turkic_horsearcher_4_ayy" mod="83583234c472401ea6ae8f205d1ee5a2" overrideParent="True" />
+						<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="sbps\races\ayyubid_cmp\unit_turkic_horsearcher_4_ayy" overrideParent="True" />
+						<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+							<state_tree_node name="ActionTree_OpeningBranch" value="tier_unit_exposure_dca\Master\reapply_upgrades\reapply_turkic_horsearcher_weapon_upgrades" overrideParent="True" />
+						</template_reference>
+						<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\ayyubid_cmp\units\tier4_cavalry_horsearcher_ayy" overrideParent="True" />
+					</group>
+				</list>
+			</list>
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\statemodel_ext" List.ItemID="-301632025" List.ParentItemID="-301632025">
+			<instance_reference name="schema" value="statemodel_schema\units\civilizations\ayyubid_cmp\horsearcher_ayy" overrideParent="True" />
+		</template_reference>
+		<template_reference name="exts" value="ebpextensions\combat_ext" List.ItemID="698418421" List.ParentItemID="698418421">
+			<list name="hardpoints">
+				<group name="hardpoint" List.ItemID="627415271" List.ParentItemID="627415271">
+					<list name="weapon_table" overrideParent="True">
+						<group name="weapon" comment="Arrow" List.ItemID="-1846026531">
+							<group name="heading">
+								<float name="x" value="0" />
+								<float name="y" value="0" />
+								<float name="z" value="1" />
+							</group>
+							<float name="length" value="0" />
+							<group name="origin">
+								<float name="x" value="0" />
+								<float name="y" value="3" />
+								<float name="z" value="1" />
+							</group>
+							<enum name="type" value="default" />
+							<template_reference name="weapon_entity_attachment" value="">
+							</template_reference>
+							<template_reference name="non_entity_weapon_wrapper" value="non_entity_weapon_wrapper">
+								<instance_reference name="non_entity_weapon_wrapper_pbg" value="weapon\races\ayyubid_cmp\weapon_turkic_horsearcher_3_ayy" overrideParent="True" />
+								<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\mongol\weapons\wpn_range_horsearcher_3_mon" />
+								<string name="marker_name_parent" value="MetaRig_LArmPalmSocket" />
+							</template_reference>
+						</group>
+						<group name="weapon" comment="Incendiary Arrow" List.ItemID="-3032654">
+							<group name="heading">
+								<float name="x" value="0" />
+								<float name="y" value="0" />
+								<float name="z" value="1" />
+							</group>
+							<float name="length" value="0" />
+							<group name="origin">
+								<float name="x" value="0" />
+								<float name="y" value="3" />
+								<float name="z" value="1" />
+							</group>
+							<enum name="type" value="default" />
+							<template_reference name="weapon_entity_attachment" value="">
+							</template_reference>
+							<template_reference name="non_entity_weapon_wrapper" value="non_entity_weapon_wrapper">
+								<instance_reference name="non_entity_weapon_wrapper_pbg" value="weapon\races\ayyubid_cmp\weapon_turkic_horsearcher_incendiary_3_ayy" overrideParent="True" />
+								<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\mongol\weapons\wpn_range_horsearcher_3_mon" />
+								<string name="marker_name_parent" value="MetaRig_LArmPalmSocket" />
+							</template_reference>
+						</group>
+						<group name="weapon" comment="Moving Shot" List.ItemID="-579660534">
+							<group name="heading">
+								<float name="x" value="0" />
+								<float name="y" value="0" />
+								<float name="z" value="1" />
+							</group>
+							<float name="length" value="0" />
+							<group name="origin">
+								<float name="x" value="0" />
+								<float name="y" value="3" overrideParent="True" />
+								<float name="z" value="1" overrideParent="True" />
+							</group>
+							<enum name="type" value="default" />
+							<template_reference name="weapon_entity_attachment" value="" overrideParent="True">
+							</template_reference>
+							<template_reference name="non_entity_weapon_wrapper" value="non_entity_weapon_wrapper" overrideParent="True">
+								<instance_reference name="non_entity_weapon_wrapper_pbg" value="weapon\races\ayyubid_cmp\weapon_turkic_horsearcher_moving_3_ayy" overrideParent="True" />
+								<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\mongol\weapons\wpn_range_horsearcher_3_mon" overrideParent="True" />
+								<string name="marker_name_parent" value="MetaRig_LArmPalmSocket" />
+							</template_reference>
+						</group>
+						<group name="weapon" comment="Moving Incendiary" List.ItemID="1731950989">
+							<group name="heading">
+								<float name="x" value="0" />
+								<float name="y" value="0" />
+								<float name="z" value="1" />
+							</group>
+							<float name="length" value="0" />
+							<group name="origin">
+								<float name="x" value="0" />
+								<float name="y" value="3" overrideParent="True" />
+								<float name="z" value="1" overrideParent="True" />
+							</group>
+							<enum name="type" value="default" />
+							<template_reference name="weapon_entity_attachment" value="" overrideParent="True">
+							</template_reference>
+							<template_reference name="non_entity_weapon_wrapper" value="non_entity_weapon_wrapper" overrideParent="True">
+								<instance_reference name="non_entity_weapon_wrapper_pbg" value="weapon\races\ayyubid_cmp\weapon_turkic_horsearcher_moving_incendiary_3_ayy" overrideParent="True" />
+								<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\mongol\weapons\wpn_range_horsearcher_3_mon" overrideParent="True" />
+								<string name="marker_name_parent" value="MetaRig_LArmPalmSocket" />
+							</template_reference>
+						</group>
+					</list>
+				</group>
+			</list>
+		</template_reference>
+	</list>
+	<uniqueid name="pbgid" value="2089321" />
+	<instance_reference name="parent_pbg" value="ebps\races\mongol\units\unit_horsearcher_3_mon" />
+	<variant name="xp3">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1491559579" List.ParentItemID="1491559579">
+				<bool name="browsable_in_editor" value="False" overrideParent="True" />
+				<float name="entity_scale" value="75" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\cost_ext" List.ItemID="1012099503" List.ParentItemID="1012099503">
+				<group name="time_cost">
+					<enum_table name="cost">
+						<float name="food" value="80" overrideParent="True" />
+						<float name="gold" value="60" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="-2085794998" List.ParentItemID="-2085794998">
+				<list name="race_type_list" overrideParent="True">
+					<instance_reference name="race_type" value="racebps\campaign_xp3\ayyubid_cmp" overrideParent="True" List.ItemID="-701625547" />
+				</list>
+				<list name="unit_type_list" removedIds="275598377">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="-85834097" List.ParentItemID="-85834097">
+				<string name="speaker_code" value="archer" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\tier_ext" List.ItemID="181591875" List.ParentItemID="181591875">
+				<list name="tier_group_list">
+					<list name="tier_group" List.ItemID="-78734107" List.ParentItemID="-78734107">
+						<group name="tier" List.ItemID="134421859" List.ParentItemID="134421859">
+							<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="" overrideParent="True" />
+							<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+								<state_tree_node name="ActionTree_OpeningBranch" value="xp3_tier_unit_exposure_dca\Master\reapply_upgrades\reapply_turkic_horsearcher_weapon_upgrades" overrideParent="True" />
+							</template_reference>
+							<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\ayyubid_cmp\units\tier3_cavalry_horsearcher_ayy" overrideParent="True" />
+						</group>
+						<group name="tier" List.ItemID="1544028076" List.ParentItemID="1544028076">
+							<instance_reference name="statetree_tier_requirements_pbg" value="upgrade\races\ayyubid_cmp\units\upgrade_unit_turkic_horse_archer_4_ayy" overrideParent="True" />
+							<instance_reference name="statetree_tier_pgb_upgrade_target_entity" value="ebps\races\ayyubid_cmp\units\unit_turkic_horsearcher_4_ayy" mod="83583234c472401ea6ae8f205d1ee5a2" overrideParent="True" />
+							<instance_reference name="statetree_tier_pgb_upgrade_target_squad" value="sbps\races\ayyubid_cmp\unit_turkic_horsearcher_4_ayy" overrideParent="True" />
+							<template_reference name="statetree_tier_reached_actions" value="state_tree_reference_info">
+								<state_tree_node name="ActionTree_OpeningBranch" value="xp3_tier_unit_exposure_dca\Master\reapply_upgrades\reapply_turkic_horsearcher_weapon_upgrades" overrideParent="True" />
+							</template_reference>
+							<instance_reference name="attachments" value="attachments\attachment_lists\civilizations\ayyubid_cmp\units\tier4_cavalry_horsearcher_ayy" overrideParent="True" />
+						</group>
+					</list>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\statemodel_ext" List.ItemID="-301632025" List.ParentItemID="-301632025">
+				<instance_reference name="schema" value="statemodel_schema\units\civilizations\ayyubid_cmp\horsearcher_ayy" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\combat_ext" List.ItemID="698418421" List.ParentItemID="698418421">
+				<list name="hardpoints">
+					<group name="hardpoint" List.ItemID="627415271" List.ParentItemID="627415271">
+						<list name="weapon_table" overrideParent="True">
+							<group name="weapon" comment="Arrow" List.ItemID="25807575">
+								<group name="heading">
+									<float name="x" value="0" />
+									<float name="y" value="0" />
+									<float name="z" value="1" />
+								</group>
+								<float name="length" value="0" />
+								<group name="origin">
+									<float name="x" value="0" />
+									<float name="y" value="3" />
+									<float name="z" value="1" />
+								</group>
+								<enum name="type" value="default" />
+								<template_reference name="weapon_entity_attachment" value="">
+								</template_reference>
+								<template_reference name="non_entity_weapon_wrapper" value="non_entity_weapon_wrapper">
+									<instance_reference name="non_entity_weapon_wrapper_pbg" value="weapon\races\ayyubid_cmp\weapon_turkic_horsearcher_3_ayy" overrideParent="True" />
+									<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\mongol\weapons\wpn_range_horsearcher_3_mon" />
+									<string name="marker_name_parent" value="MetaRig_LArmPalmSocket" />
+								</template_reference>
+							</group>
+							<group name="weapon" comment="Incendiary Arrow" List.ItemID="-1409529231">
+								<group name="heading">
+									<float name="x" value="0" />
+									<float name="y" value="0" />
+									<float name="z" value="1" />
+								</group>
+								<float name="length" value="0" />
+								<group name="origin">
+									<float name="x" value="0" />
+									<float name="y" value="3" />
+									<float name="z" value="1" />
+								</group>
+								<enum name="type" value="default" />
+								<template_reference name="weapon_entity_attachment" value="">
+								</template_reference>
+								<template_reference name="non_entity_weapon_wrapper" value="non_entity_weapon_wrapper">
+									<instance_reference name="non_entity_weapon_wrapper_pbg" value="weapon\races\ayyubid_cmp\weapon_turkic_horsearcher_incendiary_3_ayy" overrideParent="True" />
+									<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\mongol\weapons\wpn_range_horsearcher_3_mon" />
+									<string name="marker_name_parent" value="MetaRig_LArmPalmSocket" />
+								</template_reference>
+							</group>
+							<group name="weapon" comment="Moving Shot" List.ItemID="-624076757">
+								<group name="heading">
+									<float name="x" value="0" />
+									<float name="y" value="0" />
+									<float name="z" value="1" />
+								</group>
+								<float name="length" value="0" />
+								<group name="origin">
+									<float name="x" value="0" />
+									<float name="y" value="3" overrideParent="True" />
+									<float name="z" value="1" overrideParent="True" />
+								</group>
+								<enum name="type" value="default" />
+								<template_reference name="weapon_entity_attachment" value="" overrideParent="True">
+								</template_reference>
+								<template_reference name="non_entity_weapon_wrapper" value="non_entity_weapon_wrapper" overrideParent="True">
+									<instance_reference name="non_entity_weapon_wrapper_pbg" value="weapon\races\ayyubid_cmp\weapon_turkic_horsearcher_moving_3_ayy" overrideParent="True" />
+									<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\mongol\weapons\wpn_range_horsearcher_3_mon" overrideParent="True" />
+									<string name="marker_name_parent" value="MetaRig_LArmPalmSocket" />
+								</template_reference>
+							</group>
+							<group name="weapon" comment="Moving Incendiary" List.ItemID="-1354206890">
+								<group name="heading">
+									<float name="x" value="0" />
+									<float name="y" value="0" />
+									<float name="z" value="1" />
+								</group>
+								<float name="length" value="0" />
+								<group name="origin">
+									<float name="x" value="0" />
+									<float name="y" value="3" overrideParent="True" />
+									<float name="z" value="1" overrideParent="True" />
+								</group>
+								<enum name="type" value="default" />
+								<template_reference name="weapon_entity_attachment" value="" overrideParent="True">
+								</template_reference>
+								<template_reference name="non_entity_weapon_wrapper" value="non_entity_weapon_wrapper" overrideParent="True">
+									<instance_reference name="non_entity_weapon_wrapper_pbg" value="weapon\races\ayyubid_cmp\weapon_turkic_horsearcher_moving_incendiary_3_ayy" overrideParent="True" />
+									<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\mongol\weapons\wpn_range_horsearcher_3_mon" overrideParent="True" />
+									<string name="marker_name_parent" value="MetaRig_LArmPalmSocket" />
+								</template_reference>
+							</group>
+						</list>
+					</group>
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2089321" />
+		<instance_reference name="parent_pbg" value="ebps\races\mongol\units\unit_horsearcher_3_mon" />
+	</variant>
+</instance>
